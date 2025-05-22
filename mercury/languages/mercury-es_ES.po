@@ -1,0 +1,1112 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Original: Error 404
+msgid "Error 404"
+msgstr "Error 404"
+
+#. Original: Page not Found
+msgid "Page not Found"
+msgstr "Página no encontrada"
+
+#. Original: Nothing found.
+msgid "Nothing found."
+msgstr "No se encontró nada."
+
+#. Original: Go back to home page
+msgid "Go back to home page"
+msgstr "Volver a la página principal"
+
+#. Original: Get Bonus
+msgid "Get Bonus"
+msgstr "Obtener bono"
+
+#. Original: T&Cs Apply
+msgid "T&Cs Apply"
+msgstr "[es_ES translation] T&Cs Apply"
+
+#. Original: Bonus Code
+msgid "Bonus Code"
+msgstr "[es_ES translation] Bonus Code"
+
+#. Original: Valid Until:
+msgid "Valid Until:"
+msgstr "[es_ES translation] Valid Until:"
+
+#. Original: Play Now
+msgid "Play Now"
+msgstr "[es_ES translation] Play Now"
+
+#. Original: Read Review
+msgid "Read Review"
+msgstr "[es_ES translation] Read Review"
+
+#. Original: game
+msgid "game"
+msgstr "[es_ES translation] game"
+
+#. Original: games
+msgid "games"
+msgstr "[es_ES translation] games"
+
+#. Original: Software Provider
+msgid "Software Provider"
+msgstr "[es_ES translation] Software Provider"
+
+#. Original: Pages:
+msgid "Pages:"
+msgstr "[es_ES translation] Pages:"
+
+#. Original: More 
+msgid "More "
+msgstr "[es_ES translation] More "
+
+#. Original: Bonuses
+msgid "Bonuses"
+msgstr "[es_ES translation] Bonuses"
+
+#. Original: Pros
+msgid "Pros"
+msgstr "[es_ES translation] Pros"
+
+#. Original: Cons
+msgid "Cons"
+msgstr "[es_ES translation] Cons"
+
+#. Original: Details
+msgid "Details"
+msgstr "[es_ES translation] Details"
+
+#. Original: Software
+msgid "Software"
+msgstr "[es_ES translation] Software"
+
+#. Original: Deposit Methods
+msgid "Deposit Methods"
+msgstr "[es_ES translation] Deposit Methods"
+
+#. Original: Withdrawal Methods
+msgid "Withdrawal Methods"
+msgstr "[es_ES translation] Withdrawal Methods"
+
+#. Original: Withdrawal Limits
+msgid "Withdrawal Limits"
+msgstr "[es_ES translation] Withdrawal Limits"
+
+#. Original: Restricted Countries
+msgid "Restricted Countries"
+msgstr "[es_ES translation] Restricted Countries"
+
+#. Original: Licences
+msgid "Licences"
+msgstr "[es_ES translation] Licences"
+
+#. Original: Languages
+msgid "Languages"
+msgstr "[es_ES translation] Languages"
+
+#. Original: Currencies
+msgid "Currencies"
+msgstr "[es_ES translation] Currencies"
+
+#. Original: Devices
+msgid "Devices"
+msgstr "[es_ES translation] Devices"
+
+#. Original: Owner
+msgid "Owner"
+msgstr "[es_ES translation] Owner"
+
+#. Original: Established
+msgid "Established"
+msgstr "[es_ES translation] Established"
+
+#. Original: Overall Rating
+msgid "Overall Rating"
+msgstr "[es_ES translation] Overall Rating"
+
+#. Original: Trust & Fairness
+msgid "Trust & Fairness"
+msgstr "[es_ES translation] Trust & Fairness"
+
+#. Original: Games & Software
+msgid "Games & Software"
+msgstr "[es_ES translation] Games & Software"
+
+#. Original: Bonuses & Promotions
+msgid "Bonuses & Promotions"
+msgstr "[es_ES translation] Bonuses & Promotions"
+
+#. Original: Customer Support
+msgid "Customer Support"
+msgstr "[es_ES translation] Customer Support"
+
+#. Original: Games
+msgid "Games"
+msgstr "[es_ES translation] Games"
+
+#. Original: by
+msgid "by"
+msgstr "[es_ES translation] by"
+
+#. Original: All
+msgid "All"
+msgstr "[es_ES translation] All"
+
+#. Original: &laquo;
+msgid "&laquo;"
+msgstr "[es_ES translation] &laquo;"
+
+#. Original: &raquo;
+msgid "&raquo;"
+msgstr "[es_ES translation] &raquo;"
+
+#. Original: Posts not found
+msgid "Posts not found"
+msgstr "[es_ES translation] Posts not found"
+
+#. Original: No posts has been found. Please return to the homepage.
+msgid "No posts has been found. Please return to the homepage."
+msgstr "[es_ES translation] No posts has been found. Please return to the homepage."
+
+#. Original: Casinos
+msgid "Casinos"
+msgstr "[es_ES translation] Casinos"
+
+#. Original: One Reply to &ldquo;%s&rdquo;
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "[es_ES translation] One Reply to &ldquo;%s&rdquo;"
+
+#. Original: %1$s Reply to &ldquo;%2$s&rdquo;
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgstr "[es_ES translation] %1$s Reply to &ldquo;%2$s&rdquo;"
+
+#. Original: Reply
+msgid "Reply"
+msgstr "[es_ES translation] Reply"
+
+#. Original: Name*
+msgid "Name*"
+msgstr "[es_ES translation] Name*"
+
+#. Original: Email*
+msgid "Email*"
+msgstr "[es_ES translation] Email*"
+
+#. Original: Website
+msgid "Website"
+msgstr "[es_ES translation] Website"
+
+#. Original: Comment*
+msgid "Comment*"
+msgstr "[es_ES translation] Comment*"
+
+#. Original: &copy; Copyright
+msgid "&copy; Copyright"
+msgstr "[es_ES translation] &copy; Copyright"
+
+#. Original: Powered by
+msgid "Powered by"
+msgstr "[es_ES translation] Powered by"
+
+#. Original: https://wordpress.org
+msgid "https://wordpress.org"
+msgstr "[es_ES translation] https://wordpress.org"
+
+#. Original: WordPress
+msgid "WordPress"
+msgstr "[es_ES translation] WordPress"
+
+#. Original: https://mercurytheme.com
+msgid "https://mercurytheme.com"
+msgstr "[es_ES translation] https://mercurytheme.com"
+
+#. Original: Affiliate Marketing WordPress Theme. Reviews and Top Lists
+msgid "Affiliate Marketing WordPress Theme. Reviews and Top Lists"
+msgstr "[es_ES translation] Affiliate Marketing WordPress Theme. Reviews and Top Lists"
+
+#. Original: Mercury Theme
+msgid "Mercury Theme"
+msgstr "[es_ES translation] Mercury Theme"
+
+#. Original: Back to Top
+msgid "Back to Top"
+msgstr "[es_ES translation] Back to Top"
+
+#. Original: Main Menu
+msgid "Main Menu"
+msgstr "[es_ES translation] Main Menu"
+
+#. Original: Footer Menu
+msgid "Footer Menu"
+msgstr "[es_ES translation] Footer Menu"
+
+#. Original: Top Bar Menu
+msgid "Top Bar Menu"
+msgstr "[es_ES translation] Top Bar Menu"
+
+#. Original: Sidebar
+msgid "Sidebar"
+msgstr "[es_ES translation] Sidebar"
+
+#. Original: Add widgets here so that it appears on the sidebar.
+msgid "Add widgets here so that it appears on the sidebar."
+msgstr "[es_ES translation] Add widgets here so that it appears on the sidebar."
+
+#. Original: Homepage Central Block (Old)
+msgid "Homepage Central Block (Old)"
+msgstr "[es_ES translation] Homepage Central Block (Old)"
+
+#. Original: For widgets in the homepage central block.
+msgid "For widgets in the homepage central block."
+msgstr "[es_ES translation] For widgets in the homepage central block."
+
+#. Original: Homepage Right Sidebar (Old)
+msgid "Homepage Right Sidebar (Old)"
+msgstr "[es_ES translation] Homepage Right Sidebar (Old)"
+
+#. Original: Add widgets here so that it appears on the homepage right sidebar.
+msgid "Add widgets here so that it appears on the homepage right sidebar."
+msgstr "[es_ES translation] Add widgets here so that it appears on the homepage right sidebar."
+
+#. Original: Footer
+msgid "Footer"
+msgstr "[es_ES translation] Footer"
+
+#. Original: For text and images only.
+msgid "For text and images only."
+msgstr "[es_ES translation] For text and images only."
+
+#. Original: Recent Posts
+msgid "Recent Posts"
+msgstr "Entradas recientes"
+
+#. Original: No posts has been found.
+msgid "No posts has been found."
+msgstr "[es_ES translation] No posts has been found."
+
+#. Original: Search results for: %s
+msgid "Search results for: %s"
+msgstr "[es_ES translation] Search results for: %s"
+
+#. Original: Nothing found
+msgid "Nothing found"
+msgstr "[es_ES translation] Nothing found"
+
+#. Original: Nothing found. Please try another search query.
+msgid "Nothing found. Please try another search query."
+msgstr "[es_ES translation] Nothing found. Please try another search query."
+
+#. Original: Install Required Plugins
+msgid "Install Required Plugins"
+msgstr "[es_ES translation] Install Required Plugins"
+
+#. Original: Install Plugins
+msgid "Install Plugins"
+msgstr "[es_ES translation] Install Plugins"
+
+#. Original: Installing Plugin: %s
+msgid "Installing Plugin: %s"
+msgstr "[es_ES translation] Installing Plugin: %s"
+
+#. Original: Updating Plugin: %s
+msgid "Updating Plugin: %s"
+msgstr "[es_ES translation] Updating Plugin: %s"
+
+#. Original: Something went wrong with the plugin API.
+msgid "Something went wrong with the plugin API."
+msgstr "[es_ES translation] Something went wrong with the plugin API."
+
+#. Original: Return to Required Plugins Installer
+msgid "Return to Required Plugins Installer"
+msgstr "[es_ES translation] Return to Required Plugins Installer"
+
+#. Original: Return to the Dashboard
+msgid "Return to the Dashboard"
+msgstr "[es_ES translation] Return to the Dashboard"
+
+#. Original: Plugin activated successfully.
+msgid "Plugin activated successfully."
+msgstr "[es_ES translation] Plugin activated successfully."
+
+#. Original: The following plugin was activated successfully:
+msgid "The following plugin was activated successfully:"
+msgstr "[es_ES translation] The following plugin was activated successfully:"
+
+#. Original: No action taken. Plugin %1$s was already active.
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "[es_ES translation] No action taken. Plugin %1$s was already active."
+
+#. Original: All plugins installed and activated successfully. %1$s
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "[es_ES translation] All plugins installed and activated successfully. %1$s"
+
+#. Original: Dismiss this notice
+msgid "Dismiss this notice"
+msgstr "[es_ES translation] Dismiss this notice"
+
+#. Original: Please contact the administrator of this site for help.
+msgid "Please contact the administrator of this site for help."
+msgstr "[es_ES translation] Please contact the administrator of this site for help."
+
+#. Original: This plugin needs to be updated to be compatible with your theme.
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "[es_ES translation] This plugin needs to be updated to be compatible with your theme."
+
+#. Original: Update Required
+msgid "Update Required"
+msgstr "[es_ES translation] Update Required"
+
+#. Original: TGMPA v%s
+msgid "TGMPA v%s"
+msgstr "[es_ES translation] TGMPA v%s"
+
+#. Original: Required
+msgid "Required"
+msgstr "[es_ES translation] Required"
+
+#. Original: Recommended
+msgid "Recommended"
+msgstr "[es_ES translation] Recommended"
+
+#. Original: WordPress Repository
+msgid "WordPress Repository"
+msgstr "[es_ES translation] WordPress Repository"
+
+#. Original: External Source
+msgid "External Source"
+msgstr "[es_ES translation] External Source"
+
+#. Original: Pre-Packaged
+msgid "Pre-Packaged"
+msgstr "[es_ES translation] Pre-Packaged"
+
+#. Original: Not Installed
+msgid "Not Installed"
+msgstr "[es_ES translation] Not Installed"
+
+#. Original: Installed But Not Activated
+msgid "Installed But Not Activated"
+msgstr "[es_ES translation] Installed But Not Activated"
+
+#. Original: Active
+msgid "Active"
+msgstr "[es_ES translation] Active"
+
+#. Original: Required Update not Available
+msgid "Required Update not Available"
+msgstr "[es_ES translation] Required Update not Available"
+
+#. Original: Requires Update
+msgid "Requires Update"
+msgstr "[es_ES translation] Requires Update"
+
+#. Original: Update recommended
+msgid "Update recommended"
+msgstr "[es_ES translation] Update recommended"
+
+#. Original: %1$s, %2$s
+msgid "%1$s, %2$s"
+msgstr "[es_ES translation] %1$s, %2$s"
+
+#. Original: All <span class=\
+msgid "All <span class=\"
+msgstr "[es_ES translation] All <span class=\"
+
+#. Original: To Install <span class=\
+msgid "To Install <span class=\"
+msgstr "[es_ES translation] To Install <span class=\"
+
+#. Original: Update Available <span class=\
+msgid "Update Available <span class=\"
+msgstr "[es_ES translation] Update Available <span class=\"
+
+#. Original: To Activate <span class=\
+msgid "To Activate <span class=\"
+msgstr "[es_ES translation] To Activate <span class=\"
+
+#. Original: unknown
+msgid "unknown"
+msgstr "[es_ES translation] unknown"
+
+#. Original: Installed version:
+msgid "Installed version:"
+msgstr "[es_ES translation] Installed version:"
+
+#. Original: Minimum required version:
+msgid "Minimum required version:"
+msgstr "[es_ES translation] Minimum required version:"
+
+#. Original: Available version:
+msgid "Available version:"
+msgstr "[es_ES translation] Available version:"
+
+#. Original: No plugins to install, update or activate.
+msgid "No plugins to install, update or activate."
+msgstr "[es_ES translation] No plugins to install, update or activate."
+
+#. Original: Plugin
+msgid "Plugin"
+msgstr "[es_ES translation] Plugin"
+
+#. Original: Source
+msgid "Source"
+msgstr "[es_ES translation] Source"
+
+#. Original: Type
+msgid "Type"
+msgstr "[es_ES translation] Type"
+
+#. Original: Version
+msgid "Version"
+msgstr "[es_ES translation] Version"
+
+#. Original: Status
+msgid "Status"
+msgstr "[es_ES translation] Status"
+
+#. Original: Install %2$s
+msgid "Install %2$s"
+msgstr "[es_ES translation] Install %2$s"
+
+#. Original: Update %2$s
+msgid "Update %2$s"
+msgstr "[es_ES translation] Update %2$s"
+
+#. Original: Activate %2$s
+msgid "Activate %2$s"
+msgstr "[es_ES translation] Activate %2$s"
+
+#. Original: Upgrade message from the plugin author:
+msgid "Upgrade message from the plugin author:"
+msgstr "[es_ES translation] Upgrade message from the plugin author:"
+
+#. Original: Install
+msgid "Install"
+msgstr "[es_ES translation] Install"
+
+#. Original: Update
+msgid "Update"
+msgstr "[es_ES translation] Update"
+
+#. Original: Activate
+msgid "Activate"
+msgstr "[es_ES translation] Activate"
+
+#. Original: No plugins were selected to be installed. No action taken.
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "[es_ES translation] No plugins were selected to be installed. No action taken."
+
+#. Original: No plugins were selected to be updated. No action taken.
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "[es_ES translation] No plugins were selected to be updated. No action taken."
+
+#. Original: No plugins are available to be installed at this time.
+msgid "No plugins are available to be installed at this time."
+msgstr "[es_ES translation] No plugins are available to be installed at this time."
+
+#. Original: No plugins are available to be updated at this time.
+msgid "No plugins are available to be updated at this time."
+msgstr "[es_ES translation] No plugins are available to be updated at this time."
+
+#. Original: No plugins were selected to be activated. No action taken.
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "[es_ES translation] No plugins were selected to be activated. No action taken."
+
+#. Original: No plugins are available to be activated at this time.
+msgid "No plugins are available to be activated at this time."
+msgstr "[es_ES translation] No plugins are available to be activated at this time."
+
+#. Original: Plugin activation failed.
+msgid "Plugin activation failed."
+msgstr "[es_ES translation] Plugin activation failed."
+
+#. Original: Updating Plugin %1$s (%2$d/%3$d)
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "[es_ES translation] Updating Plugin %1$s (%2$d/%3$d)"
+
+#. Original: An error occurred while installing %1$s: <strong>%2$s</strong>.
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "[es_ES translation] An error occurred while installing %1$s: <strong>%2$s</strong>."
+
+#. Original: The installation of %1$s failed.
+msgid "The installation of %1$s failed."
+msgstr "[es_ES translation] The installation of %1$s failed."
+
+#. Original: %1$s installed and activated successfully.
+msgid "%1$s installed and activated successfully."
+msgstr "[es_ES translation] %1$s installed and activated successfully."
+
+#. Original: All installations and activations have been completed.
+msgid "All installations and activations have been completed."
+msgstr "[es_ES translation] All installations and activations have been completed."
+
+#. Original: Installing and Activating Plugin %1$s (%2$d/%3$d)
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "[es_ES translation] Installing and Activating Plugin %1$s (%2$d/%3$d)"
+
+#. Original: %1$s installed successfully.
+msgid "%1$s installed successfully."
+msgstr "[es_ES translation] %1$s installed successfully."
+
+#. Original: All installations have been completed.
+msgid "All installations have been completed."
+msgstr "[es_ES translation] All installations have been completed."
+
+#. Original: Installing Plugin %1$s (%2$d/%3$d)
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "[es_ES translation] Installing Plugin %1$s (%2$d/%3$d)"
+
+#. Original: %s says:
+msgid "%s says:"
+msgstr "[es_ES translation] %s says:"
+
+#. Original: Your comment is awaiting moderation.
+msgid "Your comment is awaiting moderation."
+msgstr "[es_ES translation] Your comment is awaiting moderation."
+
+#. Original: %1$s at %2$s
+msgid "%1$s at %2$s"
+msgstr "[es_ES translation] %1$s at %2$s"
+
+#. Original: (Edit)
+msgid "(Edit)"
+msgstr "[es_ES translation] (Edit)"
+
+#. Original: Main Color
+msgid "Main Color"
+msgstr "[es_ES translation] Main Color"
+
+#. Original: Second Color
+msgid "Second Color"
+msgstr "[es_ES translation] Second Color"
+
+#. Original: Stars Color
+msgid "Stars Color"
+msgstr "[es_ES translation] Stars Color"
+
+#. Original: Enable Dark Mode
+msgid "Enable Dark Mode"
+msgstr "[es_ES translation] Enable Dark Mode"
+
+#. Original: Enable a homepage archive section
+msgid "Enable a homepage archive section"
+msgstr "[es_ES translation] Enable a homepage archive section"
+
+#. Original: Header
+msgid "Header"
+msgstr "[es_ES translation] Header"
+
+#. Original: Choose a header style
+msgid "Choose a header style"
+msgstr "[es_ES translation] Choose a header style"
+
+#. Original: #1 Style
+msgid "#1 Style"
+msgstr "[es_ES translation] #1 Style"
+
+#. Original: #2 Style
+msgid "#2 Style"
+msgstr "[es_ES translation] #2 Style"
+
+#. Original: Enable Top Bar for #1 Style
+msgid "Enable Top Bar for #1 Style"
+msgstr "[es_ES translation] Enable Top Bar for #1 Style"
+
+#. Original: Disable the floating header
+msgid "Disable the floating header"
+msgstr "[es_ES translation] Disable the floating header"
+
+#. Original: Header background color
+msgid "Header background color"
+msgstr "[es_ES translation] Header background color"
+
+#. Original: Top bar background color
+msgid "Top bar background color"
+msgstr "[es_ES translation] Top bar background color"
+
+#. Original: Top bar text/link color
+msgid "Top bar text/link color"
+msgstr "[es_ES translation] Top bar text/link color"
+
+#. Original: Top bar link hover color
+msgid "Top bar link hover color"
+msgstr "[es_ES translation] Top bar link hover color"
+
+#. Original: Text logo color
+msgid "Text logo color"
+msgstr "[es_ES translation] Text logo color"
+
+#. Original: Text slogan color
+msgid "Text slogan color"
+msgstr "[es_ES translation] Text slogan color"
+
+#. Original: Main menu link color
+msgid "Main menu link color"
+msgstr "[es_ES translation] Main menu link color"
+
+#. Original: Main menu link hover color
+msgid "Main menu link hover color"
+msgstr "[es_ES translation] Main menu link hover color"
+
+#. Original: Submenu background color
+msgid "Submenu background color"
+msgstr "[es_ES translation] Submenu background color"
+
+#. Original: Submenu link color
+msgid "Submenu link color"
+msgstr "[es_ES translation] Submenu link color"
+
+#. Original: Submenu link hover color
+msgid "Submenu link hover color"
+msgstr "[es_ES translation] Submenu link hover color"
+
+#. Original: H1 title color
+msgid "H1 title color"
+msgstr "[es_ES translation] H1 title color"
+
+#. Original: Title box background color
+msgid "Title box background color"
+msgstr "[es_ES translation] Title box background color"
+
+#. Original: Title box text color
+msgid "Title box text color"
+msgstr "[es_ES translation] Title box text color"
+
+#. Original: Footer Copyright
+msgid "Footer Copyright"
+msgstr "[es_ES translation] Footer Copyright"
+
+#. Original: Add your copyright to the footer.
+msgid "Add your copyright to the footer."
+msgstr "[es_ES translation] Add your copyright to the footer."
+
+#. Original: Background image for the footer
+msgid "Background image for the footer"
+msgstr "[es_ES translation] Background image for the footer"
+
+#. Original: Recommended background image size 2000 x 500 px.
+msgid "Recommended background image size 2000 x 500 px."
+msgstr "[es_ES translation] Recommended background image size 2000 x 500 px."
+
+#. Original: Background image for the Mobile Menu
+msgid "Background image for the Mobile Menu"
+msgstr "[es_ES translation] Background image for the Mobile Menu"
+
+#. Original: Minimal background image size 640 x 1200 px.
+msgid "Minimal background image size 640 x 1200 px."
+msgstr "[es_ES translation] Minimal background image size 640 x 1200 px."
+
+#. Original: ACES
+msgid "ACES"
+msgstr "[es_ES translation] ACES"
+
+#. Original: Button colors
+msgid "Button colors"
+msgstr "[es_ES translation] Button colors"
+
+#. Original: Color of the title of the \
+msgid "Color of the title of the \"
+msgstr "[es_ES translation] Color of the title of the \"
+
+#. Original: Color of the background of the \
+msgid "Color of the background of the \"
+msgstr "[es_ES translation] Color of the background of the \"
+
+#. Original: Color of the title of the \
+msgid "Color of the title of the \"
+msgstr "[es_ES translation] Color of the title of the \"
+
+#. Original: Color of the background of the \
+msgid "Color of the background of the \"
+msgstr "[es_ES translation] Color of the background of the \"
+
+#. Original: CPT settings
+msgid "CPT settings"
+msgstr "[es_ES translation] CPT settings"
+
+#. Original: Enable old Pros/Cons for Organizations (Casinos)
+msgid "Enable old Pros/Cons for Organizations (Casinos)"
+msgstr "[es_ES translation] Enable old Pros/Cons for Organizations (Casinos)"
+
+#. Original: Enable old Pros/Cons for Units (Games)
+msgid "Enable old Pros/Cons for Units (Games)"
+msgstr "[es_ES translation] Enable old Pros/Cons for Units (Games)"
+
+#. Original: Archive settings
+msgid "Archive settings"
+msgstr "[es_ES translation] Archive settings"
+
+#. Original: #3 Style
+msgid "#3 Style"
+msgstr "[es_ES translation] #3 Style"
+
+#. Original: #4 Style
+msgid "#4 Style"
+msgstr "[es_ES translation] #4 Style"
+
+#. Original: #5 Style
+msgid "#5 Style"
+msgstr "[es_ES translation] #5 Style"
+
+#. Original: #6 Style
+msgid "#6 Style"
+msgstr "[es_ES translation] #6 Style"
+
+#. Original: #7 Style
+msgid "#7 Style"
+msgstr "[es_ES translation] #7 Style"
+
+#. Original: #8 Style
+msgid "#8 Style"
+msgstr "[es_ES translation] #8 Style"
+
+#. Original: #9 Style
+msgid "#9 Style"
+msgstr "[es_ES translation] #9 Style"
+
+#. Original: The layout style of unit (game) listing pages (archive and taxonomy)
+msgid "The layout style of unit (game) listing pages (archive and taxonomy)"
+msgstr "[es_ES translation] The layout style of unit (game) listing pages (archive and taxonomy)"
+
+#. Original: The layout style of offer (bonus) listing pages (archive and taxonomy)
+msgid "The layout style of offer (bonus) listing pages (archive and taxonomy)"
+msgstr "[es_ES translation] The layout style of offer (bonus) listing pages (archive and taxonomy)"
+
+#. Original: Enable category navigation for Organizations (Casinos)
+msgid "Enable category navigation for Organizations (Casinos)"
+msgstr "[es_ES translation] Enable category navigation for Organizations (Casinos)"
+
+#. Original: \
+msgid "\"
+msgstr "[es_ES translation] \"
+
+#. Original: Please select the page with a list of all items
+msgid "Please select the page with a list of all items"
+msgstr "[es_ES translation] Please select the page with a list of all items"
+
+#. Original: Enable category navigation for Units (Games)
+msgid "Enable category navigation for Units (Games)"
+msgstr "[es_ES translation] Enable category navigation for Units (Games)"
+
+#. Original: \
+msgid "\"
+msgstr "[es_ES translation] \"
+
+#. Original: Enable category navigation for Offers (Bonuses)
+msgid "Enable category navigation for Offers (Bonuses)"
+msgstr "[es_ES translation] Enable category navigation for Offers (Bonuses)"
+
+#. Original: \
+msgid "\"
+msgstr "[es_ES translation] \"
+
+#. Original: Other Settings
+msgid "Other Settings"
+msgstr "[es_ES translation] Other Settings"
+
+#. Original: Enable boxed layout
+msgid "Enable boxed layout"
+msgstr "[es_ES translation] Enable boxed layout"
+
+#. Original: Enable related posts
+msgid "Enable related posts"
+msgstr "[es_ES translation] Enable related posts"
+
+#. Original: Enable the sticky sidebar
+msgid "Enable the sticky sidebar"
+msgstr "[es_ES translation] Enable the sticky sidebar"
+
+#. Original: Enable the \
+msgid "Enable the \"
+msgstr "[es_ES translation] Enable the \"
+
+#. Original: Enable the post views counter
+msgid "Enable the post views counter"
+msgstr "[es_ES translation] Enable the post views counter"
+
+#. Original: Disable date display in posts
+msgid "Disable date display in posts"
+msgstr "[es_ES translation] Disable date display in posts"
+
+#. Original: Disable an author info block
+msgid "Disable an author info block"
+msgstr "[es_ES translation] Disable an author info block"
+
+#. Original: Enable an organization (casino) float bottom bar
+msgid "Enable an organization (casino) float bottom bar"
+msgstr "[es_ES translation] Enable an organization (casino) float bottom bar"
+
+#. Original: Main Menu Labels Settings
+msgid "Main Menu Labels Settings"
+msgstr "[es_ES translation] Main Menu Labels Settings"
+
+#. Original: Title of the \
+msgid "Title of the \"
+msgstr "[es_ES translation] Title of the \"
+
+#. Original: To add to the menu, continue to use the \
+msgid "To add to the menu, continue to use the \"
+msgstr "[es_ES translation] To add to the menu, continue to use the \"
+
+#. Original: Color of the title of the \
+msgid "Color of the title of the \"
+msgstr "[es_ES translation] Color of the title of the \"
+
+#. Original: Color of the background of the \
+msgid "Color of the background of the \"
+msgstr "[es_ES translation] Color of the background of the \"
+
+#. Original: Title of the \
+msgid "Title of the \"
+msgstr "[es_ES translation] Title of the \"
+
+#. Original: To add to the menu, continue to use the \
+msgid "To add to the menu, continue to use the \"
+msgstr "[es_ES translation] To add to the menu, continue to use the \"
+
+#. Original: Color of the title of the \
+msgid "Color of the title of the \"
+msgstr "[es_ES translation] Color of the title of the \"
+
+#. Original: Color of the background of the \
+msgid "Color of the background of the \"
+msgstr "[es_ES translation] Color of the background of the \"
+
+#. Original: Title of the \
+msgid "Title of the \"
+msgstr "[es_ES translation] Title of the \"
+
+#. Original: To add to the menu, continue to use the \
+msgid "To add to the menu, continue to use the \"
+msgstr "[es_ES translation] To add to the menu, continue to use the \"
+
+#. Original: Color of the title of the \
+msgid "Color of the title of the \"
+msgstr "[es_ES translation] Color of the title of the \"
+
+#. Original: Color of the background of the \
+msgid "Color of the background of the \"
+msgstr "[es_ES translation] Color of the background of the \"
+
+#. Original: Title of the \
+msgid "Title of the \"
+msgstr "[es_ES translation] Title of the \"
+
+#. Original: To add to the menu, continue to use the \
+msgid "To add to the menu, continue to use the \"
+msgstr "[es_ES translation] To add to the menu, continue to use the \"
+
+#. Original: Color of the title of the \
+msgid "Color of the title of the \"
+msgstr "[es_ES translation] Color of the title of the \"
+
+#. Original: Color of the background of the \
+msgid "Color of the background of the \"
+msgstr "[es_ES translation] Color of the background of the \"
+
+#. Original: Social Icons
+msgid "Social Icons"
+msgstr "[es_ES translation] Social Icons"
+
+#. Original: Facebook
+msgid "Facebook"
+msgstr "[es_ES translation] Facebook"
+
+#. Original: https://www.facebook.com/
+msgid "https://www.facebook.com/"
+msgstr "[es_ES translation] https://www.facebook.com/"
+
+#. Original: Twitter
+msgid "Twitter"
+msgstr "[es_ES translation] Twitter"
+
+#. Original: https://twitter.com/
+msgid "https://twitter.com/"
+msgstr "[es_ES translation] https://twitter.com/"
+
+#. Original: YouTube
+msgid "YouTube"
+msgstr "[es_ES translation] YouTube"
+
+#. Original: https://www.youtube.com/
+msgid "https://www.youtube.com/"
+msgstr "[es_ES translation] https://www.youtube.com/"
+
+#. Original: Instagram
+msgid "Instagram"
+msgstr "[es_ES translation] Instagram"
+
+#. Original: LinkedIn
+msgid "LinkedIn"
+msgstr "[es_ES translation] LinkedIn"
+
+#. Original: Reddit
+msgid "Reddit"
+msgstr "[es_ES translation] Reddit"
+
+#. Original: Other Link
+msgid "Other Link"
+msgstr "[es_ES translation] Other Link"
+
+#. Original: mercury Main Color
+msgid "mercury Main Color"
+msgstr "[es_ES translation] mercury Main Color"
+
+#. Original: mercury Second Color
+msgid "mercury Second Color"
+msgstr "[es_ES translation] mercury Second Color"
+
+#. Original: mercury White
+msgid "mercury White"
+msgstr "[es_ES translation] mercury White"
+
+#. Original: mercury Gray
+msgid "mercury Gray"
+msgstr "[es_ES translation] mercury Gray"
+
+#. Original: mercury Emerald
+msgid "mercury Emerald"
+msgstr "[es_ES translation] mercury Emerald"
+
+#. Original: mercury Alizarin
+msgid "mercury Alizarin"
+msgstr "[es_ES translation] mercury Alizarin"
+
+#. Original: mercury Wisteria
+msgid "mercury Wisteria"
+msgstr "[es_ES translation] mercury Wisteria"
+
+#. Original: mercury Peter River
+msgid "mercury Peter River"
+msgstr "[es_ES translation] mercury Peter River"
+
+#. Original: mercury Clouds
+msgid "mercury Clouds"
+msgstr "[es_ES translation] mercury Clouds"
+
+#. Original: Thank you for using the Mercury theme!
+msgid "Thank you for using the Mercury theme!"
+msgstr "[es_ES translation] Thank you for using the Mercury theme!"
+
+#. Original: https://themeforest.net/downloads
+msgid "https://themeforest.net/downloads"
+msgstr "[es_ES translation] https://themeforest.net/downloads"
+
+#. Original: themeforest.net/downloads
+msgid "themeforest.net/downloads"
+msgstr "[es_ES translation] themeforest.net/downloads"
+
+#. Original: All Mercury theme settings are in
+msgid "All Mercury theme settings are in"
+msgstr "[es_ES translation] All Mercury theme settings are in"
+
+#. Original: Customize
+msgid "Customize"
+msgstr "[es_ES translation] Customize"
+
+#. Original: https://mercurytheme.com/documentation/
+msgid "https://mercurytheme.com/documentation/"
+msgstr "[es_ES translation] https://mercurytheme.com/documentation/"
+
+#. Original: Online Documentation
+msgid "Online Documentation"
+msgstr "[es_ES translation] Online Documentation"
+
+#. Original: https://spacethemes.ticksy.com/
+msgid "https://spacethemes.ticksy.com/"
+msgstr "[es_ES translation] https://spacethemes.ticksy.com/"
+
+#. Original: Need support?
+msgid "Need support?"
+msgstr "[es_ES translation] Need support?"
+
+#. Original: One Click Demo Import
+msgid "One Click Demo Import"
+msgstr "[es_ES translation] One Click Demo Import"
+
+#. Original: Mercury Addons
+msgid "Mercury Addons"
+msgstr "[es_ES translation] Mercury Addons"
+
+#. Original: Slots Launch
+msgid "Slots Launch"
+msgstr "[es_ES translation] Slots Launch"
+
+#. Original: Mercury Casino 1
+msgid "Mercury Casino 1"
+msgstr "[es_ES translation] Mercury Casino 1"
+
+#. Original: Mercury Casino 2
+msgid "Mercury Casino 2"
+msgstr "[es_ES translation] Mercury Casino 2"
+
+#. Original: Mercury Casino 3
+msgid "Mercury Casino 3"
+msgstr "[es_ES translation] Mercury Casino 3"
+
+#. Original: Mercury Betting 1
+msgid "Mercury Betting 1"
+msgstr "[es_ES translation] Mercury Betting 1"
+
+#. Original: Mercury Casino 4
+msgid "Mercury Casino 4"
+msgstr "[es_ES translation] Mercury Casino 4"
+
+#. Original: Mercury Betting 2
+msgid "Mercury Betting 2"
+msgstr "[es_ES translation] Mercury Betting 2"
+
+#. Original: Mercury Slots 1
+msgid "Mercury Slots 1"
+msgstr "[es_ES translation] Mercury Slots 1"
+
+#. Original: Mercury Poker 1
+msgid "Mercury Poker 1"
+msgstr "[es_ES translation] Mercury Poker 1"
+
+#. Original: Mercury Betting 3
+msgid "Mercury Betting 3"
+msgstr "[es_ES translation] Mercury Betting 3"
+
+#. Original: Mercury Magazine 1
+msgid "Mercury Magazine 1"
+msgstr "[es_ES translation] Mercury Magazine 1"
+
+#. Original: Mercury Crypto 1
+msgid "Mercury Crypto 1"
+msgstr "[es_ES translation] Mercury Crypto 1"
+
+#. Original: Mercury VPN/Hosting 1
+msgid "Mercury VPN/Hosting 1"
+msgstr "[es_ES translation] Mercury VPN/Hosting 1"
+
+#. Original: Mercury Dating 1
+msgid "Mercury Dating 1"
+msgstr "[es_ES translation] Mercury Dating 1"
+
+#. Original: Slots Launch Demo
+msgid "Slots Launch Demo"
+msgstr "[es_ES translation] Slots Launch Demo"
+
+#. Original: Mercury Slots 2
+msgid "Mercury Slots 2"
+msgstr "[es_ES translation] Mercury Slots 2"
+
+#. Original: Read more
+msgid "Read more"
+msgstr "Leer más"
+
+#. Original: Affiliate WordPress Theme
+msgid "Affiliate WordPress Theme"
+msgstr "[es_ES translation] Affiliate WordPress Theme"
+
+#. Original: Read More
+msgid "Read More"
+msgstr "[es_ES translation] Read More"
+
+#. Original: Sorry, no other posts related this article.
+msgid "Sorry, no other posts related this article."
+msgstr "[es_ES translation] Sorry, no other posts related this article."

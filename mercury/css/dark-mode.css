@@ -1,0 +1,258 @@
+body {
+    background-color: #121315;
+    color: #c3c7c8;
+}
+
+::-webkit-input-placeholder {
+  color: #7f8c8d;
+}
+:-ms-input-placeholder {
+  color: #7f8c8d;
+}
+::-moz-placeholder {
+  color: #7f8c8d;
+}
+:-moz-placeholder {
+  color: #7f8c8d;
+}
+.space-box,
+hr.wp-block-separator,
+.space-footer .space-organizations-4-archive-item-ins,
+.space-organization-content-rating-overall .star-rating {
+    background-color: #121315;
+}
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #fff;
+}
+input[type="text"],
+input[type="tel"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+textarea,
+select {
+    color: #c3c7c8;
+    background-color: #292e32;
+    border-bottom: 1px solid #121315;
+}
+.space-page-content,
+.space-widget {
+    color: #c3c7c8;
+}
+.space-footer-top,
+.space-comments-ins,
+.small .space-news-11-item-image,
+.big .space-news-11-item-image,
+.space-news-10-item-image {
+    background-color: #202427;
+}
+.space-block-title,
+blockquote, blockquote.wp-block-quote {
+    color: #fff;
+}
+.space-companies-archive-item-ins {
+    background-color: #202427;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+}
+.space-companies-archive-item-ins:hover {
+    box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.55);
+}
+.space-shortcode-wrap .space-companies-archive-item-title a,
+.space-shortcode-wrap .space-companies-2-archive-item-title a,
+.space-shortcode-wrap .space-companies-sidebar-item-title a {
+    color: #fff !important;
+}
+.space-companies-2-archive-item img,
+.space-companies-sidebar-item img,
+.space-organizations-3-logo-box img {
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+}
+.space-page-content-box-wrap,
+.space-shortcode-3 .space-companies-sidebar-item-ins-wrap,
+.space-shortcode-7 .space-units-sidebar-item-ins-wrap,
+.space-news-6-item-ins ul li,
+.space-organization-content-excerpt {
+    border-bottom: 1px solid #202427;
+}
+.space-widget ul li,
+.space-header-search-block input[type="search"] {
+    border-bottom: 1px solid #121315;
+}
+.space-organization-content-rating-items,
+.space-organization-style-2-ratings-block,
+.space-unit-content-button {
+    border-top: 1px solid #121315;
+}
+.space-pros-ins,
+.space-cons-ins {
+    border: 1px solid #202427;
+}
+.space-organization-details .space-organization-details-item {
+    border-top: 1px solid #202427;
+}
+.space-organizations-3-archive-item-ins,
+.space-organizations-5-archive-item-img-wrap,
+.space-organizations-6-archive-item-img-wrap,
+.space-units-archive-item-ins,
+.space-offers-archive-item.space-dark-style .space-offers-archive-item-ins {
+    background-color: #202427;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+}
+.space-offers-archive-item-ins,
+.space-organizations-3-archive-item-ins.space-9,
+.space-header-menu ul.main-menu li ul.sub-menu {
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+}
+.space-organizations-3-archive-item-ins:hover,
+.space-units-archive-item-ins:hover,
+.space-offers-archive-item-ins:hover,
+.space-organizations-3-archive-item-ins.space-9:hover {
+    box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.55);
+}
+.space-organizations-3-archive-item-button-ins a,
+.space-organization-content-button a,
+.space-unit-content-button a {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+}
+.space-organizations-3-archive-item-logo-ins:after,
+.space-organizations-3-archive-item-terms-ins:after,
+.space-organizations-3-archive-item-rating-ins:after,
+.space-organizations-3-archive-item-provider-ins:after,
+.space-organization-header-logo-rating,
+.space-organization-style-2-ratings-all-item-value,
+.space-comments-list-item-ins {
+    background-color: #121315;
+}
+.space-title-box-h1 h1,
+.space-page-content-meta-author a,
+.space-organizations-3-archive-item-terms-ins strong,
+.space-organizations-7-archive-item-terms strong,
+.space-organizations-3-archive-item-rating-box span,
+.space-organizations-7-archive-item-rating strong,
+.space-organizations-8-archive-item-terms strong,
+ul.wp-block-latest-posts li a,
+.space-organization-content-info strong,
+.space-organization-content-rating-item label,
+.space-organization-content-rating-overall label,
+.space-organization-header-logo-rating,
+.space-organization-style-2-calltoaction-text-ins strong,
+.space-organization-style-2-rating-overall-ins,
+.space-organization-style-2-ratings-all-item-value,
+.space-units-archive-item-title a,
+.space-companies-archive-item-title a,
+.space-archive-title-box-h1 h1,
+.space-companies-2-archive-item-title a,
+.space-organizations-4-archive-item-title a,
+.space-comments-list-item-author {
+    color: #fff;
+}
+.space-organizations-3-archive-item-rating-box {
+    border: 1px solid #121315;
+}
+.space-organizations-3-archive-item-terms-ins span,
+.space-organizations-archive-item-detailed-tc,
+.space-organizations-4-archive-item .space-organizations-archive-item-button-notice,
+.space-organizations-7-archive-item-terms span,
+.space-organizations-8-archive-item-terms span,
+.space-archive-loop-item-meta span.read-more a,
+.space-organization-content-info span,
+.space-organization-style-2-calltoaction-text-ins span,
+.space-vendors span,
+.space-unit-content-short-desc,
+.space-header-search-block input[type="search"] {
+    color: #7f8c8d;
+}
+.space-organizations-3-title-box a,
+.space-shortcode-wrap .space-organizations-4-archive-item-title a,
+.space-organizations-7-archive-item-logo-title a,
+.space-organizations-8-archive-item-brand-name-link a,
+.space-shortcode-wrap .space-units-archive-item-title a,
+.space-shortcode-wrap .space-units-sidebar-item-title a,
+.space-news-1-item-title a,
+.space-news-2-small-item-title a,
+.space-news-3-item-title a,
+.space-news-4-item.small-news-block .space-news-4-item-title a,
+.space-archive-loop-item-title a,
+.space-news-6-item-ins ul li a,
+.space-news-9-item-title-box a,
+.space-news-10-item-title a,
+.small .space-news-11-item-title a,
+.space-organization-details-item-links a,
+.space-organization-details-item-links span,
+.space-vendors-item.name,
+.space-organizations-7-archive-item-button-one a:hover,
+.space-organizations-8-archive-item-button-one a:hover,
+.space-organizations-3-archive-item.units-provider .space-organizations-3-title-box a,
+.space-comments-list-item-author a {
+    color: #fff !important;
+}
+.space-header-search-block,
+.space-title-box,
+.space-archive-title-box,
+.space-organizations-4-archive-item-ins,
+.space-organizations-7-archive-item .space-organizations-7-archive-item-left,
+.space-organizations-8-archive-item-right,
+.space-organizations-8-archive-item-stars-rating,
+.space-units-2-archive-item-img-wrap,
+.space-units-3-archive-item-img-wrap,
+.space-offers-archive-item.space-dark-style .space-offers-archive-item-code-title span,
+.space-posts-shortcode-4 .space-news-4-item.small-news-block .space-news-4-item-title-box,
+.space-news-9-item-background,
+ul.wp-block-latest-posts,
+.space-organization-content-button-block,
+.space-organization-details-item-links a,
+.space-organization-details-item-links span,
+.space-organization-content-rating,
+.space-organization-content-rating-logo,
+.space-style-2-organization-header,
+.space-organization-details-item-title span,
+.space-organization-style-2-calltoaction-rating,
+ol.wp-block-latest-comments {
+    background-color: #202427;
+}
+.space-organizations-4-archive-item-ins:hover {
+    box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.4);
+}
+.space-organizations-3-archive-item-button-ins a:last-child:hover,
+.space-organizations-4-archive-item-button-one-ins a:hover {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.55) !important;
+}
+.space-organizations-7-archive-item-bg,
+.space-organizations-8-archive-item-bg {
+    background-color: #2d3337;
+}
+span.aces-card {
+    background-color: #202427;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+}
+.space-pros-ins:before {
+    color: #121315;
+    background-color: #256009;
+}
+.space-cons-ins:before {
+    color: #121315;
+    background-color: #6f0d1d;
+}
+.space-aces-single-offer-info-title h1 {
+    color: #151515;
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .space-organizations-8-archive-item-central {
+        background-color: #202427;
+        box-shadow: 0px -4px 20px 0px rgba(0,0,0, 0.65) !important;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 480px) {
+    .space-organizations-8-archive-item-central {
+        background-color: #202427;
+        box-shadow: 0px -4px 20px 0px rgba(0,0,0, 0.65) !important;
+    }
+}
+@media screen and (max-width: 479px) {
+    .space-organizations-8-archive-item-central {
+        background-color: #202427;
+        box-shadow: 0px -4px 20px 0px rgba(0,0,0, 0.65) !important;
+    }
+}

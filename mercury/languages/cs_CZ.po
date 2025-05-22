@@ -1,0 +1,1432 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Slothbet\n"
+"Language: de-at\n"
+
+#: 404.php:8
+msgid "Error 404"
+msgstr "Chyba 404"
+
+#: 404.php:28
+msgid "Page not Found"
+msgstr "Stránka nenalezena"
+
+#: 404.php:29
+msgid "Nothing found."
+msgstr "Nic nenalezeno."
+
+#: 404.php:29
+msgid "Go back to home page"
+msgstr "Přejít zpět na domovskou stránku"
+
+#: aces/bonus-item-style-1.php:38 aces/bonus-item-style-2.php:37
+#: aces/related/bonus-item-style-1.php:38 aces/single-bonus/style-1.php:51
+msgid "Get Bonus"
+msgstr "Získejte bonus"
+
+#: aces/bonus-item-style-1.php:45 aces/bonus-item-style-2.php:44
+#: aces/casino-item-style-1.php:51 aces/casino-item-style-2.php:51
+#: aces/casino-item-style-4.php:52 aces/casino-item-style-5.php:41
+#: aces/casino-item-style-7.php:53 aces/casino-item-style-8.php:53
+#: aces/casino-item-style-9.php:52 aces/game-item-style-1.php:49
+#: aces/game-item-style-2.php:66 aces/game-item-style-3.php:50
+#: aces/related/bonus-item-style-1.php:45
+#: aces/related/game-item-style-1.php:49 aces/single-bonus/style-1.php:58
+#: aces/single-casino/style-1-without-sidebar.php:63
+#: aces/single-casino/style-1.php:63
+#: aces/single-casino/style-2-without-sidebar.php:63
+#: aces/single-casino/style-2.php:63
+#: aces/single-casino/style-3-without-sidebar.php:63
+#: aces/single-casino/style-3.php:63
+#: aces/single-game/style-1-without-sidebar.php:48
+#: aces/single-game/style-1.php:48
+#: aces/single-game/style-2-without-sidebar.php:55
+#: aces/single-game/style-2.php:55
+#: aces/single-game/style-3-without-sidebar.php:55
+#: aces/single-game/style-3.php:55
+msgid "T&Cs Apply"
+msgstr "Platí T&C"
+
+#: aces/bonus-item-style-1.php:82 aces/related/bonus-item-style-1.php:82
+#: aces/single-bonus/style-1.php:114
+msgid "Bonus Code"
+msgstr "Bonusový kód"
+
+#: aces/bonus-item-style-1.php:88 aces/related/bonus-item-style-1.php:88
+#: aces/single-bonus/style-1.php:121
+msgid "Valid Until:"
+msgstr "Platí do:"
+
+#: aces/casino-item-style-1.php:38 aces/casino-item-style-2.php:38
+#: aces/casino-item-style-4.php:39 aces/casino-item-style-5.php:50
+#: aces/casino-item-style-6.php:41 aces/casino-item-style-7.php:46
+#: aces/casino-item-style-8.php:46 aces/casino-item-style-9.php:39
+#: aces/game-item-style-1.php:36 aces/game-item-style-2.php:37
+#: aces/game-item-style-3.php:37 aces/related/game-item-style-1.php:36
+#: aces/single-casino/style-1-without-sidebar.php:56
+#: aces/single-casino/style-1.php:56
+#: aces/single-casino/style-2-without-sidebar.php:56
+#: aces/single-casino/style-2.php:56
+#: aces/single-casino/style-3-without-sidebar.php:56
+#: aces/single-casino/style-3.php:56
+#: aces/single-game/style-1-without-sidebar.php:41
+#: aces/single-game/style-1.php:41
+#: aces/single-game/style-2-without-sidebar.php:42
+#: aces/single-game/style-2.php:42
+#: aces/single-game/style-3-without-sidebar.php:42
+#: aces/single-game/style-3.php:42
+msgid "Play Now"
+msgstr "Hrát hned"
+
+#: aces/casino-item-style-4.php:61 aces/casino-item-style-5.php:60
+#: aces/casino-item-style-6.php:51 aces/casino-item-style-7.php:62
+#: aces/casino-item-style-8.php:62 aces/casino-item-style-9.php:61
+#: aces/game-item-style-2.php:53
+msgid "Read Review"
+msgstr "Přečtěte si recenzi"
+
+#: aces/casino-item-style-4.php:120 aces/casino-item-style-9.php:127
+msgid "game"
+msgstr "hra"
+
+#: aces/casino-item-style-4.php:120 aces/casino-item-style-9.php:127
+msgid "games"
+msgstr "hry"
+
+#: aces/game-item-style-3.php:76
+msgid "Software Provider"
+msgstr "Poskytovatel softwaru"
+
+#: aces/single-bonus/style-1.php:200
+#: aces/single-casino/style-1-without-sidebar.php:346
+#: aces/single-casino/style-1.php:346
+#: aces/single-casino/style-2-without-sidebar.php:323
+#: aces/single-casino/style-2.php:323
+#: aces/single-casino/style-3-without-sidebar.php:359
+#: aces/single-casino/style-3.php:359
+#: aces/single-game/style-1-without-sidebar.php:243
+#: aces/single-game/style-1.php:242
+#: aces/single-game/style-2-without-sidebar.php:286
+#: aces/single-game/style-2.php:286
+#: aces/single-game/style-3-without-sidebar.php:324
+#: aces/single-game/style-3.php:324 page-blank-template.php:34
+#: page-blog.php:101 page-bonus-archive-style-1.php:139
+#: page-bonus-archive-style-2.php:139 page-casino-archive-style-1.php:139
+#: page-casino-archive-style-2.php:139 page-casino-archive-style-3.php:139
+#: page-casino-archive-style-4.php:142 page-casino-archive-style-5.php:139
+#: page-casino-archive-style-6.php:139 page-casino-archive-style-7.php:142
+#: page-casino-archive-style-8.php:142 page-full-width.php:43
+#: page-game-archive-style-1.php:139 page-game-archive-style-2.php:139
+#: page-game-archive-style-3.php:139 page-no-sidebar.php:42
+#: page-without-title.php:24 page.php:38
+#: theme-parts/single-empty-sidebar.php:15 theme-parts/single-empty.php:15
+#: theme-parts/single/style-1.php:55 theme-parts/single/style-2.php:55
+#: theme-parts/single/style-3.php:58 theme-parts/single/style-4.php:58
+#: theme-parts/slotslaunch/style-1.php:46
+msgid "Pages:"
+msgstr "Stránky:"
+
+#: aces/single-bonus/style-1.php:259
+#: aces/single-game/style-1-without-sidebar.php:316
+#: aces/single-game/style-1.php:315
+#: aces/single-game/style-2-without-sidebar.php:346
+#: aces/single-game/style-2.php:346
+#: aces/single-game/style-3-without-sidebar.php:384
+#: aces/single-game/style-3.php:384
+msgid "More "
+msgstr "Více "
+
+#: aces/single-bonus/style-1.php:263
+#: aces/single-casino/style-1-without-sidebar.php:979
+#: aces/single-casino/style-1.php:979
+#: aces/single-casino/style-2-without-sidebar.php:933
+#: aces/single-casino/style-2.php:933
+#: aces/single-casino/style-3-without-sidebar.php:969
+#: aces/single-casino/style-3.php:969 archive-bonus.php:10
+msgid "Bonuses"
+msgstr "Bonusy"
+
+#: aces/single-casino/style-1-without-sidebar.php:305
+#: aces/single-casino/style-1.php:305
+#: aces/single-casino/style-2-without-sidebar.php:282
+#: aces/single-casino/style-2.php:282
+#: aces/single-casino/style-3-without-sidebar.php:318
+#: aces/single-casino/style-3.php:318
+#: aces/single-game/style-1-without-sidebar.php:201
+#: aces/single-game/style-1.php:200
+#: aces/single-game/style-2-without-sidebar.php:245
+#: aces/single-game/style-2.php:245
+#: aces/single-game/style-3-without-sidebar.php:283
+#: aces/single-game/style-3.php:283
+msgid "Pros"
+msgstr "Pros"
+
+#: aces/single-casino/style-1-without-sidebar.php:323
+#: aces/single-casino/style-1.php:323
+#: aces/single-casino/style-2-without-sidebar.php:300
+#: aces/single-casino/style-2.php:300
+#: aces/single-casino/style-3-without-sidebar.php:336
+#: aces/single-casino/style-3.php:336
+#: aces/single-game/style-1-without-sidebar.php:219
+#: aces/single-game/style-1.php:218
+#: aces/single-game/style-2-without-sidebar.php:263
+#: aces/single-game/style-2.php:263
+#: aces/single-game/style-3-without-sidebar.php:301
+#: aces/single-game/style-3.php:301
+msgid "Cons"
+msgstr "Nevýhody"
+
+#: aces/single-casino/style-1-without-sidebar.php:365
+#: aces/single-casino/style-1.php:365
+#: aces/single-casino/style-2-without-sidebar.php:342
+#: aces/single-casino/style-2.php:342
+#: aces/single-casino/style-3-without-sidebar.php:378
+#: aces/single-casino/style-3.php:378
+msgid "Details"
+msgstr "Podrobnosti"
+
+#: aces/single-casino/style-1-without-sidebar.php:378
+#: aces/single-casino/style-1.php:378
+#: aces/single-casino/style-2-without-sidebar.php:354
+#: aces/single-casino/style-2.php:354
+#: aces/single-casino/style-3-without-sidebar.php:390
+#: aces/single-casino/style-3.php:390
+msgid "Software"
+msgstr "Software"
+
+#: aces/single-casino/style-1-without-sidebar.php:410
+#: aces/single-casino/style-1.php:410
+#: aces/single-casino/style-2-without-sidebar.php:384
+#: aces/single-casino/style-2.php:384
+#: aces/single-casino/style-3-without-sidebar.php:420
+#: aces/single-casino/style-3.php:420
+msgid "Deposit Methods"
+msgstr "Vkladové metody"
+
+#: aces/single-casino/style-1-without-sidebar.php:442
+#: aces/single-casino/style-1.php:442
+#: aces/single-casino/style-2-without-sidebar.php:414
+#: aces/single-casino/style-2.php:414
+#: aces/single-casino/style-3-without-sidebar.php:450
+#: aces/single-casino/style-3.php:450
+msgid "Withdrawal Methods"
+msgstr "Způsoby odnětí"
+
+#: aces/single-casino/style-1-without-sidebar.php:474
+#: aces/single-casino/style-1.php:474
+#: aces/single-casino/style-2-without-sidebar.php:444
+#: aces/single-casino/style-2.php:444
+#: aces/single-casino/style-3-without-sidebar.php:480
+#: aces/single-casino/style-3.php:480
+msgid "Withdrawal Limits"
+msgstr "Limity výběru"
+
+#: aces/single-casino/style-1-without-sidebar.php:506
+#: aces/single-casino/style-1.php:506
+#: aces/single-casino/style-2-without-sidebar.php:474
+#: aces/single-casino/style-2.php:474
+#: aces/single-casino/style-3-without-sidebar.php:510
+#: aces/single-casino/style-3.php:510
+msgid "Restricted Countries"
+msgstr "Zakázané země"
+
+#: aces/single-casino/style-1-without-sidebar.php:538
+#: aces/single-casino/style-1.php:538
+#: aces/single-casino/style-2-without-sidebar.php:504
+#: aces/single-casino/style-2.php:504
+#: aces/single-casino/style-3-without-sidebar.php:540
+#: aces/single-casino/style-3.php:540
+msgid "Licences"
+msgstr "licence"
+
+#: aces/single-casino/style-1-without-sidebar.php:570
+#: aces/single-casino/style-1.php:570
+#: aces/single-casino/style-2-without-sidebar.php:534
+#: aces/single-casino/style-2.php:534
+#: aces/single-casino/style-3-without-sidebar.php:570
+#: aces/single-casino/style-3.php:570
+msgid "Languages"
+msgstr "Jazyky"
+
+#: aces/single-casino/style-1-without-sidebar.php:602
+#: aces/single-casino/style-1.php:602
+#: aces/single-casino/style-2-without-sidebar.php:564
+#: aces/single-casino/style-2.php:564
+#: aces/single-casino/style-3-without-sidebar.php:600
+#: aces/single-casino/style-3.php:600
+msgid "Currencies"
+msgstr "Měny"
+
+#: aces/single-casino/style-1-without-sidebar.php:634
+#: aces/single-casino/style-1.php:634
+#: aces/single-casino/style-2-without-sidebar.php:594
+#: aces/single-casino/style-2.php:594
+#: aces/single-casino/style-3-without-sidebar.php:630
+#: aces/single-casino/style-3.php:630
+msgid "Devices"
+msgstr "Zařízení"
+
+#: aces/single-casino/style-1-without-sidebar.php:666
+#: aces/single-casino/style-1.php:666
+#: aces/single-casino/style-2-without-sidebar.php:624
+#: aces/single-casino/style-2.php:624
+#: aces/single-casino/style-3-without-sidebar.php:660
+#: aces/single-casino/style-3.php:660
+msgid "Owner"
+msgstr "Majitel"
+
+#: aces/single-casino/style-1-without-sidebar.php:700
+#: aces/single-casino/style-1.php:700
+#: aces/single-casino/style-2-without-sidebar.php:656
+#: aces/single-casino/style-2.php:656
+#: aces/single-casino/style-3-without-sidebar.php:692
+#: aces/single-casino/style-3.php:692
+msgid "Established"
+msgstr "Založeno"
+
+#: aces/single-casino/style-1-without-sidebar.php:757
+#: aces/single-casino/style-1.php:757
+#: aces/single-casino/style-2-without-sidebar.php:823
+#: aces/single-casino/style-2.php:823
+#: aces/single-casino/style-3-without-sidebar.php:859
+#: aces/single-casino/style-3.php:859
+msgid "Overall Rating"
+msgstr "Celkové hodnocení"
+
+#: aces/single-casino/style-1-without-sidebar.php:780
+#: aces/single-casino/style-1.php:780
+#: aces/single-casino/style-2-without-sidebar.php:755
+#: aces/single-casino/style-2.php:755
+#: aces/single-casino/style-3-without-sidebar.php:791
+#: aces/single-casino/style-3.php:791
+msgid "Trust & Fairness"
+msgstr "Důvěra a férovost"
+
+#: aces/single-casino/style-1-without-sidebar.php:805
+#: aces/single-casino/style-1.php:805
+#: aces/single-casino/style-2-without-sidebar.php:772
+#: aces/single-casino/style-2.php:772
+#: aces/single-casino/style-3-without-sidebar.php:808
+#: aces/single-casino/style-3.php:808
+msgid "Games & Software"
+msgstr "Hry a software"
+
+#: aces/single-casino/style-1-without-sidebar.php:830
+#: aces/single-casino/style-1.php:830
+#: aces/single-casino/style-2-without-sidebar.php:789
+#: aces/single-casino/style-2.php:789
+#: aces/single-casino/style-3-without-sidebar.php:825
+#: aces/single-casino/style-3.php:825
+msgid "Bonuses & Promotions"
+msgstr "Bonusy a akce"
+
+#: aces/single-casino/style-1-without-sidebar.php:855
+#: aces/single-casino/style-1.php:855
+#: aces/single-casino/style-2-without-sidebar.php:806
+#: aces/single-casino/style-2.php:806
+#: aces/single-casino/style-3-without-sidebar.php:842
+#: aces/single-casino/style-3.php:842
+msgid "Customer Support"
+msgstr "Zákaznická podpora"
+
+#: aces/single-casino/style-1-without-sidebar.php:922
+#: aces/single-casino/style-1.php:922
+#: aces/single-casino/style-2-without-sidebar.php:876
+#: aces/single-casino/style-2.php:876
+#: aces/single-casino/style-3-without-sidebar.php:912
+#: aces/single-casino/style-3.php:912
+#: aces/single-game/style-1-without-sidebar.php:320
+#: aces/single-game/style-1.php:319
+#: aces/single-game/style-2-without-sidebar.php:350
+#: aces/single-game/style-2.php:350
+#: aces/single-game/style-3-without-sidebar.php:388
+#: aces/single-game/style-3.php:388 archive-game.php:10
+msgid "Games"
+msgstr "Hry"
+
+#: aces/single-game/style-1-without-sidebar.php:89
+#: aces/single-game/style-1.php:89
+#: aces/single-game/style-2-without-sidebar.php:102
+#: aces/single-game/style-2.php:102
+#: aces/single-game/style-3-without-sidebar.php:213
+#: aces/single-game/style-3.php:213 theme-parts/author-info.php:7
+msgid "by"
+msgstr "podle"
+
+#: archive-bonus.php:52 archive-casino.php:52 archive-game.php:52
+#: page-bonus-archive-style-1.php:52 page-bonus-archive-style-2.php:52
+#: page-casino-archive-style-1.php:52 page-casino-archive-style-2.php:52
+#: page-casino-archive-style-3.php:52 page-casino-archive-style-4.php:52
+#: page-casino-archive-style-5.php:52 page-casino-archive-style-6.php:52
+#: page-casino-archive-style-7.php:52 page-casino-archive-style-8.php:52
+#: page-game-archive-style-1.php:52 page-game-archive-style-2.php:52
+#: page-game-archive-style-3.php:52 taxonomy-bonus-category.php:44
+#: taxonomy-casino-category.php:44 taxonomy-game-category.php:44
+#: theme-functions/customize.php:32
+msgid "All"
+msgstr "Vše"
+
+#: archive-bonus.php:84 archive-casino.php:118 archive-game.php:94
+#: archive.php:40 category.php:40 comments.php:48 index.php:34
+#: page-blog.php:57 page-bonus-archive-style-1.php:93
+#: page-bonus-archive-style-2.php:93 page-casino-archive-style-1.php:93
+#: page-casino-archive-style-2.php:93 page-casino-archive-style-3.php:93
+#: page-casino-archive-style-4.php:96 page-casino-archive-style-5.php:93
+#: page-casino-archive-style-6.php:93 page-casino-archive-style-7.php:96
+#: page-casino-archive-style-8.php:96 page-game-archive-style-1.php:93
+#: page-game-archive-style-2.php:93 page-game-archive-style-3.php:93
+#: search.php:44 taxonomy-bonus-category.php:93
+#: taxonomy-casino-category.php:128 taxonomy-game-category.php:98
+#: taxonomy-restricted-country.php:82 taxonomy-vendor.php:51 taxonomy.php:83
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: archive-bonus.php:85 archive-casino.php:119 archive-game.php:95
+#: archive.php:41 category.php:41 comments.php:49 index.php:35
+#: page-blog.php:58 page-bonus-archive-style-1.php:94
+#: page-bonus-archive-style-2.php:94 page-casino-archive-style-1.php:94
+#: page-casino-archive-style-2.php:94 page-casino-archive-style-3.php:94
+#: page-casino-archive-style-4.php:97 page-casino-archive-style-5.php:94
+#: page-casino-archive-style-6.php:94 page-casino-archive-style-7.php:97
+#: page-casino-archive-style-8.php:97 page-game-archive-style-1.php:94
+#: page-game-archive-style-2.php:94 page-game-archive-style-3.php:94
+#: search.php:45 taxonomy-bonus-category.php:94
+#: taxonomy-casino-category.php:129 taxonomy-game-category.php:99
+#: taxonomy-restricted-country.php:83 taxonomy-vendor.php:52 taxonomy.php:84
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: archive-bonus.php:97 archive-casino.php:131 archive-game.php:107
+#: archive.php:53 category.php:53 index.php:47 page-blog.php:70
+#: page-bonus-archive-style-1.php:106 page-bonus-archive-style-2.php:106
+#: page-casino-archive-style-1.php:106 page-casino-archive-style-2.php:106
+#: page-casino-archive-style-3.php:106 page-casino-archive-style-4.php:109
+#: page-casino-archive-style-5.php:106 page-casino-archive-style-6.php:106
+#: page-casino-archive-style-7.php:109 page-casino-archive-style-8.php:109
+#: page-game-archive-style-1.php:106 page-game-archive-style-2.php:106
+#: page-game-archive-style-3.php:106 search.php:57
+#: taxonomy-bonus-category.php:106 taxonomy-casino-category.php:141
+#: taxonomy-game-category.php:111 taxonomy-restricted-country.php:95
+#: taxonomy-vendor.php:64 taxonomy.php:96 theme-parts/related-posts.php:72
+msgid "Posts not found"
+msgstr "Příspěvky nebyly nalezeny"
+
+#: archive-bonus.php:99 archive-casino.php:133 archive-game.php:109
+#: archive.php:55 category.php:55 page-bonus-archive-style-1.php:108
+#: page-bonus-archive-style-2.php:108 page-casino-archive-style-1.php:108
+#: page-casino-archive-style-2.php:108 page-casino-archive-style-3.php:108
+#: page-casino-archive-style-4.php:111 page-casino-archive-style-5.php:108
+#: page-casino-archive-style-6.php:108 page-casino-archive-style-7.php:111
+#: page-casino-archive-style-8.php:111 page-game-archive-style-1.php:108
+#: page-game-archive-style-2.php:108 page-game-archive-style-3.php:108
+#: taxonomy-bonus-category.php:108 taxonomy-casino-category.php:143
+#: taxonomy-game-category.php:113 taxonomy-restricted-country.php:97
+#: taxonomy-vendor.php:66 taxonomy.php:98
+msgid "No posts has been found. Please return to the homepage."
+msgstr "Nebyly nalezeny žádné příspěvky. Vraťte se prosím na domovskou stránku."
+
+#: archive-casino.php:10
+msgid "Casinos"
+msgstr "Kasina"
+
+#: comments.php:17
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "Jedna odpověď pro &dquo;%s&ldquo;"
+
+#: comments.php:21
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgstr "%1$s Odpověď na &dquo;%2$s&rdquo;"
+
+#: comments.php:41
+msgid "Reply"
+msgstr "Odpověď"
+
+#: comments.php:59
+msgid "Name*"
+msgstr "Jméno*"
+
+#: comments.php:60
+msgid "Email*"
+msgstr "E-mail*"
+
+#: comments.php:61 theme-parts/social-icons.php:39
+msgid "Website"
+msgstr "webové stránky"
+
+#: comments.php:63
+msgid "Save my name, email, and website in this browser for the next time I comment."
+msgstr "Uložte si mé jméno, e-mail a webovou stránku v tomto prohlížeči pro příští komentář."
+
+#: comments.php:65
+msgid "Comment*"
+msgstr "Komentář*"
+
+#: footer.php:17 theme-parts/mobile-menu.php:24
+msgid "&copy; Copyright"
+msgstr "&kopie; Copyright"
+
+#: footer.php:17 theme-parts/mobile-menu.php:24
+msgid "Powered by"
+msgstr "Provozováno na"
+
+#: footer.php:17 theme-parts/mobile-menu.php:24
+msgid "https://wordpress.org"
+msgstr "https://wordpress.org"
+
+#: footer.php:17 theme-parts/mobile-menu.php:24
+msgid "WordPress"
+msgstr "WordPress"
+
+#: footer.php:17 theme-parts/mobile-menu.php:24
+msgid "https://mercurytheme.com"
+msgstr "https://mercurytheme.com"
+
+#: footer.php:17
+msgid "Affiliate Marketing WordPress Theme. Reviews and Top Lists"
+msgstr "Téma WordPress pro affiliate marketing. Recenze a nejlepší seznamy"
+
+#: footer.php:17 theme-functions/index.php:13 theme-functions/index.php:14
+#: theme-functions/index.php:28 theme-parts/mobile-menu.php:24
+msgid "Mercury Theme"
+msgstr "Téma Merkur"
+
+#: footer.php:60
+msgid "Back to Top"
+msgstr "Zpět na začátek"
+
+#: functions.php:110
+msgid "Main Menu"
+msgstr "Hlavní menu"
+
+#: functions.php:111
+msgid "Footer Menu"
+msgstr "Nabídka zápatí"
+
+#: functions.php:112
+msgid "Top Bar Menu"
+msgstr "Nabídka horní lišty"
+
+#: functions.php:124
+msgid "Sidebar"
+msgstr "Postranní panel"
+
+#: functions.php:126
+msgid "Add widgets here so that it appears on the sidebar."
+msgstr "Zde přidejte widgety, aby se zobrazily na postranním panelu."
+
+#: functions.php:134
+msgid "Homepage Central Block (Old)"
+msgstr "Centrální blok domovské stránky (starý)"
+
+#: functions.php:136
+msgid "For widgets in the homepage central block."
+msgstr "Pro widgety v centrálním bloku domovské stránky."
+
+#: functions.php:144
+msgid "Homepage Right Sidebar (Old)"
+msgstr "Pravý postranní panel domovské stránky (starý)"
+
+#: functions.php:146
+msgid "Add widgets here so that it appears on the homepage right sidebar."
+msgstr "Zde přidejte widgety, aby se zobrazily na pravém postranním panelu domovské stránky."
+
+#: functions.php:154 theme-functions/customize.php:417
+msgid "Footer"
+msgstr "Zápatí"
+
+#: functions.php:156
+msgid "For text and images only."
+msgstr "Pouze pro text a obrázky."
+
+#: index.php:8
+msgid "Recent Posts"
+msgstr "Poslední příspěvky"
+
+#: index.php:49 page-blog.php:72
+msgid "No posts has been found."
+msgstr "Nebyly nalezeny žádné příspěvky."
+
+#: search.php:9
+msgid "Search results for: %s"
+msgstr "Výsledky hledání pro: %s"
+
+#: search.php:11
+msgid "Nothing found"
+msgstr "Nic nenalezeno"
+
+#: search.php:59
+msgid "Nothing found. Please try another search query."
+msgstr "Nic nenalezeno. Zkuste prosím jiný vyhledávací dotaz."
+
+#: theme-functions/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr "Nainstalujte požadované pluginy"
+
+#: theme-functions/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr "Nainstalujte pluginy"
+
+#: theme-functions/class-tgm-plugin-activation.php:330
+msgid "Installing Plugin: %s"
+msgstr "Instalace pluginu: %s"
+
+#: theme-functions/class-tgm-plugin-activation.php:332
+msgid "Updating Plugin: %s"
+msgstr "Aktualizace pluginu: %s"
+
+#: theme-functions/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr "Něco se pokazilo s API pluginu."
+
+#: theme-functions/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr "Vraťte se do instalačního programu požadovaných pluginů"
+
+#: theme-functions/class-tgm-plugin-activation.php:386
+#: theme-functions/class-tgm-plugin-activation.php:827
+#: theme-functions/class-tgm-plugin-activation.php:2533
+#: theme-functions/class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr "Vraťte se na řídicí panel"
+
+#: theme-functions/class-tgm-plugin-activation.php:387
+#: theme-functions/class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr "Plugin byl úspěšně aktivován."
+
+#: theme-functions/class-tgm-plugin-activation.php:388
+#: theme-functions/class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgstr "Následující plugin byl úspěšně aktivován:"
+
+#: theme-functions/class-tgm-plugin-activation.php:390
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Nebyla provedena žádná akce. Plugin %1$s již byl aktivní."
+
+#: theme-functions/class-tgm-plugin-activation.php:392
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr "Plugin není aktivován. Pro tento motiv je potřeba vyšší verze %s. Aktualizujte prosím plugin."
+
+#: theme-functions/class-tgm-plugin-activation.php:394
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Všechny pluginy byly úspěšně nainstalovány a aktivovány. %1$s"
+
+#: theme-functions/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr "Odmítněte toto upozornění"
+
+#: theme-functions/class-tgm-plugin-activation.php:396
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr "Existuje jeden nebo více požadovaných nebo doporučených pluginů k instalaci, aktualizaci nebo aktivaci."
+
+#: theme-functions/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr "Požádejte o pomoc správce tohoto webu."
+
+#: theme-functions/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "Tento plugin je třeba aktualizovat, aby byl kompatibilní s vaším motivem."
+
+#: theme-functions/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr "Je vyžadována aktualizace"
+
+#: theme-functions/class-tgm-plugin-activation.php:934
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr "Balíček vzdáleného pluginu neobsahuje složku s požadovaným slugem a přejmenování nefungovalo."
+
+#: theme-functions/class-tgm-plugin-activation.php:934
+#: theme-functions/class-tgm-plugin-activation.php:937
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr "Kontaktujte prosím poskytovatele pluginu a požádejte ho, aby zabalil svůj plugin podle pokynů pro WordPress."
+
+#: theme-functions/class-tgm-plugin-activation.php:937
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr "Balíček vzdáleného pluginu se skládá z více než jednoho souboru, ale soubory nejsou zabaleny ve složce."
+
+#: theme-functions/class-tgm-plugin-activation.php:1982
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: theme-functions/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr "Požadovaný"
+
+#: theme-functions/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr "Doporučeno"
+
+#: theme-functions/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr "Úložiště WordPress"
+
+#: theme-functions/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr "Externí zdroj"
+
+#: theme-functions/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr "Předbaleno"
+
+#: theme-functions/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr "Není nainstalováno"
+
+#: theme-functions/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr "Instalováno, ale neaktivováno"
+
+#: theme-functions/class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr "Aktivní"
+
+#: theme-functions/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr "Požadovaná aktualizace není k dispozici"
+
+#: theme-functions/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr "Vyžaduje aktualizaci"
+
+#: theme-functions/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr "Aktualizace doporučena"
+
+#: theme-functions/class-tgm-plugin-activation.php:2342
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#: theme-functions/class-tgm-plugin-activation.php:2388
+msgid "All <span class=\"count\">(%s)</span>"
+msgstr "Vše <span class=\"count\">(%s)</span>"
+
+#: theme-functions/class-tgm-plugin-activation.php:2392
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgstr "Chcete-li nainstalovat <span class=\"count\">(%s)</span>"
+
+#: theme-functions/class-tgm-plugin-activation.php:2396
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgstr "Dostupná aktualizace <span class=\"count\">(%s)</span>"
+
+#: theme-functions/class-tgm-plugin-activation.php:2400
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgstr "Chcete-li aktivovat <span class=\"count\">(%s)</span>"
+
+#: theme-functions/class-tgm-plugin-activation.php:2482
+msgid "unknown"
+msgstr "neznámý"
+
+#: theme-functions/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr "Nainstalovaná verze:"
+
+#: theme-functions/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr "Minimální požadovaná verze:"
+
+#: theme-functions/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr "Dostupná verze:"
+
+#: theme-functions/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr "Žádné pluginy k instalaci, aktualizaci nebo aktivaci."
+
+#: theme-functions/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr "Plugin"
+
+#: theme-functions/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr "Zdroj"
+
+#: theme-functions/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr "Typ"
+
+#: theme-functions/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr "Verze"
+
+#: theme-functions/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr "Postavení"
+
+#: theme-functions/class-tgm-plugin-activation.php:2603
+msgid "Install %2$s"
+msgstr "Nainstalujte %2$s"
+
+#: theme-functions/class-tgm-plugin-activation.php:2608
+msgid "Update %2$s"
+msgstr "Aktualizovat %2$s"
+
+#: theme-functions/class-tgm-plugin-activation.php:2614
+msgid "Activate %2$s"
+msgstr "Aktivujte %2$s"
+
+#: theme-functions/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr "Zpráva o aktualizaci od autora pluginu:"
+
+#: theme-functions/class-tgm-plugin-activation.php:2717
+msgid "Install"
+msgstr "Instalovat"
+
+#: theme-functions/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr "Aktualizovat"
+
+#: theme-functions/class-tgm-plugin-activation.php:2726
+msgid "Activate"
+msgstr "Aktivovat"
+
+#: theme-functions/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "Nebyly vybrány žádné pluginy k instalaci. Nebyla provedena žádná akce."
+
+#: theme-functions/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "Nebyly vybrány žádné pluginy k aktualizaci. Nebyla provedena žádná akce."
+
+#: theme-functions/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr "V tuto chvíli nejsou k dispozici žádné pluginy, které by bylo možné nainstalovat."
+
+#: theme-functions/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr "V tuto chvíli nejsou k dispozici žádné pluginy, které by bylo možné aktualizovat."
+
+#: theme-functions/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "Nebyly vybrány žádné pluginy k aktivaci. Nebyla provedena žádná akce."
+
+#: theme-functions/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr "V tuto chvíli nejsou k dispozici žádné pluginy, které by bylo možné aktivovat."
+
+#: theme-functions/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr "Aktivace pluginu se nezdařila."
+
+#: theme-functions/class-tgm-plugin-activation.php:3498
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Aktualizace pluginu %1$s (%2$d/%3$d)"
+
+#: theme-functions/class-tgm-plugin-activation.php:3501
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Při instalaci %1$s: <strong>%2$s</strong> došlo k chybě."
+
+#: theme-functions/class-tgm-plugin-activation.php:3503
+msgid "The installation of %1$s failed."
+msgstr "Instalace %1$s se nezdařila."
+
+#: theme-functions/class-tgm-plugin-activation.php:3507
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Spouští se proces instalace a aktivace. Tento proces může u některých hostitelů chvíli trvat, buďte prosím trpěliví."
+
+#: theme-functions/class-tgm-plugin-activation.php:3509
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s úspěšně nainstalováno a aktivováno."
+
+#: theme-functions/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr "Všechny instalace a aktivace byly dokončeny."
+
+#: theme-functions/class-tgm-plugin-activation.php:3512
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalace a aktivace pluginu %1$s (%2$d/%3$d)"
+
+#: theme-functions/class-tgm-plugin-activation.php:3515
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Spouští se proces instalace. Tento proces může u některých hostitelů chvíli trvat, buďte prosím trpěliví."
+
+#: theme-functions/class-tgm-plugin-activation.php:3517
+msgid "%1$s installed successfully."
+msgstr "%1$s úspěšně nainstalováno."
+
+#: theme-functions/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr "Všechny instalace byly dokončeny."
+
+#: theme-functions/class-tgm-plugin-activation.php:3520
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalace pluginu %1$s (%2$d/%3$d)"
+
+#: theme-functions/custom-comments.php:31
+msgid "%s says:"
+msgstr "%s říká:"
+
+#: theme-functions/custom-comments.php:35
+msgid "Your comment is awaiting moderation."
+msgstr "Váš komentář čeká na moderování."
+
+#: theme-functions/custom-comments.php:42
+msgid "%1$s at %2$s"
+msgstr "%1$s v %2$s"
+
+#: theme-functions/custom-comments.php:47
+msgid "(Edit)"
+msgstr "(Upravit)"
+
+#: theme-functions/customize.php:100
+msgid "Main Color"
+msgstr "Hlavní barva"
+
+#: theme-functions/customize.php:114
+msgid "Second Color"
+msgstr "Druhá barva"
+
+#: theme-functions/customize.php:128
+msgid "Stars Color"
+msgstr "Barva hvězd"
+
+#: theme-functions/customize.php:142
+msgid "Enable Dark Mode"
+msgstr "Povolit tmavý režim"
+
+#: theme-functions/customize.php:157
+msgid "Enable a homepage archive section"
+msgstr "Povolit sekci archivu domovské stránky"
+
+#: theme-functions/customize.php:166
+msgid "Header"
+msgstr "Záhlaví"
+
+#: theme-functions/customize.php:179
+msgid "Choose a header style"
+msgstr "Vyberte styl záhlaví"
+
+#: theme-functions/customize.php:183 theme-functions/customize.php:588
+#: theme-functions/customize.php:613 theme-functions/customize.php:632
+msgid "#1 Style"
+msgstr "Styl č. 1"
+
+#: theme-functions/customize.php:184 theme-functions/customize.php:589
+#: theme-functions/customize.php:614 theme-functions/customize.php:633
+msgid "#2 Style"
+msgstr "#2 Styl"
+
+#: theme-functions/customize.php:197
+msgid "Enable Top Bar for #1 Style"
+msgstr "Povolit horní lištu pro styl č. 1"
+
+#: theme-functions/customize.php:212
+msgid "Disable the floating header"
+msgstr "Zakázat plovoucí záhlaví"
+
+#: theme-functions/customize.php:227
+msgid "Header background color"
+msgstr "Barva pozadí záhlaví"
+
+#: theme-functions/customize.php:241
+msgid "Top bar background color"
+msgstr "Barva pozadí horní lišty"
+
+#: theme-functions/customize.php:255
+msgid "Top bar text/link color"
+msgstr "Barva textu/odkazu v horní liště"
+
+#: theme-functions/customize.php:269
+msgid "Top bar link hover color"
+msgstr "Barva odkazu na horní liště"
+
+#: theme-functions/customize.php:283
+msgid "Text logo color"
+msgstr "Barva loga textu"
+
+#: theme-functions/customize.php:297
+msgid "Text slogan color"
+msgstr "Barva textu sloganu"
+
+#: theme-functions/customize.php:311
+msgid "Main menu link color"
+msgstr "Barva odkazu hlavní nabídky"
+
+#: theme-functions/customize.php:325
+msgid "Main menu link hover color"
+msgstr "Barva při najetí na odkaz hlavní nabídky"
+
+#: theme-functions/customize.php:339
+msgid "Submenu background color"
+msgstr "Barva pozadí podnabídky"
+
+#: theme-functions/customize.php:353
+msgid "Submenu link color"
+msgstr "Barva odkazu podnabídky"
+
+#: theme-functions/customize.php:367
+msgid "Submenu link hover color"
+msgstr "Barva ukazatele podnabídky"
+
+#: theme-functions/customize.php:381
+msgid "H1 title color"
+msgstr "Barva názvu H1"
+
+#: theme-functions/customize.php:395
+msgid "Title box background color"
+msgstr "Barva pozadí pole názvu"
+
+#: theme-functions/customize.php:409
+msgid "Title box text color"
+msgstr "Barva textu pole nadpisu"
+
+#: theme-functions/customize.php:432
+msgid "Footer Copyright"
+msgstr "Zápatí Copyright"
+
+#: theme-functions/customize.php:433
+msgid "Add your copyright to the footer."
+msgstr "Přidejte svá autorská práva do zápatí."
+
+#: theme-functions/customize.php:444
+msgid "Background image for the footer"
+msgstr "Obrázek na pozadí pro zápatí"
+
+#: theme-functions/customize.php:445
+msgid "Recommended background image size 2000 x 500 px."
+msgstr "Doporučená velikost obrázku na pozadí 2000 x 500 px."
+
+#: theme-functions/customize.php:458
+msgid "Background image for the Mobile Menu"
+msgstr "Obrázek na pozadí mobilní nabídky"
+
+#: theme-functions/customize.php:459
+msgid "Minimal background image size 640 x 1200 px."
+msgstr "Minimální velikost obrázku na pozadí 640 x 1200 px."
+
+#: theme-functions/customize.php:469 theme-functions/index.php:76
+msgid "ACES"
+msgstr "ACES"
+
+#: theme-functions/customize.php:475
+msgid "Button colors"
+msgstr "Barvy knoflíků"
+
+#: theme-functions/customize.php:488
+msgid "Color of the title of the \"Play Now\" button"
+msgstr "Barva názvu tlačítka „Hrát nyní“."
+
+#: theme-functions/customize.php:500
+msgid "Color of the background of the \"Play Now\" button"
+msgstr "Barva pozadí tlačítka „Play Now“."
+
+#: theme-functions/customize.php:514
+msgid "Color of the title of the \"Read Review\" button"
+msgstr "Barva nadpisu tlačítka „Přečíst recenzi“."
+
+#: theme-functions/customize.php:526
+msgid "Color of the background of the \"Read Review\" button"
+msgstr "Barva pozadí tlačítka \"Přečíst recenzi\"."
+
+#: theme-functions/customize.php:534
+msgid "CPT settings"
+msgstr "nastavení CPT"
+
+#: theme-functions/customize.php:547
+msgid "Enable old Pros/Cons for Organizations (Casinos)"
+msgstr "Povolit staré výhody a nevýhody pro organizace (kasina)"
+
+#: theme-functions/customize.php:562
+msgid "Enable old Pros/Cons for Units (Games)"
+msgstr "Povolit staré výhody/nevýhody pro jednotky (hry)"
+
+#: theme-functions/customize.php:571
+msgid "Archive settings"
+msgstr "Nastavení archivu"
+
+#: theme-functions/customize.php:584
+msgid "The layout style of organization (casino) listing pages (archive and taxonomy)"
+msgstr "Styl rozvržení stránek se seznamem organizace (kasina) (archiv a taxonomie)"
+
+#: theme-functions/customize.php:590 theme-functions/customize.php:615
+msgid "#3 Style"
+msgstr "#3 Styl"
+
+#: theme-functions/customize.php:591
+msgid "#4 Style"
+msgstr "#4 Styl"
+
+#: theme-functions/customize.php:592
+msgid "#5 Style"
+msgstr "#5 Styl"
+
+#: theme-functions/customize.php:593
+msgid "#6 Style"
+msgstr "#6 Styl"
+
+#: theme-functions/customize.php:594
+msgid "#7 Style"
+msgstr "#7 Styl"
+
+#: theme-functions/customize.php:595
+msgid "#8 Style"
+msgstr "#8 Styl"
+
+#: theme-functions/customize.php:596
+msgid "#9 Style"
+msgstr "#9 Styl"
+
+#: theme-functions/customize.php:609
+msgid "The layout style of unit (game) listing pages (archive and taxonomy)"
+msgstr "Styl rozvržení stránek se seznamem jednotek (her) (archiv a taxonomie)"
+
+#: theme-functions/customize.php:628
+msgid "The layout style of offer (bonus) listing pages (archive and taxonomy)"
+msgstr "Styl rozvržení stránek se seznamem nabídky (bonus) (archiv a taxonomie)"
+
+#: theme-functions/customize.php:646
+msgid "Enable category navigation for Organizations (Casinos)"
+msgstr "Povolit navigaci kategorií pro organizace (kasina)"
+
+#: theme-functions/customize.php:660
+msgid "\"All\" page for Organizations (Casinos)"
+msgstr "Stránka „Vše“ pro organizace (kasina)"
+
+#: theme-functions/customize.php:661 theme-functions/customize.php:688
+#: theme-functions/customize.php:715
+msgid "Please select the page with a list of all items"
+msgstr "Vyberte prosím stránku se seznamem všech položek"
+
+#: theme-functions/customize.php:673
+msgid "Enable category navigation for Units (Games)"
+msgstr "Povolit navigaci podle kategorií pro jednotky (hry)"
+
+#: theme-functions/customize.php:687
+msgid "\"All\" page for Units (Games)"
+msgstr "Stránka „Vše“ pro jednotky (hry)"
+
+#: theme-functions/customize.php:700
+msgid "Enable category navigation for Offers (Bonuses)"
+msgstr "Povolit navigaci podle kategorií pro nabídky (bonusy)"
+
+#: theme-functions/customize.php:714
+msgid "\"All\" page for Offers (Bonuses)"
+msgstr "Stránka „Vše“ pro nabídky (bonusy)"
+
+#: theme-functions/customize.php:721
+msgid "Other Settings"
+msgstr "Další nastavení"
+
+#: theme-functions/customize.php:734
+msgid "Enable boxed layout"
+msgstr "Povolit rozvržení v rámečku"
+
+#: theme-functions/customize.php:749
+msgid "Enable related posts"
+msgstr "Povolit související příspěvky"
+
+#: theme-functions/customize.php:764
+msgid "Enable the sticky sidebar"
+msgstr "Povolte lepivý postranní panel"
+
+#: theme-functions/customize.php:779
+msgid "Enable the \"time ago\" date format"
+msgstr "Povolit formát data „před časem“."
+
+#: theme-functions/customize.php:794
+msgid "Enable the post views counter"
+msgstr "Povolit počítadlo zobrazení příspěvku"
+
+#: theme-functions/customize.php:809
+msgid "Disable date display in posts"
+msgstr "Zakázat zobrazování data v příspěvcích"
+
+#: theme-functions/customize.php:824
+msgid "Disable an author info block"
+msgstr "Zakázat blok informací o autorovi"
+
+#: theme-functions/customize.php:839
+msgid "Enable an organization (casino) float bottom bar"
+msgstr "Povolit organizaci (kasino) plovoucí spodní lištu"
+
+#: theme-functions/customize.php:848
+msgid "Main Menu Labels Settings"
+msgstr "Nastavení štítků hlavní nabídky"
+
+#: theme-functions/customize.php:863
+msgid "Title of the \"New\" label"
+msgstr "Název štítku „Nový“."
+
+#: theme-functions/customize.php:864
+msgid "To add to the menu, continue to use the \".new\" class"
+msgstr "Pro přidání do nabídky nadále používejte třídu „.new“."
+
+#: theme-functions/customize.php:874
+msgid "Color of the title of the \"New\" label"
+msgstr "Barva nadpisu štítku „Nový“."
+
+#: theme-functions/customize.php:886
+msgid "Color of the background of the \"New\" label"
+msgstr "Barva pozadí štítku \"Nová\"."
+
+#: theme-functions/customize.php:902
+msgid "Title of the \"Best\" label"
+msgstr "Název štítku „Nejlepší“."
+
+#: theme-functions/customize.php:903
+msgid "To add to the menu, continue to use the \".best\" class"
+msgstr "Chcete-li přidat do nabídky, nadále používejte třídu „.best“."
+
+#: theme-functions/customize.php:913
+msgid "Color of the title of the \"Best\" label"
+msgstr "Barva názvu štítku „Nejlepší“."
+
+#: theme-functions/customize.php:925
+msgid "Color of the background of the \"Best\" label"
+msgstr "Barva pozadí štítku \"Nejlepší\"."
+
+#: theme-functions/customize.php:941
+msgid "Title of the \"Hot\" label"
+msgstr "Název štítku \"Hot\"."
+
+#: theme-functions/customize.php:942
+msgid "To add to the menu, continue to use the \".hot\" class"
+msgstr "Chcete-li do menu přidat další položky, pokračujte v používání třídy „.hot“."
+
+#: theme-functions/customize.php:952
+msgid "Color of the title of the \"Hot\" label"
+msgstr "Barva nadpisu štítku \"Hot\"."
+
+#: theme-functions/customize.php:964
+msgid "Color of the background of the \"Hot\" label"
+msgstr "Barva pozadí štítku \"Hot\"."
+
+#: theme-functions/customize.php:980
+msgid "Title of the \"Top\" label"
+msgstr "Název štítku \"Top\"."
+
+#: theme-functions/customize.php:981
+msgid "To add to the menu, continue to use the \".top\" class"
+msgstr "Chcete-li přidat do nabídky, nadále používejte třídu „.top“."
+
+#: theme-functions/customize.php:991
+msgid "Color of the title of the \"Top\" label"
+msgstr "Barva nadpisu štítku \"Top\"."
+
+#: theme-functions/customize.php:1003
+msgid "Color of the background of the \"Top\" label"
+msgstr "Barva pozadí štítku \"Top\"."
+
+#: theme-functions/customize.php:1011
+msgid "Social Icons"
+msgstr "Sociální ikony"
+
+#: theme-functions/customize.php:1025 theme-parts/social-icons.php:3
+msgid "Facebook"
+msgstr "Facebook"
+
+#: theme-functions/customize.php:1027
+msgid "https://www.facebook.com/"
+msgstr "https://www.facebook.com/"
+
+#: theme-functions/customize.php:1041 theme-parts/social-icons.php:9
+msgid "Twitter"
+msgstr "Cvrlikání"
+
+#: theme-functions/customize.php:1043
+msgid "https://twitter.com/"
+msgstr "https://twitter.com/"
+
+#: theme-functions/customize.php:1057 theme-parts/social-icons.php:15
+msgid "YouTube"
+msgstr "YouTube"
+
+#: theme-functions/customize.php:1059
+msgid "https://www.youtube.com/"
+msgstr "https://www.youtube.com/"
+
+#: theme-functions/customize.php:1073 theme-parts/social-icons.php:21
+msgid "Instagram"
+msgstr "Instagram"
+
+#: theme-functions/customize.php:1086 theme-parts/social-icons.php:27
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: theme-functions/customize.php:1099 theme-parts/social-icons.php:33
+msgid "Reddit"
+msgstr "Reddit"
+
+#: theme-functions/customize.php:1112
+msgid "Other Link"
+msgstr "Jiný odkaz"
+
+#: theme-functions/gutenberg.php:20
+msgid "mercury Main Color"
+msgstr "hlavní barva rtuti"
+
+#: theme-functions/gutenberg.php:26
+msgid "mercury Second Color"
+msgstr "rtuťová druhá barva"
+
+#: theme-functions/gutenberg.php:32
+msgid "mercury White"
+msgstr "rtuťová bílá"
+
+#: theme-functions/gutenberg.php:38
+msgid "mercury Gray"
+msgstr "rtuťová šedá"
+
+#: theme-functions/gutenberg.php:44
+msgid "mercury Emerald"
+msgstr "rtuťový smaragd"
+
+#: theme-functions/gutenberg.php:50
+msgid "mercury Alizarin"
+msgstr "rtuťový alizarin"
+
+#: theme-functions/gutenberg.php:56
+msgid "mercury Wisteria"
+msgstr "rtuť Wisteria"
+
+#: theme-functions/gutenberg.php:62
+msgid "mercury Peter River"
+msgstr "rtuť Peter River"
+
+#: theme-functions/gutenberg.php:68
+msgid "mercury Clouds"
+msgstr "rtuťové mraky"
+
+#: theme-functions/index.php:31
+msgid "Thank you for using the Mercury theme!"
+msgstr "Děkujeme, že používáte téma Merkur!"
+
+#: theme-functions/index.php:32
+msgid "Please, don&#8217;t forget to rate 5 stars ★★★★★ for the theme. It helps a lot."
+msgstr "Prosím, nezapomeňte ohodnotit 5 hvězdičkami ★★★★★ za téma. Hodně to pomáhá."
+
+#: theme-functions/index.php:33
+msgid "https://themeforest.net/downloads"
+msgstr "https://themeforest.net/downloads"
+
+#: theme-functions/index.php:33
+msgid "themeforest.net/downloads"
+msgstr "themeforest.net/downloads"
+
+#: theme-functions/index.php:38
+msgid "All Mercury theme settings are in"
+msgstr "Všechna nastavení motivu Mercury jsou in"
+
+#: theme-functions/index.php:38
+msgid "Customize"
+msgstr "Přizpůsobit"
+
+#: theme-functions/index.php:39
+msgid "https://mercurytheme.com/documentation/"
+msgstr "https://mercurytheme.com/documentation/"
+
+#: theme-functions/index.php:39
+msgid "Online Documentation"
+msgstr "Online dokumentace"
+
+#: theme-functions/index.php:40
+msgid "https://spacethemes.ticksy.com/"
+msgstr "https://spacethemes.ticsy.com/"
+
+#: theme-functions/index.php:40
+msgid "Need support?"
+msgstr "Potřebujete podporu?"
+
+#: theme-functions/index.php:57
+msgid "One Click Demo Import"
+msgstr "Import ukázky jedním kliknutím"
+
+#: theme-functions/index.php:66
+msgid "Mercury Addons"
+msgstr "Mercury Addons"
+
+#: theme-functions/index.php:86
+msgid "Slots Launch"
+msgstr "Spuštění slotů"
+
+#: theme-functions/index.php:119
+msgid "Mercury Casino 1"
+msgstr "Mercury Casino 1"
+
+#: theme-functions/index.php:125 theme-functions/index.php:136
+#: theme-functions/index.php:147 theme-functions/index.php:158
+#: theme-functions/index.php:169 theme-functions/index.php:180
+#: theme-functions/index.php:191 theme-functions/index.php:202
+#: theme-functions/index.php:213 theme-functions/index.php:224
+#: theme-functions/index.php:235 theme-functions/index.php:246
+#: theme-functions/index.php:257 theme-functions/index.php:268
+#: theme-functions/index.php:279
+msgid "Please waiting for a few minutes, do not close the window or refresh the page until the data is imported."
+msgstr "Počkejte prosím několik minut, nezavírejte okno ani neobnovujte stránku, dokud nebudou data importována."
+
+#: theme-functions/index.php:130
+msgid "Mercury Casino 2"
+msgstr "Mercury Casino 2"
+
+#: theme-functions/index.php:141
+msgid "Mercury Casino 3"
+msgstr "Mercury Casino 3"
+
+#: theme-functions/index.php:152
+msgid "Mercury Betting 1"
+msgstr "Mercury sázení 1"
+
+#: theme-functions/index.php:163
+msgid "Mercury Casino 4"
+msgstr "Mercury Casino 4"
+
+#: theme-functions/index.php:174
+msgid "Mercury Betting 2"
+msgstr "Mercury sázení 2"
+
+#: theme-functions/index.php:185
+msgid "Mercury Slots 1"
+msgstr "Sloty Mercury 1"
+
+#: theme-functions/index.php:196
+msgid "Mercury Poker 1"
+msgstr "Mercury Poker 1"
+
+#: theme-functions/index.php:207
+msgid "Mercury Betting 3"
+msgstr "Sázky na Merkur 3"
+
+#: theme-functions/index.php:218
+msgid "Mercury Magazine 1"
+msgstr "Mercury Magazine 1"
+
+#: theme-functions/index.php:229
+msgid "Mercury Crypto 1"
+msgstr "Mercury Crypto 1"
+
+#: theme-functions/index.php:240
+msgid "Mercury VPN/Hosting 1"
+msgstr "Mercury VPN/hosting 1"
+
+#: theme-functions/index.php:251
+msgid "Mercury Dating 1"
+msgstr "Mercury seznamka 1"
+
+#: theme-functions/index.php:262
+msgid "Slots Launch Demo"
+msgstr "Ukázka spuštění slotů"
+
+#: theme-functions/index.php:273
+msgid "Mercury Slots 2"
+msgstr "Sloty Mercury 2"
+
+#: theme-parts/archive/loop-search.php:47 theme-parts/archive/loop.php:52
+msgid "Read more"
+msgstr "Přečtěte si více"
+
+#: theme-parts/mobile-menu.php:24
+msgid "Affiliate WordPress Theme"
+msgstr "Affiliate téma WordPress"
+
+#: theme-parts/related-posts.php:4
+msgid "Read More"
+msgstr "Přečtěte si více"
+
+#: theme-parts/related-posts.php:74
+msgid "Sorry, no other posts related this article."
+msgstr "Omlouváme se, ale s tímto článkem se netýkají žádné další příspěvky."
+

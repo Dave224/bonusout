@@ -110,6 +110,9 @@ msgstr ""
 "X-Poedit-SearchPath-91: taxonomy.php\n"
 "X-Poedit-SearchPath-92: page-blank-template.php\n"
 
+msgid "Enter keyword..."
+msgstr "Wpisz słowo kluczowe..."
+
 #: 404.php:8
 msgid "Error 404"
 msgstr "Błąd 404"

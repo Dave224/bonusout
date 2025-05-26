@@ -114,6 +114,9 @@ msgstr ""
 "X-Poedit-SearchPath-95: page-bonus-archive-style-2.php\n"
 "X-Poedit-SearchPath-96: page-game-archive-style-3.php\n"
 
+msgid "Enter keyword..."
+msgstr ""
+
 #: 404.php:8
 msgid "Error 404"
 msgstr ""

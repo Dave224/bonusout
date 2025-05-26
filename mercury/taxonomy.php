@@ -93,9 +93,9 @@
 
 				<div class="space-page-content-wrap relative">
 					<div class="space-page-content page-template box-100 relative">
-						<h2><?php esc_html_e( 'V této rubrice zatím nejsou žádné příspěvky', 'mercury' ); ?></h2>
+						<h2><?php esc_html_e( 'No posts has been found.', 'mercury' ); ?></h2>
 						<p>
-							<?php esc_html_e( 'V této rubrice zatím nejsou žádné příspěvky. Prosím vraťte se na úvodní stránku.', 'mercury' ); ?>
+							<?php esc_html_e( 'No posts has been found. Please return to the homepage.', 'mercury' ); ?>
 						</p>
 					</div>
 				</div>

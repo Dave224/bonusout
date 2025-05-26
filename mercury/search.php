@@ -6,9 +6,9 @@
 	<div class="space-title-box-ins space-page-wrapper relative">
 		<div class="space-title-box-h1 relative">
 			<h1><?php if ( have_posts() ) : ?>
-					<?php printf( esc_html__( 'Výsledky pro: %s', 'mercury' ), '' . get_search_query() . '' ); ?>
+					<?php printf( esc_html__( 'Search results for: %s', 'mercury' ), '' . get_search_query() . '' ); ?>
 				<?php else : ?>
-					<?php esc_html_e( 'Nic nenalezeno', 'mercury' ); ?>
+					<?php esc_html_e( 'Posts not found', 'mercury' ); ?>
 				<?php endif; ?></h1>
 			
 			<!-- Breadcrumbs Start -->

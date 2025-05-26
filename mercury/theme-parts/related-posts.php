@@ -1,7 +1,7 @@
 			<div class="space-news-3 box-100 read-more-block relative">
 				<div class="space-news-3-ins space-page-wrapper relative">
 					<div class="space-block-title relative">
-						<span><?php esc_html_e( 'Zobrazit', 'mercury' ); ?></span>
+						<span><?php esc_html_e( 'Read more', 'mercury' ); ?></span>
 					</div>
 					<div class="space-news-3-items box-100 relative">
 

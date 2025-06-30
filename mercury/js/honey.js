@@ -5,5 +5,5 @@ document.addEventListener("DOMContentLoaded", () => {
     inputs.forEach((input) => {
       input.value = 'abcd1234-' + now;
     });
-  }, 5000);
+  }, 50000);
 });

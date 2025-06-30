@@ -243,6 +243,7 @@ function mercury_scripts() {
 	if( !get_theme_mod('mercury_disable_floating_header') ) {
 		wp_enqueue_script( 'mercury-floating-header', get_theme_file_uri( '/js/floating-header.js' ), array( 'jquery' ), $GLOBALS['mercury_version'], true );
 	}
+    wp_enqueue_script( 'honeypot-js', get_theme_file_uri( '/js/honey.js' ), [], '2025-05-06', true );
 
 	wp_enqueue_script( 'owl-carousel', get_theme_file_uri( '/js/owl.carousel.min.js' ), array( 'jquery' ), '2.3.4', true );
 	wp_enqueue_script( 'mercury-global-js', get_theme_file_uri( '/js/scripts.js' ), array( 'jquery' ), $GLOBALS['mercury_version'], true );
@@ -1286,6 +1287,8 @@ require_once( get_template_directory() . '/theme-functions/utils.php' );
 require_once( get_template_directory() . '/theme-functions/custom-author/custom-author.php' );
 require_once( get_template_directory() . '/theme-functions/custom-category-inputs.php' );
 require_once( get_template_directory() . '/theme-functions/custom-hp-inputs.php' );
+require_once( get_template_directory() . '/theme-functions/comments-honey.php' );
+require_once( get_template_directory() . '/theme-functions/custom-pretty-links.php' );
 // require_once( get_template_directory() . '/theme-functions/geo-redirect/geo-redirect.php' );
 
 /*  Space-Themes Functions End  */
@@ -1399,7 +1402,7 @@ function createPostFromApp ($data)
 
         $attach_meta_id = 0;
         if ($postMetaData['image']) {
-            $attach_meta_id = media_sideload_image('https://app.simplesio.com/' . $postMetaData['image']['url'], $posts[0]->ID, $postMetaData['image']['alt'], 'id');
+            $attach_meta_id = media_sideload_image($data->get_params()['origin'] . '/' . $postMetaData['image']['url'], $posts[0]->ID, $postMetaData['image']['alt'], 'id');
             $attachment_data = wp_generate_attachment_metadata( $attach_meta_id, $postMetaData['image']['alt'] );
             wp_update_attachment_metadata( $attach_meta_id,  $attachment_data );
             update_post_meta($posts[0]->ID, '_yoast_wpseo_opengraph-image-id', $attach_meta_id);
@@ -1421,7 +1424,7 @@ function createPostFromApp ($data)
         $attach_meta_id = 0;
 
         if ($postMetaData['image']) {
-            $attach_meta_id = media_sideload_image('https://app.simplesio.com/' . $postMetaData['image']['url'], $post_id, $postMetaData['image']['alt'], 'id');
+            $attach_meta_id = media_sideload_image($data->get_params()['origin'] . '/' . $postMetaData['image']['url'], $post_id, $postMetaData['image']['alt'], 'id');
             $attachment_data = wp_generate_attachment_metadata( $attach_meta_id, $postMetaData['image']['alt'] );
             wp_update_attachment_metadata( $attach_meta_id,  $attachment_data );
             update_post_meta($post_id, '_yoast_wpseo_opengraph-image-id', $attach_meta_id);
@@ -1474,3 +1477,8 @@ function get_user_by_meta_data( $meta_key, $meta_value ) {
     return $users[0];
 
 } // end get_user_by_meta_data
+
+function reduce_comment_flood_time() {
+    return 5; // sekundy mezi komentáři
+}
+add_filter('comment_flood_delay', 'reduce_comment_flood_time');

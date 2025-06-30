@@ -1,3 +1,6 @@
+<?php
+use utils\Util;
+?>
 <!-- Title Box Start -->
 
 <div class="space-title-box box-100 relative">
@@ -98,5 +101,23 @@
 		</div>
 	</div>
 </div>
+
+<?php
+$bottomBar = get_post_meta(get_the_ID(), POST_BOTTOM_BAR . '_bottom_bar', true);
+$postTerms = wp_get_post_terms(get_the_ID(), 'category');
+$removeBottomBar = false;
+$categoryId = null;
+foreach($postTerms as $postTerm) {
+    $useSettings = get_term_meta($postTerm->term_id, CATEGORY_BOTTOM_BAR . '_bottom_bar', true);
+    if (Util::issetAndNotEmpty($useSettings) && $useSettings !== 'disabled') {
+        $removeBottomBar = true;
+        break;
+    }
+}
+
+if ($bottomBar === 'disabled' && !$removeBottomBar) {
+    get_template_part(FOUR_CROWNS_THEME_PARTS . '/bottom-bar');
+}
+?>
 
 <!-- Page Section End -->

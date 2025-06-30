@@ -15,8 +15,10 @@
   gtag('config', 'G-PP27NYFDE6');
 </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<?= Fourcrowns_Storage::get('option', null, 'custom-settings-header-code'); ?>
 </head>
 <body ontouchstart <?php body_class(); ?>>
+<?= Fourcrowns_Storage::get('option', null, 'custom-settings-body-start-code'); ?>
 <?php wp_body_open(); ?>
 <div class="space-box relative<?php if( get_theme_mod('mercury_boxed_layout') ) { ?> enabled<?php } ?>">
 

@@ -63,6 +63,7 @@
 <!-- Back to Top End -->
 
 <?php wp_footer(); ?>
+<?= html_entity_decode(Fourcrowns_Storage::get('option', null, 'custom-settings-footer-code')); ?>
 
 </body>
 </html>

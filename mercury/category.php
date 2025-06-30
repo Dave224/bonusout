@@ -18,7 +18,7 @@
 
 <!-- Title Box End -->
 
-<?php get_template_part( '/theme-parts/custom-parts/top-brands' ); ?>
+<?php get_template_part( FOUR_CROWNS_THEME_PARTS . '/top-brands' ); ?>
 
 <!-- Archive Section Start -->
 
@@ -65,7 +65,7 @@
 
 				<!-- Category Description Start -->
 
-				<?php if( !is_paged() ) { 
+				<?php if( !is_paged() ) {
 					if (category_description()) { ?>
 
 				<div class="space-taxonomy-description box-100 relative" style="margin-top: 45px;">

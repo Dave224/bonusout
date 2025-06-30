@@ -79,12 +79,7 @@ class Fourcrowns_Fields {
                     if ($field['type'] == 'textarea') {
                         Fourcrowns_Storage::update('option', null, $name, stripslashes($val));
                     } else {
-                        bdump($val);
-                        bdump($name);
-
                         $sanitized = $obj->sanitize($val);
-                        bdump($sanitized);
-
                         Fourcrowns_Storage::update('option', null, $name, $sanitized);
                     }
 

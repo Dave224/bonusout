@@ -1,11 +1,6 @@
 <?php
 const POST_BOTTOM_BAR = 'post_bottom_bar';
 const RECOMMENDED = 'post_recommended';
-const BACKGROUND = [
-    'no-background' => 'Bílé pozadí',
-    'black-background' => 'Černé pozadí',
-    'color-background' => 'Pozadí v barvě webu'
-];
 
 Fourcrowns_Fields::add_metabox(POST_BOTTOM_BAR . '_metabox', [
     'title' => 'Nastavení spodní lišty',

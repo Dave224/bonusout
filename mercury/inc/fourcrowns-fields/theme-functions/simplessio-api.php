@@ -36,11 +36,11 @@ function createPostFromApp ($data)
         $author_id = $user->ID;
     }
 
-   // $new_html = replace_images_with_sideloaded_versions($postContentData['contentHTML']);
+    $new_html = replace_images_with_sideloaded_versions($postContentData['contentHTML']);
 
     $my_post = [
         'post_title'    => $postContentData['title'],
-        'post_content'  => $postContentData['contentHTML'],
+        'post_content'  => $new_html,
         'post_excerpt'  => $postContentData['description'],
         'post_status'   => 'draft',
         'post_author'   => $author_id,
@@ -72,7 +72,7 @@ function createPostFromApp ($data)
         $my_post = [
             'ID'            => $posts[0]->ID,
             'post_title'    => $postContentData['title'],
-            'post_content'  => $postContentData['contentHTML'],
+            'post_content'  => $new_html,
             'post_excerpt'  => $postContentData['description'],
             'post_status'   => get_post_status($posts[0]->ID),
             'post_author'   => $author_id,

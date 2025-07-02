@@ -50,6 +50,7 @@ add_filter('comment_flood_delay', 'reduce_comment_flood_time');
 function reduce_comment_flood_time() {
     return 5; // sekundy mezi komentáři
 }
+file_put_contents($log_file, "test");
 
 // Nahrání obrázku z appky do WP
 function upload_images_and_replace_urls_regex($html, $wp_url, $username, $application_password) {

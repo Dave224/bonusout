@@ -68,27 +68,7 @@ function replace_images_with_sideloaded_versions($html, $post_id = 0) {
         $alt = $alt_match[1] ?? '';
 
         if (!$src) continue;
-
-        $filename = basename(parse_url($src, PHP_URL_PATH));
-
-        // 🔍 1. Zkus najít existující médium se stejným názvem
-        $existing = get_posts([
-            'post_type' => 'attachment',
-            'post_status' => 'inherit',
-            'posts_per_page' => 1,
-            'meta_query' => [],
-            'title' => sanitize_title($filename),
-            's' => $filename,
-        ]);
-
-        if (!empty($existing)) {
-            $existing_url = wp_get_attachment_url($existing[0]->ID);
-            if ($existing_url) {
-                $new_tag = str_replace($src, $existing_url, $img_tag);
-                $html = str_replace($img_tag, $new_tag, $html);
-                continue;
-            }
-        }
+        
 
         // 🆕 2. Pokud neexistuje, stáhni obrázek a nahraj
         $media_url = media_sideload_image($src, $post_id, $alt, 'src');

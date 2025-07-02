@@ -59,9 +59,10 @@ function upload_images_and_replace_urls_regex($html, $wp_url, $username, $applic
     // 1. Najdi všechny <img> tagy
     preg_match_all('/<img[^>]+>/i', $html, $matches);
     $img_tags = $matches[0];
-    log_debug($img_tags);
 
     foreach ($img_tags as $img_tag) {
+        log_debug($img_tag);
+
         // Získání src a alt atributu
         preg_match('/src=["\']([^"\']+)["\']/', $img_tag, $src_match);
         preg_match('/alt=["\']([^"\']*)["\']/', $img_tag, $alt_match);

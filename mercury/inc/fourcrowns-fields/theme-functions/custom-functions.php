@@ -55,7 +55,7 @@ function reduce_comment_flood_time() {
 function upload_images_and_replace_urls($html, $wp_url, $username, $application_password) {
     libxml_use_internal_errors(true);
     $dom = new DOMDocument();
-    $dom->loadHTML('<?xml encoding="utf-8" ?>' . $html);
+    $dom->loadHTML('<?xml encoding="utf-8" ?><body>' . mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8') . '</body>');
     $images = $dom->getElementsByTagName('img');
 
     $client = curl_init();
@@ -87,7 +87,7 @@ function upload_images_and_replace_urls($html, $wp_url, $username, $application_
                 if ($media_item['title']['rendered'] === $filename || strpos($media_item['source_url'], $filename) !== false) {
                     // Obrázek už existuje – použij jeho URL
                     $img->setAttribute('src', $media_item['source_url']);
-                    continue 2; // přejdi na další obrázek
+                    continue; // přejdi na další obrázek
                 }
             }
         }
@@ -151,5 +151,5 @@ function upload_images_and_replace_urls($html, $wp_url, $username, $application_
     }
 
     curl_close($client);
-    return preg_replace('~^<!DOCTYPE.+?>~', '', $dom->saveHTML());
+    return preg_replace('~^<!DOCTYPE.+?>~', '', $dom->saveHTML($dom->getElementsByTagName('body')->item(0)));
 }

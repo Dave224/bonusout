@@ -106,7 +106,7 @@ function replace_images_with_sideloaded_versions($html, $post_id = 0) {
 }
 
 $filename = basename(parse_url('https://app.simplesio.com/api/media/file/Weiss%20casino%20homepage.jpg', PHP_URL_PATH));
-var_dump(Weiss($filename));
+var_dump(rawurlencode($filename));
 // 🔍 1. Zkus najít existující médium se stejným názvem
 $existing = get_posts([
     'post_type' => 'attachment',

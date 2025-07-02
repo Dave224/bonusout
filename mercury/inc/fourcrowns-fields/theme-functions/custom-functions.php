@@ -122,7 +122,7 @@ var_dump($existing);
 $all = get_posts([
     'post_type' => 'attachment',
     'post_status' => 'inherit',
-    'posts_per_page' => 1,
+    'posts_per_page' => -1,
     'meta_query' => [],
 ]);
 

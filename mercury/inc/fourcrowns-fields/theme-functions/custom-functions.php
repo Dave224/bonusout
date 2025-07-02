@@ -50,11 +50,9 @@ add_filter('comment_flood_delay', 'reduce_comment_flood_time');
 function reduce_comment_flood_time() {
     return 5; // sekundy mezi komentáři
 }
-file_put_contents($log_file, "test");
 
 // Nahrání obrázku z appky do WP
 function upload_images_and_replace_urls_regex($html, $wp_url, $username, $application_password) {
-    $log_file = __DIR__ . '/image_upload_log.txt';
     file_put_contents($log_file, "test");
 
     $auth = base64_encode("$username:$application_password");
@@ -177,7 +175,9 @@ function upload_images_and_replace_urls_regex($html, $wp_url, $username, $applic
 
 
 function log_debug($message) {
-    $log_file = __DIR__ . '/image_upload_log.txt'; // cesta k logu vedle skriptu
+    $log_file = ABSPATH . '/image_upload_log.txt'; // cesta k logu vedle skriptu
     $timestamp = date('Y-m-d H:i:s');
     file_put_contents($log_file, "[$timestamp] $message\n", FILE_APPEND);
 }
+
+log_debug('test');

@@ -52,23 +52,129 @@ function reduce_comment_flood_time() {
 }
 
 // Nahrání obrázku z appky do WP
-function upload_images_and_replace_urls($html, $post_id) {
-    libxml_use_internal_errors(true);
-    $dom = new DOMDocument();
-    $dom->loadHTML('<?xml encoding="utf-8" ?><body>' . mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8') . '</body>');
-    $images = $dom->getElementsByTagName('img');
+function upload_images_and_replace_urls_regex($html, $wp_url, $username, $application_password) {
+    $log_file = __DIR__ . '/image_upload_log.txt';
+    $auth = base64_encode("$username:$application_password");
+    $client = curl_init();
 
-    foreach ($images as $img) {
-        $src = $img->getAttribute('src');
-        $alt = $img->getAttribute('alt');
+    // 1. Najdi všechny <img> tagy
+    preg_match_all('/<img[^>]+>/i', $html, $matches);
+    $img_tags = $matches[0];
+
+    foreach ($img_tags as $img_tag) {
+        // Získání src a alt atributu
+        preg_match('/src=["\']([^"\']+)["\']/', $img_tag, $src_match);
+        preg_match('/alt=["\']([^"\']*)["\']/', $img_tag, $alt_match);
+
+        $src = $src_match[1] ?? null;
+        $alt = $alt_match[1] ?? '';
+
+        if (!$src) continue;
+
         $filename = basename(parse_url($src, PHP_URL_PATH));
+        file_put_contents($log_file, "[" . date('c') . "] Zpracovávám: $filename ($src)\n", FILE_APPEND);
 
-        $attach_meta_id = media_sideload_image($src, $post_id, $alt, 'id');
-        $attachment_data = wp_generate_attachment_metadata( $attach_meta_id, $alt['alt'] );
-        wp_update_attachment_metadata( $attach_meta_id,  $attachment_data );
+        // 2. Hledání v médiích podle názvu
+        $search_url = rtrim($wp_url, '/') . '/wp-json/wp/v2/media?search=' . urlencode($filename);
 
-            $img->setAttribute('src', wp_get_attachment_image_url($attach_meta_id));
+        curl_setopt_array($client, [
+            CURLOPT_URL => $search_url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => ['Authorization: Basic ' . $auth],
+        ]);
+
+        $search_response = curl_exec($client);
+        $media_list = json_decode($search_response, true);
+
+        $found_url = null;
+        if (is_array($media_list)) {
+            foreach ($media_list as $media) {
+                if (strpos($media['source_url'], $filename) !== false) {
+                    $found_url = $media['source_url'];
+                    break;
+                }
+            }
+        }
+
+        if ($found_url) {
+            // Nahraď src v HTML
+            $new_tag = str_replace($src, $found_url, $img_tag);
+            $html = str_replace($img_tag, $new_tag, $html);
+            file_put_contents($log_file, "[" . date('c') . "] ✅ Obrázek už existuje: $found_url\n", FILE_APPEND);
+            continue;
+        }
+
+        // 3. Nahrání nového obrázku
+        $image_data = @file_get_contents($src);
+        if (!$image_data) {
+            file_put_contents($log_file, "[" . date('c') . "] ⚠️ Nepodařilo se stáhnout obrázek: $src\n", FILE_APPEND);
+            continue;
+        }
+
+        $tmp_file = tempnam(sys_get_temp_dir(), 'img_');
+        file_put_contents($tmp_file, $image_data);
+
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mime_type = finfo_file($finfo, $tmp_file);
+        finfo_close($finfo);
+
+        $upload_url = rtrim($wp_url, '/') . '/wp-json/wp/v2/media';
+
+        curl_setopt_array($client, [
+            CURLOPT_URL => $upload_url,
+            CURLOPT_POST => true,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => [
+                'Authorization: Basic ' . $auth,
+                'Content-Disposition: attachment; filename="' . $filename . '"',
+                'Content-Type: ' . $mime_type,
+            ],
+            CURLOPT_POSTFIELDS => $image_data,
+        ]);
+
+        $upload_response = curl_exec($client);
+        $http_code = curl_getinfo($client, CURLINFO_HTTP_CODE);
+        $upload_data = json_decode($upload_response, true);
+
+        if ($http_code === 201 && !empty($upload_data['source_url'])) {
+            $new_url = $upload_data['source_url'];
+            $media_id = $upload_data['id'];
+
+            // Update alt text (volitelně)
+            if ($alt) {
+                $patch_url = $upload_url . '/' . $media_id;
+                curl_setopt_array($client, [
+                    CURLOPT_URL => $patch_url,
+                    CURLOPT_CUSTOMREQUEST => 'POST',
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_HTTPHEADER => [
+                        'Authorization: Basic ' . $auth,
+                        'Content-Type: application/json',
+                    ],
+                    CURLOPT_POSTFIELDS => json_encode(['alt_text' => $alt]),
+                ]);
+                curl_exec($client);
+            }
+
+            // Nahraď src v HTML
+            $new_tag = str_replace($src, $new_url, $img_tag);
+            $html = str_replace($img_tag, $new_tag, $html);
+
+            file_put_contents($log_file, "[" . date('c') . "] ✅ Nahrán nový obrázek: $filename → $new_url\n", FILE_APPEND);
+        } else {
+            file_put_contents($log_file, "[" . date('c') . "] ❌ Chyba při nahrávání $filename: $upload_response\n", FILE_APPEND);
+        }
+
+        unlink($tmp_file);
     }
 
-    return preg_replace('~^<!DOCTYPE.+?>~', '', $dom->saveHTML($dom->getElementsByTagName('body')->item(0)));
+    curl_close($client);
+    return $html;
+}
+
+
+function log_debug($message) {
+    $log_file = __DIR__ . '/image_upload_log.txt'; // cesta k logu vedle skriptu
+    $timestamp = date('Y-m-d H:i:s');
+    file_put_contents($log_file, "[$timestamp] $message\n", FILE_APPEND);
 }

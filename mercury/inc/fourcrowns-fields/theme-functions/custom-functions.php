@@ -66,7 +66,7 @@ function replace_images_with_sideloaded_versions($html, $post_id = 0) {
 
         $src = $src_match[1] ?? null;
         $alt = $alt_match[1] ?? '';
-        
+
         if (!$src) continue;
 
         $filename = basename(parse_url($src, PHP_URL_PATH));

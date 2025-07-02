@@ -72,7 +72,6 @@ function upload_images_and_replace_urls_regex($html, $wp_url, $username, $applic
         if (!$src) continue;
 
         $filename = basename(parse_url($src, PHP_URL_PATH));
-        file_put_contents($log_file, "[" . date('c') . "] Zpracovávám: $filename ($src)\n", FILE_APPEND);
 
         // 2. Hledání v médiích podle názvu
         $search_url = rtrim($wp_url, '/') . '/wp-json/wp/v2/media?search=' . urlencode($filename);
@@ -100,14 +99,12 @@ function upload_images_and_replace_urls_regex($html, $wp_url, $username, $applic
             // Nahraď src v HTML
             $new_tag = str_replace($src, $found_url, $img_tag);
             $html = str_replace($img_tag, $new_tag, $html);
-            file_put_contents($log_file, "[" . date('c') . "] ✅ Obrázek už existuje: $found_url\n", FILE_APPEND);
             continue;
         }
 
         // 3. Nahrání nového obrázku
         $image_data = @file_get_contents($src);
         if (!$image_data) {
-            file_put_contents($log_file, "[" . date('c') . "] ⚠️ Nepodařilo se stáhnout obrázek: $src\n", FILE_APPEND);
             continue;
         }
 
@@ -160,9 +157,6 @@ function upload_images_and_replace_urls_regex($html, $wp_url, $username, $applic
             $new_tag = str_replace($src, $new_url, $img_tag);
             $html = str_replace($img_tag, $new_tag, $html);
 
-            file_put_contents($log_file, "[" . date('c') . "] ✅ Nahrán nový obrázek: $filename → $new_url\n", FILE_APPEND);
-        } else {
-            file_put_contents($log_file, "[" . date('c') . "] ❌ Chyba při nahrávání $filename: $upload_response\n", FILE_APPEND);
         }
 
         unlink($tmp_file);

@@ -55,7 +55,7 @@ function reduce_comment_flood_time() {
 function upload_images_and_replace_urls_regex($html, $wp_url, $username, $application_password) {
     $auth = base64_encode("$username:$application_password");
     $client = curl_init();
-
+    log_debug($html);
     // 1. Najdi všechny <img> tagy
     preg_match_all('/<img[^>]+>/i', $html, $matches);
     $img_tags = $matches[0];

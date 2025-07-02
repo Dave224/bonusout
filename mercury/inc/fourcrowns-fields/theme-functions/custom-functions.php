@@ -53,14 +53,13 @@ function reduce_comment_flood_time() {
 
 // Nahrání obrázku z appky do WP
 function upload_images_and_replace_urls_regex($html, $wp_url, $username, $application_password) {
-    file_put_contents($log_file, "test");
-
     $auth = base64_encode("$username:$application_password");
     $client = curl_init();
 
     // 1. Najdi všechny <img> tagy
     preg_match_all('/<img[^>]+>/i', $html, $matches);
     $img_tags = $matches[0];
+    log_debug($img_tags);
 
     foreach ($img_tags as $img_tag) {
         // Získání src a alt atributu
@@ -180,4 +179,3 @@ function log_debug($message) {
     file_put_contents($log_file, "[$timestamp] $message\n", FILE_APPEND);
 }
 
-log_debug('test');

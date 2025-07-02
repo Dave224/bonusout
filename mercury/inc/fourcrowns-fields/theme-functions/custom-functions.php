@@ -66,10 +66,12 @@ function replace_images_with_sideloaded_versions($html, $post_id = 0) {
         log_debug('test');
         $src = $src_match[1] ?? null;
         $alt = $alt_match[1] ?? '';
-        log_debug($src);
+
         if (!$src) continue;
 
         $src = str_replace(" ", "-", $src);
+        $src = str_replace("%20", "-", $src);
+
         // 1. Zkus obrázek stáhnout do médií
         $media_html = media_sideload_image($src, $post_id, $alt, 'src'); // nebo 'html' místo 'src'
 

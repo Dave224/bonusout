@@ -70,6 +70,8 @@ function replace_images_with_sideloaded_versions($html, $post_id = 0) {
         if (!$src) continue;
 
         $filename = basename(parse_url($src, PHP_URL_PATH));
+        $filename = rawurldecode($filename);
+        $filenameArray = explode('.', $filename);
 
         // 🔍 1. Zkus najít existující médium se stejným názvem
         $existing = get_posts([
@@ -77,7 +79,7 @@ function replace_images_with_sideloaded_versions($html, $post_id = 0) {
             'post_status' => 'inherit',
             'posts_per_page' => 1,
             'meta_query' => [],
-            's' => rawurldecode($filename),
+            's' => $filenameArray[0],
         ]);
 
         if (!empty($existing)) {

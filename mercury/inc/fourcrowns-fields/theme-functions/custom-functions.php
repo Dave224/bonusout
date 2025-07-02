@@ -77,8 +77,7 @@ function replace_images_with_sideloaded_versions($html, $post_id = 0) {
             'post_status' => 'inherit',
             'posts_per_page' => 1,
             'meta_query' => [],
-            'title' => sanitize_title($filename),
-            's' => $filename,
+            's' => rawurldecode($filename),
         ]);
 
         if (!empty($existing)) {
@@ -104,26 +103,3 @@ function replace_images_with_sideloaded_versions($html, $post_id = 0) {
 
     return $html;
 }
-
-$filename = basename(parse_url('https://app.simplesio.com/api/media/file/Weiss%20casino%20homepage.jpg', PHP_URL_PATH));
-var_dump(rawurldecode($filename));
-// 🔍 1. Zkus najít existující médium se stejným názvem
-$existing = get_posts([
-    'post_type' => 'attachment',
-    'post_status' => 'inherit',
-    'posts_per_page' => 1,
-    'meta_query' => [],
-    'title' => $filename,
-    's' => $filename,
-]);
-
-var_dump($existing);
-
-$all = get_posts([
-    'post_type' => 'attachment',
-    'post_status' => 'inherit',
-    'posts_per_page' => -1,
-    'meta_query' => [],
-]);
-
-var_dump($all);

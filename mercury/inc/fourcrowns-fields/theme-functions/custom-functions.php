@@ -70,14 +70,14 @@ function replace_images_with_sideloaded_versions($html, $post_id = 0) {
         if (!$src) continue;
 
         $filename = basename(parse_url($src, PHP_URL_PATH));
-        error_log($filename);
+
         // 🔍 1. Zkus najít existující médium se stejným názvem
         $existing = get_posts([
             'post_type' => 'attachment',
             'post_status' => 'inherit',
             'posts_per_page' => 1,
             'meta_query' => [],
-            'title' => rawurlencode($filename),
+            'title' => str_replace("%20", " ", $filename),
             's' => $filename,
         ]);
 

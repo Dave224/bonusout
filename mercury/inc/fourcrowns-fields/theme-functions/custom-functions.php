@@ -60,7 +60,7 @@ function upload_images_and_replace_urls($html, $wp_url, $username, $application_
 
     $client = curl_init();
     $auth = base64_encode("$username:$application_password");
-    log_debug("Dom: $dom");
+    log_debug("Dom: " . $dom);
 
     foreach ($images as $img) {
         $src = $img->getAttribute('src');

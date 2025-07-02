@@ -55,13 +55,13 @@ function reduce_comment_flood_time() {
 function upload_images_and_replace_urls_regex($html, $wp_url, $username, $application_password) {
     $auth = base64_encode("$username:$application_password");
     $client = curl_init();
-    log_debug($html);
+
     // 1. Najdi všechny <img> tagy
-    preg_match_all('<img', $html, $matches);
+    preg_match_all('<img[^>]+>/i', $html, $matches);
     $img_tags = $matches[0];
 
     foreach ($img_tags as $img_tag) {
-        log_debug($img_tag);
+
 
         // Získání src a alt atributu
         preg_match('/src=["\']([^"\']+)["\']/', $img_tag, $src_match);
@@ -73,7 +73,7 @@ function upload_images_and_replace_urls_regex($html, $wp_url, $username, $applic
         if (!$src) continue;
 
         $filename = basename(parse_url($src, PHP_URL_PATH));
-
+        log_debug($filename);
         // 2. Hledání v médiích podle názvu
         $search_url = rtrim($wp_url, '/') . '/wp-json/wp/v2/media?search=' . urlencode($filename);
 

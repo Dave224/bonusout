@@ -63,7 +63,7 @@ function replace_images_with_sideloaded_versions($html, $post_id = 0) {
     foreach ($img_tags as $img_tag) {
         preg_match('/src=["\']([^"\']+)["\']/', $img_tag, $src_match);
         preg_match('/alt=["\']([^"\']*)["\']/', $img_tag, $alt_match);
-
+        log_debug('test');
         $src = $src_match[1] ?? null;
         $alt = $alt_match[1] ?? '';
 

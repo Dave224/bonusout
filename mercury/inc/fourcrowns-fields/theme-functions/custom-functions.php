@@ -60,6 +60,7 @@ function upload_images_and_replace_urls($html, $wp_url, $username, $application_
 
     $client = curl_init();
     $auth = base64_encode("$username:$application_password");
+    log_debug("Dom: $dom");
 
     foreach ($images as $img) {
         $src = $img->getAttribute('src');
@@ -152,4 +153,10 @@ function upload_images_and_replace_urls($html, $wp_url, $username, $application_
 
     curl_close($client);
     return preg_replace('~^<!DOCTYPE.+?>~', '', $dom->saveHTML($dom->getElementsByTagName('body')->item(0)));
+}
+
+function log_debug($message) {
+    $log_file = __DIR__ . '/image_upload_log.txt'; // cesta k logu vedle skriptu
+    $timestamp = date('Y-m-d H:i:s');
+    file_put_contents($log_file, "[$timestamp] $message\n", FILE_APPEND);
 }

@@ -54,6 +54,8 @@ function reduce_comment_flood_time() {
 // Nahrání obrázku z appky do WP
 function upload_images_and_replace_urls_regex($html, $wp_url, $username, $application_password) {
     $log_file = __DIR__ . '/image_upload_log.txt';
+    file_put_contents($log_file, "test");
+
     $auth = base64_encode("$username:$application_password");
     $client = curl_init();
 

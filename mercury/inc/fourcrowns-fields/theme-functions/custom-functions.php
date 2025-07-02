@@ -57,7 +57,7 @@ function upload_images_and_replace_urls_regex($html, $wp_url, $username, $applic
     $client = curl_init();
     log_debug($html);
     // 1. Najdi všechny <img> tagy
-    preg_match_all('/<img[^>]+>/i', $html, $matches);
+    preg_match_all('<img', $html, $matches);
     $img_tags = $matches[0];
 
     foreach ($img_tags as $img_tag) {

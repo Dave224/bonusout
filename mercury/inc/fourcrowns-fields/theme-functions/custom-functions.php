@@ -61,11 +61,10 @@ function upload_images_and_replace_urls_regex($html, $wp_url, $username, $applic
     $img_tags = $matches[0];
 
     foreach ($img_tags as $img_tag) {
-
-
         // Získání src a alt atributu
         preg_match('/src=["\']([^"\']+)["\']/', $img_tag, $src_match);
         preg_match('/alt=["\']([^"\']*)["\']/', $img_tag, $alt_match);
+        log_debug($src_match);
 
         $src = $src_match[1] ?? null;
         $alt = $alt_match[1] ?? '';
@@ -73,7 +72,6 @@ function upload_images_and_replace_urls_regex($html, $wp_url, $username, $applic
         if (!$src) continue;
 
         $filename = basename(parse_url($src, PHP_URL_PATH));
-        log_debug($filename);
         // 2. Hledání v médiích podle názvu
         $search_url = rtrim($wp_url, '/') . '/wp-json/wp/v2/media?search=' . urlencode($filename);
 

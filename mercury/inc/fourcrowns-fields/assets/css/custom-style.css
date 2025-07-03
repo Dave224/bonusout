@@ -979,7 +979,7 @@ a.visit-btn:hover {
 
 .space-archive-loop-item-img-category a:hover, .space-title-box-category a:hover, .space-news-3-item-img-category a:hover {
     background-color: var(--main-color)!important;
-    color: #151515!important
+    color: #fff!important
 }
 
 .space-news-3-item-title a:hover, .space-footer-area.space-widget a:hover, .space-archive-loop-item-title a:hover, .space-archive-loop-item-meta span.read-more a:hover {
@@ -1001,12 +1001,12 @@ nav.pagination a {
 
 nav.pagination a:hover {
     background-color: var(--main-color)!important;
-    color: #151515!important
+    color: #fff!important
 }
 
 nav.pagination span.current {
     background-color: var(--main-color)!important;
-    color: #151515!important
+    color: #fff!important
 }
 
 a.btn {
@@ -1016,12 +1016,12 @@ a.btn {
 
 a.btn:hover {
     background-color: var(--main-color)!important;
-    color: #151515!important
+    color: #fff!important
 }
 
 a.bottom-bar-btn {
     background-color: var(--main-color)!important;
-    color: #151515!important
+    color: #fff!important
 }
 
 a.bottom-bar-btn:hover {
@@ -1031,7 +1031,7 @@ a.bottom-bar-btn:hover {
 
 input[type="submit"]:hover {
     background-color: var(--main-color)!important;
-    color: #151515!important
+    color: #fff!important
 }
 
 .space-footer-copy-menu ul li a:hover {

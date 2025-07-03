@@ -1,5 +1,5 @@
 <?php
-add_action( 'wp_enqueue_scripts', 'four_crowns_enqueue_styles', 30 );
+add_action( 'wp_enqueue_scripts', 'four_crowns_enqueue_styles', 20 );
 
 function four_crowns_enqueue_styles()
 {

@@ -1226,3 +1226,20 @@ input[type="submit"]:hover {
     margin-left: 10px!important; /* Mezera mezi obrázkem a titulkem */
     flex-grow: 1; /* Zajišťuje, že titulek zabírá zbývající prostor */
 }
+
+.space-header-height .space-header-search {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.space-header-height .space-header-search:hover {
+    color: var(--main-color)!important;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}

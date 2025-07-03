@@ -963,3 +963,266 @@ a.visit-btn:hover {
         font-size: 1.2em !important;
     }
 }
+
+.space-footer-copy {
+    background-color: #262161!important;
+}
+
+.space-page-content a:hover, .space-header-height .space-header-menu ul.main-menu li ul.sub-menu li a:hover {
+    color: var(--main-color)!important;
+}
+
+.space-archive-loop-item-img-category a, .space-title-box-category a, .space-news-3-item-img-category a {
+    color: #ffffff!important;
+    background-color: var(--secondary-color)!important;
+}
+
+.space-archive-loop-item-img-category a:hover, .space-title-box-category a:hover, .space-news-3-item-img-category a:hover {
+    background-color: var(--main-color)!important;
+    color: #151515!important
+}
+
+.space-news-3-item-title a:hover, .space-footer-area.space-widget a:hover, .space-archive-loop-item-title a:hover, .space-archive-loop-item-meta span.read-more a:hover {
+    color: var(--main-color)!important;
+}
+
+div#ez-toc-container ul.ez-toc-list a {
+    color: #206dd8!important;
+}
+
+div#ez-toc-container ul.ez-toc-list a:hover {
+    color: var(--main-color)!important;
+}
+
+nav.pagination a {
+    background-color: var(--secondary-color)!important;
+    color: #fff!important
+}
+
+nav.pagination a:hover {
+    background-color: var(--main-color)!important;
+    color: #151515!important
+}
+
+nav.pagination span.current {
+    background-color: var(--main-color)!important;
+    color: #151515!important
+}
+
+a.btn {
+    background-color: var(--secondary-color)!important;
+    color: #fff!important
+}
+
+a.btn:hover {
+    background-color: var(--main-color)!important;
+    color: #151515!important
+}
+
+a.bottom-bar-btn {
+    background-color: var(--main-color)!important;
+    color: #151515!important
+}
+
+a.bottom-bar-btn:hover {
+    background-color: var(--secondary-color)!important;
+    color: #fff!important
+}
+
+input[type="submit"]:hover {
+    background-color: var(--main-color)!important;
+    color: #151515!important
+}
+
+.space-footer-copy-menu ul li a:hover {
+    color: var(--main-color)!important;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0!important;
+}
+
+.user-box a {
+    color: #206dd8;
+}
+
+.user-box a:hover {
+    color: var(--main-color);
+}
+
+.author-info-link {
+    color: #7f8c8d!important;
+}
+
+.author-info-link:hover {
+    color: var(--main-color)!important;
+    text-decoration: underline!important;
+}
+
+.user-box {
+    padding: 20px;
+    padding-left: 0;
+}
+
+.user-box img {
+    border-radius: 50%;
+}
+
+.user-box-extended {
+    padding-bottom: 20px;
+    margin: 0 8px;
+}
+
+@media screen and (max-width: 479px) {
+    .user-box-photo {
+        max-width: 50%;
+        padding-bottom: 0;
+    }
+}
+
+.custom-wrapper {
+    background-color: #1d1d1b;
+    padding: 0;
+}
+
+/* Kontejner pro layout s 6 sloupci */
+.custom-container {
+    display: grid;
+    background-color: #1d1d1b;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+    gap: 10px; /* Mezera mezi sloupci */
+    padding: 20px;
+}
+
+.elementor-widget-container .custom-wrapper .custom-container {
+    background-color: white;
+}
+
+.custom-container:empty {
+    justify-items: center;
+}
+
+/* Styl pro každý sloupec */
+.custom-column {
+    padding: 20px 10px;
+    text-align: left;
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: relative; /* Pro pozicování ikony */
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    justify-content: space-between; /* Zajišťuje, že obrázek a titulek jsou na opačných stranách */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Plynulý efekt pro zoom a stín */
+    text-decoration: none!important;
+}
+
+/* Obrázek v každém sloupci */
+.custom-column img {
+    width: 33%;
+    height: auto;
+    border-radius: 50%!important;
+}
+
+/* Ikona hvězdičky s číslem v pravém horním rohu */
+.star-rating {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(38, 33, 97, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 15% 0 15%;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.star-rating i {
+    margin-right: 5px;
+}
+
+/* Efekt zoomování při najetí myší */
+.custom-column:hover {
+    transform: scale(1.05); /* Zoomujeme o 5% při najetí */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Jemný stín pro zvýraznění */
+}
+
+/* Media query pro obrazovky menší než 768px (mobilní zařízení a tablety) */
+@media (max-width: 1076px) {
+    .custom-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 sloupce vedle sebe */
+    }
+
+    .custom-column h3 {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Media query pro obrazovky menší než 480px (velmi malé mobilní zařízení) */
+@media (max-width: 480px) {
+    .custom-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 sloupce vedle sebe */
+    }
+
+    .custom-column {
+        max-width: 225px;
+    }
+
+    .custom-column h3 {
+        margin-left: 5px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .star-rating {
+        padding: 3px 5px;
+        font-size: 0.6rem;
+    }
+
+    .custom-hp-container {
+        padding: 0;
+    }
+}
+
+.space-mobile-menu .space-mobile-menu-list ul li a {
+    font-size: 1.1em;
+    line-height: 1.2em;
+    padding-right: 15px;
+}
+
+.mobile-menu .space-up {
+    border-bottom: none;
+}
+
+.space-mobile-menu-block-ins .space-mobile-menu-list ul li ul.sub-menu {
+    border-radius: 5px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    background-color: rgba(153, 51, 153, 0.7);
+}
+
+.space-mobile-menu-list ul li.menu-item-has-children:after {
+    font-size: 20px!important;
+}
+
+.space-mobile-menu-list ul li.menu-item-has-children.space-up:after {
+    font-size: 20px!important;
+}
+
+.space-page-content h3 {
+    font-size: 1.65em!important;
+}
+
+.tag-over-title {
+    color: #ccff00!important;
+}
+
+/* Titulek pod obrázkem */
+.custom-column h3 {
+    font-size: 1rem!important;
+    color:white;
+    margin-left: 10px!important; /* Mezera mezi obrázkem a titulkem */
+    flex-grow: 1; /* Zajišťuje, že titulek zabírá zbývající prostor */
+}

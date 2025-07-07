@@ -78,10 +78,6 @@ class Fourcrowns_Fields {
                 if ($obj) {
                     if ($field['type'] == 'textarea') {
                         Fourcrowns_Storage::update('option', null, $name, stripslashes($val));
-                    } else if ($field['type'] == 'repeater') {
-                        var_dump($field['type']);
-                        $val = str_replace("/\/", '', $val);
-                        Fourcrowns_Storage::update('option', null, $name, $val);
                     } else {
                         $sanitized = $obj->sanitize($val);
                         Fourcrowns_Storage::update('option', null, $name, $sanitized);

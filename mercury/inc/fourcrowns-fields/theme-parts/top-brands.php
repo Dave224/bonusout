@@ -25,8 +25,9 @@ $key = 1;
                             $image = ['url' => $image];
                         }
                     }
-                    var_dump($image);
+
                     $imageUrl = Image::getCloudImage($image['id'], 270, 270);
+                    var_dump($imageUrl);
                     ?>
                     <a class="custom-column dynamic-typewriter" target="_blank" href="<?= $topBrand[CATEGORY_TOP_BRANDS . '_url']; ?>" rel="noopener">
                         <div class="star-rating"><i class="fas fa-star"></i><?= $key; ?></div>

@@ -10,6 +10,7 @@ if ($mainSettings) {
     $topBrands = Fourcrowns_Storage::get('term', $term_id, CATEGORY_TOP_BRANDS);
     $prefix = 'CATEGORY_';
 }
+var_dump($topBrands);
 $key = 1;
 ?>
 <?php if ($topBrands && $topBrands != []) { ?>

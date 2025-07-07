@@ -36,7 +36,6 @@ class Fourcrowns_Field_Image extends Fourcrowns_Field_Base {
 
 
     public function sanitize($value) {
-        var_dump($value);
         $value = stripslashes($value);
         $decoded = json_decode($value, true);
 

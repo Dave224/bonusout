@@ -31,6 +31,7 @@ class Fourcrowns_Field_Repeater extends Fourcrowns_Field_Base {
 
     public function sanitize($value) {
         return is_array($value) ? array_map(function($item) {
+            var_dump($item);
             return is_array($item) ? array_map('sanitize_text_field', $item) : $item;
         }, $value) : [];
     }

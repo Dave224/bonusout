@@ -54,16 +54,6 @@ class Image {
 			return '';
 		}
 
-		$OriginalWidth  = $src[1];
-		$OriginalHeight = $src[2];
-
-		if ( 2 * $OriginalWidth < $width ) {
-			return "";
-		}
-		if ( 2 * $OriginalHeight < $height ) {
-			return "";
-		}
-
 		if ( function_exists( 'cloudinary_url' ) ) {
 
 			// if "Auto Cloudinary" plugin exists -> get the image url with the specified and predefined parameters from Cloudinary service
@@ -88,13 +78,10 @@ class Image {
 
 			$img = fly_get_attachment_image_src( $id, array( $width, $height ), true );
 			if ( isset( $img['src'] ) ) {
-                var_dump(wp_get_original_image_path( $id ));
+
 				if ( self::isSvg( wp_get_original_image_path( $id ) ) ) {
 					$image_url = wp_get_attachment_image_src( $id )[0];
-				} else if (self::isWebp( wp_get_original_image_path( $id ) )) {
-                    var_dump('here');
-                    $image_url = wp_get_attachment_image_src( $id )[0];
-                } else {
+				} else {
 					$image_url = $img['src'];
 				}
 			} else {
@@ -118,12 +105,4 @@ class Image {
 
 		return false;
 	}
-
-    public static function isWebp( $filePath ) {
-        if ( $filePath ) {
-            return 'image/webp' === mime_content_type( $filePath );
-        }
-
-        return false;
-    }
 }

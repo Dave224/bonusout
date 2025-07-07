@@ -77,8 +77,7 @@ class Fourcrowns_Fields {
                 $obj = Fourcrowns_FieldFactory::create($field, $val);
                 if ($obj) {
                     if ($field['type'] == 'textarea' || $field['type'] == 'image') {
-                        var_dump(stripslashes($val));
-
+                        $val = preg_replace('/\\\\/', '', $val);
                         Fourcrowns_Storage::update('option', null, $name, stripslashes($val));
                     } else {
                         $sanitized = $obj->sanitize($val);

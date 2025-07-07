@@ -34,7 +34,7 @@ $key = 1;
                     }
                     $imageUrl = Image::getCloudImage($image['id'], 270, 270);
                     ?>
-                    <a class="custom-column dynamic-typewriter" target="_blank" href="<?= $topBrand[$prefix . TOP_BRANDS . '_url']; ?>" rel="noopener">
+                    <a class="custom-column dynamic-typewriter" target="_blank" href="<?= $topBrand[$urlKey]; ?>" rel="noopener">
                         <div class="star-rating"><i class="fas fa-star"></i><?= $key; ?></div>
                         <?php if ($imageUrl) { ?>
                             <img src="<?= $imageUrl; ?>" alt="<?= $topBrand[$titleKey]; ?>">

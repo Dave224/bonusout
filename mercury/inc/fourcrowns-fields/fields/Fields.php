@@ -80,6 +80,7 @@ class Fourcrowns_Fields {
                         Fourcrowns_Storage::update('option', null, $name, stripslashes($val));
                     } else if ($field['type'] == 'image') {
                         $val = str_replace("/\/", '', $val);
+                        var_dump($val);
                         Fourcrowns_Storage::update('option', null, $name, $val);
                     } else {
                         $sanitized = $obj->sanitize($val);

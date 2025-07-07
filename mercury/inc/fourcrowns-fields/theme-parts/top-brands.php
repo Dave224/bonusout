@@ -10,13 +10,14 @@ if ($mainSettings) {
     $topBrands = Fourcrowns_Storage::get('term', $term_id, CATEGORY_TOP_BRANDS);
     $prefix = 'CATEGORY_';
 }
-var_dump($topBrands);
+;
 $key = 1;
 ?>
 <?php if ($topBrands && $topBrands != []) { ?>
     <div class="custom-wrapper custom-category-brands-wrapper relative">
         <div class="custom-container space-page-wrapper relative">
-            <?php foreach ($topBrands as $topBrand) { ?>
+            <?php foreach ($topBrands as $topBrand) {
+                var_dump($topBrand[$prefix . TOP_BRANDS . '_title'])?>
                 <?php if ($topBrand[$prefix . TOP_BRANDS . '_title']) {
                     $image = $topBrand[$prefix . TOP_BRANDS . '_image'];
                     if (is_string($image)) {

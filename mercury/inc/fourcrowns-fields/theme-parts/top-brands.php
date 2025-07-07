@@ -25,7 +25,7 @@ $key = 1;
                             $image = ['url' => $image];
                         }
                     }
-
+                    var_dump($image);
                     $imageUrl = Image::getCloudImage($image['id'], 270, 270);
                     var_dump($imageUrl);
                     ?>

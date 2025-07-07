@@ -2,7 +2,12 @@
 use utils\Image;
 
 $term_id = get_queried_object()->term_id;
-$topBrands = Fourcrowns_Storage::get('term', $term_id, CATEGORY_TOP_BRANDS);
+$mainSettings = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_TOP_BRANDS . '_use_settings');
+if ($mainSettings) {
+    $topBrands = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_TOP_BRANDS);
+} else {
+    $topBrands = Fourcrowns_Storage::get('term', $term_id, CATEGORY_TOP_BRANDS);
+}
 $key = 1;
 ?>
 <?php if ($topBrands && $topBrands != []) { ?>
@@ -20,6 +25,7 @@ $key = 1;
                             $image = ['url' => $image];
                         }
                     }
+                    var_dump($image);
                     $imageUrl = Image::getCloudImage($image['id'], 270, 270);
                     ?>
                     <a class="custom-column dynamic-typewriter" target="_blank" href="<?= $topBrand[CATEGORY_TOP_BRANDS . '_url']; ?>" rel="noopener">

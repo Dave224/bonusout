@@ -1,6 +1,7 @@
 <?php
 const CUSTOM_SETTINGS = 'custom-settings';
 const CUSTOM_SETTINGS_BOTTOM_BAR = 'custom-settings-bottom-bar';
+const CUSTOM_SETTINGS_TOP_BRANDS = 'custom-settings-top-brands';
 
 // REGISTRACE polí bez hooku (rovnou při načtení)
 Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS, [
@@ -62,6 +63,20 @@ Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_BOTTOM_BAR, [
     ]
 ]);
 
+Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_TOP_BRANDS . '_metabox', [
+    'title' => 'Nastavení top brandů',
+    'context' => 'option',
+    'fields' => [
+        ['type' => 'repeater', 'name' => CUSTOM_SETTINGS_TOP_BRANDS, 'label' => 'Top brandy', 'max' => 6, 'fields' => [
+            ['type' => 'text', 'name' => CUSTOM_SETTINGS_TOP_BRANDS . '_title', 'label' => 'Titulek:'],
+            ['type' => 'image', 'name' => CUSTOM_SETTINGS_TOP_BRANDS . '_image', 'label' => 'Obrázek:'],
+            ['type' => 'text', 'name' => CUSTOM_SETTINGS_TOP_BRANDS . '_url', 'label' => 'URL:'],
+        ]],
+        ['type' => 'checkbox', 'name' => CUSTOM_SETTINGS_TOP_BRANDS . '_use_settings', 'label' => 'Použít toto nastavení pro všechny kategorie'],
+
+    ],
+]);
+
 function custom_admin_menu() {
     // Hlavní stránka v sekci "Nastavení"
     add_menu_page(
@@ -90,7 +105,16 @@ function custom_admin_menu() {
         'Nastavení dolní lišty',        // Název v menu
         'manage_options',      // Potřebná oprávnění
         CUSTOM_SETTINGS_BOTTOM_BAR,         // Slug
-        'custom_menu_page'    // Callback funkce
+        'custom_bottom_bar_menu_page'    // Callback funkce
+    );
+
+    add_submenu_page(
+        CUSTOM_SETTINGS,     // Parent
+        'Nastavení top brandů',        // Název
+        'Nastavení top brandů',        // Název v menu
+        'manage_options',      // Potřebná oprávnění
+        CUSTOM_SETTINGS_TOP_BRANDS,         // Slug
+        'custom_brand_menu_page'    // Callback funkce
     );
 }
 add_action('admin_menu', 'custom_admin_menu');
@@ -99,7 +123,10 @@ function custom_settings_page() {
     Fourcrowns_AdminPages::render_option_page(CUSTOM_SETTINGS, 'Nastavení šablony');
 }
 
-
-function custom_menu_page() {
+function custom_bottom_bar_menu_page() {
     Fourcrowns_AdminPages::render_option_page(CUSTOM_SETTINGS_BOTTOM_BAR, 'Nastavení dolní lišty');
+}
+
+function custom_brand_menu_page() {
+    Fourcrowns_AdminPages::render_option_page(CUSTOM_SETTINGS_TOP_BRANDS, 'Nastavení top brandů');
 }

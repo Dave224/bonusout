@@ -88,6 +88,7 @@ class Image {
 
 			$img = fly_get_attachment_image_src( $id, array( $width, $height ), true );
 			if ( isset( $img['src'] ) ) {
+                var_dump(wp_get_original_image_path( $id ));
 				if ( self::isSvg( wp_get_original_image_path( $id ) ) ) {
 					$image_url = wp_get_attachment_image_src( $id )[0];
 				} else if (self::isWebp( wp_get_original_image_path( $id ) )) {

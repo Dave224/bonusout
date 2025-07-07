@@ -91,6 +91,7 @@ class Image {
 				if ( self::isSvg( wp_get_original_image_path( $id ) ) ) {
 					$image_url = wp_get_attachment_image_src( $id )[0];
 				} else if (self::isWebp( wp_get_original_image_path( $id ) )) {
+                    var_dump('here');
                     $image_url = wp_get_attachment_image_src( $id )[0];
                 } else {
 					$image_url = $img['src'];

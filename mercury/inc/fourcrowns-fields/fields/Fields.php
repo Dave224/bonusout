@@ -80,6 +80,7 @@ class Fourcrowns_Fields {
                     if ($field['type'] == 'textarea') {
                         Fourcrowns_Storage::update('option', null, $name, stripslashes($val));
                     } else if ($field['type'] == 'image') {
+                        var_dump($field['type']);
                         $val = str_replace("/\/", '', $val);
                         Fourcrowns_Storage::update('option', null, $name, $val);
                     } else {

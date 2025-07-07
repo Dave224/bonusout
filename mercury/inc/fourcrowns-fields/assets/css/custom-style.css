@@ -1225,6 +1225,7 @@ input[type="submit"]:hover {
     color:white;
     margin-left: 10px!important; /* Mezera mezi obrázkem a titulkem */
     flex-grow: 1; /* Zajišťuje, že titulek zabírá zbývající prostor */
+    white-space: normal!important;
 }
 
 .space-header-height .space-header-search {

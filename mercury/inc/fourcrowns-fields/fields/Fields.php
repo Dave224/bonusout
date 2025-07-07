@@ -70,7 +70,6 @@ class Fourcrowns_Fields {
         if (!isset($_POST['_fourcrowns_options_save'])) return;
 
         foreach (self::$boxes as $id => $args) {
-            var_dump($args['fields']);
             if ($args['context'] !== 'option') continue;
             foreach ($args['fields'] as $field) {
                 $name = $field['name'];

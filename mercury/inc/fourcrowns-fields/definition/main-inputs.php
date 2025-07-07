@@ -63,7 +63,7 @@ Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_BOTTOM_BAR, [
     ]
 ]);
 
-Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_TOP_BRANDS . '_metabox', [
+Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_TOP_BRANDS, [
     'title' => 'Nastavení top brandů',
     'context' => 'option',
     'fields' => [

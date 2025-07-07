@@ -31,8 +31,12 @@ class Fourcrowns_Field_Repeater extends Fourcrowns_Field_Base {
 
     public function sanitize($value) {
         return is_array($value) ? array_map(function($item) {
-            var_dump($item);
+            if (str_contains('image', $item)) {
+                $obj = Fourcrowns_FieldFactory::create('image', $item);
+                return is_array($item) ? array_map($obj->sanitize($item), $item) : $item;
+            } else {
             return is_array($item) ? array_map('sanitize_text_field', $item) : $item;
+            }
         }, $value) : [];
     }
 }

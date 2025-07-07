@@ -5,10 +5,14 @@ $term_id = get_queried_object()->term_id;
 $mainSettings = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_TOP_BRANDS . '_use_settings');
 if ($mainSettings) {
     $topBrands = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_TOP_BRANDS);
-    $prefix = 'CUSTOM_SETTINGS_';
+    $titleKey = CUSTOM_SETTINGS_TOP_BRANDS . '_title';
+    $imageKey = CUSTOM_SETTINGS_TOP_BRANDS . '_image';
+    $urlKey = CUSTOM_SETTINGS_TOP_BRANDS . '_url';
 } else {
     $topBrands = Fourcrowns_Storage::get('term', $term_id, CATEGORY_TOP_BRANDS);
-    $prefix = 'CATEGORY_';
+    $titleKey = CATEGORY_TOP_BRANDS . '_title';
+    $imageKey = CATEGORY_TOP_BRANDS . '_image';
+    $urlKey = CATEGORY_TOP_BRANDS . '_url';
 }
 ;
 $key = 1;
@@ -16,12 +20,9 @@ $key = 1;
 <?php if ($topBrands && $topBrands != []) { ?>
     <div class="custom-wrapper custom-category-brands-wrapper relative">
         <div class="custom-container space-page-wrapper relative">
-            <?php foreach ($topBrands as $topBrand) {
-                var_dump('here');
-
-                var_dump($topBrand[$prefix . TOP_BRANDS . '_title']); ?>
-                <?php if ($topBrand[$prefix . TOP_BRANDS . '_title']) {
-                    $image = $topBrand[$prefix . TOP_BRANDS . '_image'];
+            <?php foreach ($topBrands as $topBrand) { ?>
+                <?php if ($topBrand[$titleKey]) {
+                    $image = $topBrand[$imageKey];
                     if (is_string($image)) {
                         $decoded = json_decode($image, true);
                         if (json_last_error() === JSON_ERROR_NONE) {
@@ -36,9 +37,9 @@ $key = 1;
                     <a class="custom-column dynamic-typewriter" target="_blank" href="<?= $topBrand[$prefix . TOP_BRANDS . '_url']; ?>" rel="noopener">
                         <div class="star-rating"><i class="fas fa-star"></i><?= $key; ?></div>
                         <?php if ($imageUrl) { ?>
-                            <img src="<?= $imageUrl; ?>" alt="<?= $topBrand[$prefix . TOP_BRANDS . '_title']; ?>">
+                            <img src="<?= $imageUrl; ?>" alt="<?= $topBrand[$titleKey]; ?>">
                         <?php } ?>
-                        <h3><?= $topBrand[$prefix . TOP_BRANDS . '_title']; ?></h3>
+                        <h3><?= $topBrand[$titleKey]; ?></h3>
                         <span class="hidden-text" style="display:none"><?= __('Navštívit', 'SLOTH'); ?></span>
                     </a>
                 <?php } ?>

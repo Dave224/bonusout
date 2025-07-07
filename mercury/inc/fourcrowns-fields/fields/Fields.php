@@ -75,8 +75,10 @@ class Fourcrowns_Fields {
                 $name = $field['name'];
                 $val = $_POST[$name] ?? null;
                 $obj = Fourcrowns_FieldFactory::create($field, $val);
+                var_dump($name);
+                var_dump($val);
                 if ($obj) {
-                    if ($field['type'] == 'textarea' || $field['type'] == 'image') {
+                    if ($field['type'] == 'textarea') {
                         Fourcrowns_Storage::update('option', null, $name, stripslashes($val));
                     } else {
                         $sanitized = $obj->sanitize($val);

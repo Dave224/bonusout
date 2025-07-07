@@ -70,6 +70,7 @@ class Fourcrowns_Fields {
         if (!isset($_POST['_fourcrowns_options_save'])) return;
 
         foreach (self::$boxes as $id => $args) {
+            var_dump($args['fields']);
             if ($args['context'] !== 'option') continue;
             foreach ($args['fields'] as $field) {
                 $name = $field['name'];
@@ -78,9 +79,8 @@ class Fourcrowns_Fields {
                 if ($obj) {
                     if ($field['type'] == 'textarea') {
                         Fourcrowns_Storage::update('option', null, $name, stripslashes($val));
-                    } else if ($field['type'] == 'repeater') {
+                    } else if ($field['type'] == 'image') {
                         $val = str_replace("/\/", '', $val);
-                        var_dump($val);
                         Fourcrowns_Storage::update('option', null, $name, $val);
                     } else {
                         $sanitized = $obj->sanitize($val);

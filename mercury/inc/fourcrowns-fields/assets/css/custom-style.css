@@ -1243,3 +1243,7 @@ input[type="submit"]:hover {
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
+
+.space-footer-copy-menu ul li a, .space-footer-copy-left {
+    color: #ffffff!important;
+}

@@ -3,6 +3,7 @@ use utils\Image;
 
 $term_id = get_queried_object()->term_id;
 $mainSettings = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_TOP_BRANDS . '_use_settings');
+var_dump($mainSettings);
 if ($mainSettings) {
     $topBrands = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_TOP_BRANDS);
     $titleKey = CUSTOM_SETTINGS_TOP_BRANDS . '_title';

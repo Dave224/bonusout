@@ -12,7 +12,7 @@ if ($mainSettings) {
 }
 ;
 $key = 1;
-var_dump($topBrands);
+var_dump($topBrands && $topBrands != []);
 ?>
 <?php if ($topBrands && $topBrands != []) { ?>
     <div class="custom-wrapper custom-category-brands-wrapper relative">

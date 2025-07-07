@@ -12,12 +12,13 @@ if ($mainSettings) {
 }
 ;
 $key = 1;
+var_dump($topBrands);
 ?>
 <?php if ($topBrands && $topBrands != []) { ?>
     <div class="custom-wrapper custom-category-brands-wrapper relative">
         <div class="custom-container space-page-wrapper relative">
             <?php foreach ($topBrands as $topBrand) {
-                var_dump($topBrand[$prefix . TOP_BRANDS . '_title'])?>
+                var_dump($topBrand[$prefix . TOP_BRANDS . '_title']); ?>
                 <?php if ($topBrand[$prefix . TOP_BRANDS . '_title']) {
                     $image = $topBrand[$prefix . TOP_BRANDS . '_image'];
                     if (is_string($image)) {

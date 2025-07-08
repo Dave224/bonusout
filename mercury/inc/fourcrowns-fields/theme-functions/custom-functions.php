@@ -103,7 +103,7 @@ function replace_images_with_sideloaded_versions($html, $app_post_id, $post_id =
             $pathinfo = pathinfo( $file );
 
             // 3. Vytvoř nový název souboru
-            $new_filename = $app_post_id . '-' . sanitize_file_name( $pathinfo['basename'] );
+            $new_filename = $app_post_id . '-' . $pathinfo['basename'];
             $new_path = $pathinfo['dirname'] . '/' . $new_filename;
 
             // 4. Přejmenuj soubor na disku
@@ -115,7 +115,7 @@ function replace_images_with_sideloaded_versions($html, $app_post_id, $post_id =
             // 6. (Volitelné) změň post_name (slug) přílohy v DB
             wp_update_post( [
                 'ID' => $attachment_id,
-                'post_name' => sanitize_title( $app_post_id . '-' . $pathinfo['filename'] )
+                'post_name' =>  $app_post_id . '-' . $pathinfo['filename'],
             ] );
         }
 

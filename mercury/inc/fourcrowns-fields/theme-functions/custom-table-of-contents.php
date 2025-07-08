@@ -45,7 +45,7 @@ class FC_Outline_Widget extends WP_Widget {
                 foreach ($matches as $match) {
                     $tag = $match[1];      // h2 nebo h3
                     $id = $match[2];
-                    $title = $match[3];
+                    $title = $match[4];
 
                     if ($tag === 'h2') {
                         if ($open_sublist) {

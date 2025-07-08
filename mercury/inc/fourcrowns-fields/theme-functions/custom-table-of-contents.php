@@ -77,3 +77,63 @@ function fc_register_outline_widget() {
     register_widget('FC_Outline_Widget');
 }
 add_action('widgets_init', 'fc_register_outline_widget');
+
+function fc_insert_outline_into_content($content) {
+    if (!is_single()) {
+        return $content;
+    }
+
+    // Vygeneruj osnovu z <h2> a <h3>
+    preg_match_all('/<(h[2-3])[^>]*id="([^"]+)"[^>]*>(.*?)<\/\1>/', $content, $matches, PREG_SET_ORDER);
+
+    if (empty($matches)) {
+        return $content;
+    }
+
+    // Vytvoření HTML osnovy
+    $outline = '<div class="fc-inline-outline">';
+    $outline .= '<ul class="fc-outline">';
+    $open_sublist = false;
+
+    foreach ($matches as $match) {
+        $tag = $match[1];
+        $id = $match[2];
+        $title = $match[3];
+
+        if ($tag === 'h2') {
+            if ($open_sublist) {
+                $outline .= '</ul></li>';
+                $open_sublist = false;
+            }
+            $outline .= '<li><a href="#' . esc_attr($id) . '">' . esc_html($title) . '</a>';
+        } elseif ($tag === 'h3') {
+            if (!$open_sublist) {
+                $outline .= '<ul class="fc-outline-sub">';
+                $open_sublist = true;
+            }
+            $outline .= '<li><a href="#' . esc_attr($id) . '">' . esc_html($title) . '</a></li>';
+        }
+    }
+
+    if ($open_sublist) {
+        $outline .= '</ul></li>';
+    }
+
+    $outline .= '</ul></div>';
+
+    // Najdi kontejner .space-page-content.box-100.relative
+    if (preg_match('/(<div[^>]*class="[^"]*space-page-content[^"]*box-100[^"]*relative[^"]*"[^>]*>)(.*?)<\/div>/is', $content, $matches)) {
+        $container_open = $matches[1];
+        $container_inner = $matches[2];
+
+        // Vlož osnovu před první <div> v obsahu
+        $modified_inner = preg_replace('/(<div[^>]*>)/i', $outline . '$1', $container_inner, 1);
+
+        // Sestav zpět celý obsah
+        $new_container = $container_open . $modified_inner . '</div>';
+        $content = str_replace($matches[0], $new_container, $content);
+    }
+
+    return $content;
+}
+add_filter('the_content', 'fc_insert_outline_into_content', 20); // Použij vyšší prioritu pro jistotu

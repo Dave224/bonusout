@@ -78,20 +78,21 @@ function fc_register_outline_widget() {
 }
 add_action('widgets_init', 'fc_register_outline_widget');
 
-function fc_insert_outline_into_content($content) {
+function fc_insert_outline_at_top($content) {
     if (!is_single()) {
         return $content;
     }
 
-    // Vygeneruj osnovu z <h2> a <h3>
+    // Najdi nadpisy
     preg_match_all('/<(h[2-3])[^>]*id="([^"]+)"[^>]*>(.*?)<\/\1>/', $content, $matches, PREG_SET_ORDER);
 
     if (empty($matches)) {
-        return $content;
+        return $content . '<!-- Osnova: žádné nadpisy nenalezeny -->';
     }
 
-    // Vytvoření HTML osnovy
+    // Vytvoř HTML osnovy
     $outline = '<div class="fc-inline-outline">';
+    $outline .= '<h2>Osnova článku</h2>';
     $outline .= '<ul class="fc-outline">';
     $open_sublist = false;
 
@@ -121,21 +122,7 @@ function fc_insert_outline_into_content($content) {
 
     $outline .= '</ul></div>';
 
-    // Najdi kontejner s class "space-page-content" (může mít i další třídy)
-    if (preg_match('/(<div[^>]*class="[^"]*\bspace-page-content\b[^"]*"[^>]*>)(.*?)(<\/div>)/is', $content, $container_matches)) {
-        $container_open = $container_matches[1];
-        $container_inner = $container_matches[2];
-        $container_close = $container_matches[3];
-
-        // Vlož osnovu před první <div> uvnitř
-        $modified_inner = preg_replace('/(<div[^>]*>)/i', $outline . '$1', $container_inner, 1);
-
-        $new_container = $container_open . $modified_inner . $container_close;
-        $content = str_replace($container_matches[0], $new_container, $content);
-    } else {
-        return $content . '<!-- Osnova: kontejner space-page-content nenalezen -->';
-    }
-
-    return $content;
+    // Vlož osnovu na začátek obsahu
+    return $outline . $content;
 }
-add_filter('the_content', 'fc_insert_outline_into_content', 999); // Použij vyšší prioritu pro jistotu
+add_filter('the_content', 'fc_insert_outline_at_top', 20);

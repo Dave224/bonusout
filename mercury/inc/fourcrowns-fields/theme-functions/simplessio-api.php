@@ -36,7 +36,7 @@ function createPostFromApp ($data)
         $author_id = $user->ID;
     }
 
-    $new_html = replace_images_with_sideloaded_versions($postContentData['contentHTML']);
+    $new_html = replace_images_with_sideloaded_versions($postContentData['contentHTML'], $appPostId);
 
     $my_post = [
         'post_title'    => $postContentData['title'],

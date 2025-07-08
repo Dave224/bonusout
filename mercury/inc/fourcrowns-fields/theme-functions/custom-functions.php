@@ -52,7 +52,7 @@ function reduce_comment_flood_time() {
 }
 
 // Nahrání obrázku z appky do WP
-function replace_images_with_sideloaded_versions($html, $post_id = 0) {
+function replace_images_with_sideloaded_versions($html, $app_post_id, $post_id = 0) {
     require_once ABSPATH . 'wp-admin/includes/image.php';
     require_once ABSPATH . 'wp-admin/includes/file.php';
     require_once ABSPATH . 'wp-admin/includes/media.php';
@@ -71,6 +71,7 @@ function replace_images_with_sideloaded_versions($html, $post_id = 0) {
 
         $filename = basename(parse_url($src, PHP_URL_PATH));
         $filename = rawurldecode($filename);
+        $filename = $app_post_id . '-' . $filename;
         $filenameArray = explode('.', $filename);
 
         // 🔍 1. Zkus najít existující médium se stejným názvem
@@ -92,7 +93,33 @@ function replace_images_with_sideloaded_versions($html, $post_id = 0) {
         }
 
         // 🆕 2. Pokud neexistuje, stáhni obrázek a nahraj
-        $media_url = media_sideload_image($src, $post_id, $alt, 'src');
+        $media = media_sideload_image($src, $post_id, $alt, 'id');
+
+        if ( ! is_wp_error( $media ) ) {
+            $attachment_id = $media;
+
+            // 2. Získej aktuální cestu k souboru
+            $file = get_attached_file( $attachment_id );
+            $pathinfo = pathinfo( $file );
+
+            // 3. Vytvoř nový název souboru
+            $new_filename = $app_post_id . '-' . sanitize_file_name( $pathinfo['basename'] );
+            $new_path = $pathinfo['dirname'] . '/' . $new_filename;
+
+            // 4. Přejmenuj soubor na disku
+            rename( $file, $new_path );
+
+            // 5. Aktualizuj attachment meta
+            update_attached_file( $attachment_id, $new_path );
+
+            // 6. (Volitelné) změň post_name (slug) přílohy v DB
+            wp_update_post( [
+                'ID' => $attachment_id,
+                'post_name' => sanitize_title( $app_post_id . '-' . $pathinfo['filename'] )
+            ] );
+        }
+
+        $media_url = wp_get_attachment_url($attachment_id);
 
         if (is_wp_error($media_url)) {
             error_log("❌ Nepodařilo se nahrát obrázek $src – " . $media_url->get_error_message());

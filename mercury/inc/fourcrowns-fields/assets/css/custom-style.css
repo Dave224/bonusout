@@ -1282,6 +1282,7 @@ div#ez-toc-container {
 .fc-outline li {
     margin-bottom: 5px;
     border: none!important;
+    list-style: none!important;
 }
 
 .fc-outline-sub {

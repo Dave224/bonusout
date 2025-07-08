@@ -1248,3 +1248,7 @@ input[type="submit"]:hover {
 .space-footer-copy-menu ul li a, .space-footer-copy-left {
     color: #ffffff!important;
 }
+
+div#ez-toc-container {
+    margin-bottom: 25px!important;
+}

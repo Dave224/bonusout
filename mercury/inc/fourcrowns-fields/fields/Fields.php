@@ -67,10 +67,13 @@ class Fourcrowns_Fields {
     }
 
     public static function option_save_handler() {
-        if (!isset($_POST['_fourcrowns_options_save'])) return;
+        if (!isset($_POST['_fourcrowns_options_save'], $_POST['_fourcrowns_options_slug'])) return;
+
+        $current_slug = sanitize_text_field($_POST['_fourcrowns_options_slug']);
 
         foreach (self::$boxes as $id => $args) {
             if ($args['context'] !== 'option') continue;
+            if ($id !== $current_slug) continue; // 💥 Zpracuj pouze aktuální stránku!
             foreach ($args['fields'] as $field) {
                 $name = $field['name'];
                 $val = $_POST[$name] ?? null;

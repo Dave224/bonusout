@@ -6,6 +6,7 @@ class Fourcrowns_AdminPages {
 
         echo '<form method="post" class="fourcrowns-form">';
         echo '<input type="hidden" name="_fourcrowns_options_save" value="1">';
+        echo '<input type="hidden" name="_fourcrowns_options_slug" value=" ' . esc_attr($slug) . '">';
 
         $reflection = new ReflectionClass('Fourcrowns_Fields');
         $property = $reflection->getProperty('boxes');

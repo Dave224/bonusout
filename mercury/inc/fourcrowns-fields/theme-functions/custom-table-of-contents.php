@@ -52,13 +52,13 @@ class FC_Outline_Widget extends WP_Widget {
                             echo '</ul></li>'; // Uzavřít otevřený <ul> z předchozí h3
                             $open_sublist = false;
                         }
-                        echo '<li><a href="#' . esc_attr($id) . '">' . esc_html($title) . '</a>';
+                        echo '<li><a href="#' . esc_attr($id) . '">' . $title . '</a>';
                     } elseif ($tag === 'h3') {
                         if (!$open_sublist) {
                             echo '<ul class="fc-outline-sub">';
                             $open_sublist = true;
                         }
-                        echo '<li><a href="#' . esc_attr($id) . '">' . esc_html($title) . '</a></li>';
+                        echo '<li><a href="#' . esc_attr($id) . '">' . $title . '</a></li>';
                     }
                 }
 

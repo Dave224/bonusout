@@ -3,6 +3,10 @@
     --secondary-color: #993399;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .mobile-menu .wpml-ls-current-language {
     border-bottom: none;
 }

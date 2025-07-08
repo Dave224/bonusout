@@ -1262,7 +1262,7 @@ div#ez-toc-container {
     padding: 0;
     margin: 0;
     background: #f5f5f5;
-    border-left: 4px solid #121785;
+    border-left: 4px solid #262161;
     padding-left: 1rem!important;
     padding-top: 0.5rem!important;
     padding-bottom: 0.5rem!important;
@@ -1271,16 +1271,17 @@ div#ez-toc-container {
 
 .fc-outline a {
     text-decoration: none;
-    color: #121785!important; /* Tmavě modrá z webu */
+    color: #262161!important;
 }
 
 .fc-outline a:hover {
     text-decoration: underline;
-    color: #52DEBD!important;
+    color: var(--main-color)!important;
 }
 
 .fc-outline li {
     margin-bottom: 5px;
+    border: none!important;
 }
 
 .fc-outline-sub {

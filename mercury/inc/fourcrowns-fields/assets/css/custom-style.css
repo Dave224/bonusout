@@ -1271,7 +1271,7 @@ div#ez-toc-container {
 
 .fc-outline a {
     text-decoration: none;
-    color: var(--secondary-color)!important;
+    color: #206dd8!important;
 }
 
 .fc-outline a:hover {

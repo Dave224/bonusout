@@ -121,17 +121,19 @@ function fc_insert_outline_into_content($content) {
 
     $outline .= '</ul></div>';
 
-    // Najdi kontejner .space-page-content.box-100.relative
-    if (preg_match('/(<div[^>]*class="[^"]*space-page-content[^"]*box-100[^"]*relative[^"]*"[^>]*>)(.*?)<\/div>/is', $content, $matches)) {
-        $container_open = $matches[1];
-        $container_inner = $matches[2];
+    // Najdi kontejner s class "space-page-content" (může mít i další třídy)
+    if (preg_match('/(<div[^>]*class="[^"]*\bspace-page-content\b[^"]*"[^>]*>)(.*?)(<\/div>)/is', $content, $container_matches)) {
+        $container_open = $container_matches[1];
+        $container_inner = $container_matches[2];
+        $container_close = $container_matches[3];
 
-        // Vlož osnovu před první <div> v obsahu
+        // Vlož osnovu před první <div> uvnitř
         $modified_inner = preg_replace('/(<div[^>]*>)/i', $outline . '$1', $container_inner, 1);
 
-        // Sestav zpět celý obsah
-        $new_container = $container_open . $modified_inner . '</div>';
-        $content = str_replace($matches[0], $new_container, $content);
+        $new_container = $container_open . $modified_inner . $container_close;
+        $content = str_replace($container_matches[0], $new_container, $content);
+    } else {
+        return $content . '<!-- Osnova: kontejner space-page-content nenalezen -->';
     }
 
     return $content;

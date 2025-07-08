@@ -1267,6 +1267,7 @@ div#ez-toc-container {
     padding-top: 0.5rem!important;
     padding-bottom: 0.5rem!important;
     font-size: 0.95rem;
+    margin-left: 0!important;
 }
 
 .fc-outline a {
@@ -1275,7 +1276,7 @@ div#ez-toc-container {
 }
 
 .fc-outline a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--main-color)!important;
 }
 

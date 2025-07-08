@@ -78,19 +78,19 @@ function fc_register_outline_widget() {
 }
 add_action('widgets_init', 'fc_register_outline_widget');
 
-function fc_insert_outline_at_top($content) {
+function fc_insert_outline_into_first_div($content) {
     if (!is_single()) {
         return $content;
     }
 
-    // Najdi nadpisy
+    // Najdi <h2> a <h3> s ID
     preg_match_all('/<(h[2-3])[^>]*id="([^"]+)"[^>]*>(.*?)<\/\1>/', $content, $matches, PREG_SET_ORDER);
 
     if (empty($matches)) {
         return $content . '<!-- Osnova: žádné nadpisy nenalezeny -->';
     }
 
-    // Vytvoř HTML osnovy
+    // Vytvoř osnovu
     $outline = '<div class="fc-inline-outline">';
     $outline .= '<h2>Osnova článku</h2>';
     $outline .= '<ul class="fc-outline">';
@@ -122,7 +122,15 @@ function fc_insert_outline_at_top($content) {
 
     $outline .= '</ul></div>';
 
-    // Vlož osnovu na začátek obsahu
-    return $outline . $content;
+    // Najdi první <div> v obsahu a vlož osnovu dovnitř něj (na začátek)
+    if (preg_match('/<div[^>]*>/', $content, $match, PREG_OFFSET_CAPTURE)) {
+        $pos = $match[0][1] + strlen($match[0][0]); // pozice ZA otevíracím tagem <div>
+        $content = substr_replace($content, $outline, $pos, 0);
+    } else {
+        // Pokud žádný <div> nenalezen, dej osnovu na začátek
+        $content = $outline . $content . '<!-- Osnova: první div nenalezen, vloženo nahoru -->';
+    }
+
+    return $content;
 }
-add_filter('the_content', 'fc_insert_outline_at_top', 20);
+add_filter('the_content', 'fc_insert_outline_into_first_div', 20);

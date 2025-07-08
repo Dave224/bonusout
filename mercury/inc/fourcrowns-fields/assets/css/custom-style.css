@@ -1252,3 +1252,7 @@ input[type="submit"]:hover {
 div#ez-toc-container {
     margin-bottom: 25px!important;
 }
+
+.attachment-mercury-custom-logo {
+    max-width: 226px!important;
+}

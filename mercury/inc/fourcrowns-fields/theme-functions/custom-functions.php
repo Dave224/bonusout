@@ -71,6 +71,7 @@ function replace_images_with_sideloaded_versions($html, $app_post_id, $post_id =
 
         $filename = basename(parse_url($src, PHP_URL_PATH));
         $filename = rawurldecode($filename);
+        $filename = $app_post_id . '-' . $filename;
         $filenameArray = explode('.', $filename);
 
         // 🔍 1. Zkus najít existující médium se stejným názvem
@@ -114,6 +115,7 @@ function replace_images_with_sideloaded_versions($html, $app_post_id, $post_id =
             // 6. (Volitelné) změň post_name (slug) přílohy v DB
             wp_update_post( [
                 'ID' => $attachment_id,
+                'post_title' => $app_post_id . '-' . $pathinfo['filename'],
                 'post_name' =>  $app_post_id . '-' . $pathinfo['filename'],
             ] );
         }

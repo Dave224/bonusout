@@ -115,7 +115,7 @@ function replace_images_with_sideloaded_versions($html, $app_post_id, $post_id =
             // 6. (Volitelné) změň post_name (slug) přílohy v DB
             wp_update_post( [
                 'ID' => $attachment_id,
-                'post_title' => $app_post_id . '-' . rawurldecode($pathinfo['filename']),
+                'post_title' => $app_post_id . '-' . str_replace('20', ' ', $pathinfo['filename']),
                 'post_name' =>  $app_post_id . '-' . $pathinfo['filename'],
             ] );
         }

@@ -133,3 +133,50 @@ function replace_images_with_sideloaded_versions($html, $app_post_id, $post_id =
 
     return $html;
 }
+
+function prepareImageFroPost ($src, $appPostId, $post_id, $image_alt) {
+    $filename = basename(parse_url($src, PHP_URL_PATH));
+    $filename = rawurldecode($filename);
+    $filename = $appPostId . '-' . $filename;
+    $filenameArray = explode('.', $filename);
+
+    // 🔍 1. Zkus najít existující médium se stejným názvem
+    $existing = get_posts([
+        'post_type' => 'attachment',
+        'post_status' => 'inherit',
+        'posts_per_page' => 1,
+        'meta_query' => [],
+        's' => $filenameArray[0],
+    ]);
+
+    if (empty($existing)) {
+        $attach_meta_id = media_sideload_image($src, $post_id, $image_alt, 'id');
+        // 2. Získej aktuální cestu k souboru
+        $file = get_attached_file( $attach_meta_id );
+        $pathinfo = pathinfo( $file );
+
+        // 3. Vytvoř nový název souboru
+        $new_filename = $appPostId . '-' . $pathinfo['basename'];
+        $new_path = $pathinfo['dirname'] . '/' . $new_filename;
+
+        // 4. Přejmenuj soubor na disku
+        rename( $file, $new_path );
+
+        // 5. Aktualizuj attachment meta
+        update_attached_file( $attach_meta_id, $new_path );
+
+        // 6. (Volitelné) změň post_name (slug) přílohy v DB
+        wp_update_post( [
+            'ID' => $attach_meta_id,
+            'post_title' => $appPostId . '-' . str_replace('20', ' ', $pathinfo['filename']),
+            'post_name' =>  $appPostId . '-' . $pathinfo['filename'],
+        ] );
+
+        $attachment_data = wp_generate_attachment_metadata( $attach_meta_id, $image_alt );
+        wp_update_attachment_metadata( $attach_meta_id,  $attachment_data );
+        update_post_meta($post_id, '_yoast_wpseo_opengraph-image-id', $attach_meta_id);
+        $attach_meta_url = wp_get_attachment_url($attach_meta_id);
+        update_post_meta($post_id, '_yoast_wpseo_opengraph-image', $attach_meta_url);
+        set_post_thumbnail($post_id, $attach_meta_id);
+    }
+}

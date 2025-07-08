@@ -80,16 +80,10 @@ function createPostFromApp ($data)
         ];
         wp_update_post($my_post);
 
-        $attach_meta_id = 0;
         if ($postMetaData['image']) {
-            $attach_meta_id = media_sideload_image($data->get_params()['origin'] . '/' . $postMetaData['image']['url'], $posts[0]->ID, $postMetaData['image']['alt'], 'id');
-            $attachment_data = wp_generate_attachment_metadata( $attach_meta_id, $postMetaData['image']['alt'] );
-            wp_update_attachment_metadata( $attach_meta_id,  $attachment_data );
-            update_post_meta($posts[0]->ID, '_yoast_wpseo_opengraph-image-id', $attach_meta_id);
-            $attach_meta_url = wp_get_attachment_url($attach_meta_id);
-            update_post_meta($posts[0]->ID, '_yoast_wpseo_opengraph-image', $attach_meta_url);
+            $src = $data->get_params()['origin'] . '/' . $postMetaData['image']['url'];
+            prepareImageFroPost($src, $appPostId, $posts[0]->ID, $postMetaData['image']['alt']);
         }
-        set_post_thumbnail($posts[0]->ID, $attach_meta_id);
 
         update_post_meta($posts[0]->ID, '_yoast_wpseo_title', $postMetaData['title']);
         update_post_meta($posts[0]->ID, '_yoast_wpseo_metadesc', $postMetaData['description']);
@@ -101,17 +95,11 @@ function createPostFromApp ($data)
         // Create post in specific language (en is default)
         $post_id = wp_insert_post($my_post);
         add_post_meta($post_id, 'app_id', $appPostId);
-        $attach_meta_id = 0;
 
         if ($postMetaData['image']) {
-            $attach_meta_id = media_sideload_image($data->get_params()['origin'] . '/' . $postMetaData['image']['url'], $post_id, $postMetaData['image']['alt'], 'id');
-            $attachment_data = wp_generate_attachment_metadata( $attach_meta_id, $postMetaData['image']['alt'] );
-            wp_update_attachment_metadata( $attach_meta_id,  $attachment_data );
-            update_post_meta($post_id, '_yoast_wpseo_opengraph-image-id', $attach_meta_id);
-            $attach_meta_url = wp_get_attachment_url($attach_meta_id);
-            update_post_meta($post_id, '_yoast_wpseo_opengraph-image', $attach_meta_url);
+            $src = $data->get_params()['origin'] . '/' . $postMetaData['image']['url'];
+            prepareImageFroPost($src, $appPostId, $post_id, $postMetaData['image']['alt']);
         }
-        set_post_thumbnail($post_id, $attach_meta_id);
 
         add_post_meta($post_id, '_yoast_wpseo_title', $postMetaData['title']);
         add_post_meta($post_id, '_yoast_wpseo_metadesc', $postMetaData['description']);

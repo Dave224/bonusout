@@ -138,4 +138,4 @@ function fc_insert_outline_into_content($content) {
 
     return $content;
 }
-add_filter('the_content', 'fc_insert_outline_into_content', 20); // Použij vyšší prioritu pro jistotu
+add_filter('the_content', 'fc_insert_outline_into_content', 999); // Použij vyšší prioritu pro jistotu

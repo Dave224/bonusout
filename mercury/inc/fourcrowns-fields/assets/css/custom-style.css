@@ -1269,10 +1269,6 @@ div#ez-toc-container {
     font-size: 0.95rem;
 }
 
-.fc-outline li {
-    margin-bottom: 0.5em;
-}
-
 .fc-outline a {
     text-decoration: none;
     color: #121785!important; /* Tmavě modrá z webu */
@@ -1281,4 +1277,13 @@ div#ez-toc-container {
 .fc-outline a:hover {
     text-decoration: underline;
     color: #52DEBD!important;
+}
+
+.fc-outline li {
+    margin-bottom: 5px;
+}
+
+.fc-outline-sub {
+    padding-left: 20px;
+    margin-top: 5px;
 }

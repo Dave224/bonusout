@@ -178,5 +178,7 @@ function prepareImageFroPost ($src, $appPostId, $post_id, $image_alt) {
         $attach_meta_url = wp_get_attachment_url($attach_meta_id);
         update_post_meta($post_id, '_yoast_wpseo_opengraph-image', $attach_meta_url);
         set_post_thumbnail($post_id, $attach_meta_id);
+    } else {
+        set_post_thumbnail($post_id, $existing[0]->ID);
     }
 }

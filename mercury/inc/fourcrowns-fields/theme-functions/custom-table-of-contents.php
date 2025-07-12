@@ -88,6 +88,7 @@ function fc_insert_outline_before_first_div($content) {
 
     // Vytvoř osnovu
     $outline = '<div class="fc-inline-outline">';
+    $outline .= '<h2>Obsah článku</h2>';
     $outline .= '<ul class="fc-outline">';
     $open_sublist = false;
 

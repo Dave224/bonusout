@@ -1,4 +1,5 @@
 <?php
+use utils\Util;
 
 // Vložení ID k <h2> a <h3> nadpisům pro kotvy
 function fc_add_heading_ids($content) {
@@ -83,13 +84,17 @@ function fc_insert_outline_before_first_div($content) {
         return $content;
     }
 
+    $contentTitle = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_contents_title');
+
     // Najdi <h2> a <h3> s ID
     preg_match_all('/<(h[2-3])[^>]*id="([^"]+)"[^>]*>(.*?)<\/\1>/', $content, $matches, PREG_SET_ORDER);
 
     // Vytvoř osnovu
     $outline = '<div class="fc-inline-outline">';
     $outline .= '<ul class="fc-outline">';
-    $outline .= '<h2 class="fc-outline-headline">Obsah článku</h2>';
+    if (Util::issetAndNotEmpty($contentTitle)) {
+        $outline .= '<h2 class="fc-outline-headline"> ' . $contentTitle . ' </h2>';
+    }
     $open_sublist = false;
 
     foreach ($matches as $match) {

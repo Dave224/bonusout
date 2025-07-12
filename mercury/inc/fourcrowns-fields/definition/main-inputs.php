@@ -2,6 +2,7 @@
 const CUSTOM_SETTINGS = 'custom-settings';
 const CUSTOM_SETTINGS_BOTTOM_BAR = 'custom-settings-bottom-bar';
 const CUSTOM_SETTINGS_TOP_BRANDS = 'custom-settings-top-brands';
+const CUSTOM_SETTINGS_POST_DETAIL = 'custom-settings-post-detail';
 
 // REGISTRACE polí bez hooku (rovnou při načtení)
 Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS, [
@@ -77,6 +78,15 @@ Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_TOP_BRANDS, [
     ],
 ]);
 
+Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_POST_DETAIL, [
+    'title' => 'Nastavení detailu článku',
+    'context' => 'option',
+    'fields' => [
+        ['type' => 'text', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_contents_title', 'label' => 'Nadpis pro osnovu článku:'],
+
+    ],
+]);
+
 function custom_admin_menu() {
     // Hlavní stránka v sekci "Nastavení"
     add_menu_page(
@@ -116,6 +126,15 @@ function custom_admin_menu() {
         CUSTOM_SETTINGS_TOP_BRANDS,         // Slug
         'custom_brand_menu_page'    // Callback funkce
     );
+
+    add_submenu_page(
+        CUSTOM_SETTINGS,     // Parent
+        'Nastavení detailu článku',        // Název
+        'Nastavení detailu článku',        // Název v menu
+        'manage_options',      // Potřebná oprávnění
+        CUSTOM_SETTINGS_POST_DETAIL,         // Slug
+        'post_detail_settings_menu_page'    // Callback funkce
+    );
 }
 add_action('admin_menu', 'custom_admin_menu');
 
@@ -129,4 +148,8 @@ function custom_bottom_bar_menu_page() {
 
 function custom_brand_menu_page() {
     Fourcrowns_AdminPages::render_option_page(CUSTOM_SETTINGS_TOP_BRANDS, 'Nastavení top brandů');
+}
+
+function post_detail_settings_menu_page() {
+    Fourcrowns_AdminPages::render_option_page(CUSTOM_SETTINGS_POST_DETAIL, 'Nastavení detailu článku');
 }

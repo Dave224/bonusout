@@ -16,6 +16,8 @@ foreach($postTerms as $postTerm) {
     }
 }
 
+$recommendedItems = [];
+
 $mainRecommended = get_option(CUSTOM_SETTINGS_RECOMMENDED . '_show');
 if (get_post_meta($postId, RECOMMENDED . '_section_title', true)) {
     $background = Fourcrowns_Storage::get('post', get_queried_object_id(), RECOMMENDED . '_background');

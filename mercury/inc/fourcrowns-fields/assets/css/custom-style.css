@@ -1294,3 +1294,7 @@ div#ez-toc-container {
     padding-left: 20px;
     margin-top: 5px;
 }
+
+.fc-outline-headline {
+    margin: 10px 0!important;
+}

@@ -1084,11 +1084,6 @@ input[type="submit"]:hover {
     }
 }
 
-.custom-wrapper {
-    background-color: #1d1d1b;
-    padding: 0;
-}
-
 /* Kontejner pro layout s 6 sloupci */
 .custom-container {
     display: grid;

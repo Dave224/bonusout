@@ -76,14 +76,15 @@ use utils\Util;
 			<?php if( get_theme_mod('mercury_related_posts') ) { ?>
 
 			<!-- Read More Start -->
-
 			<?php get_template_part( '/theme-parts/related-posts' ); ?>
 
 			<!-- Read More End -->
 
 			<?php } ?>
 
-			<?php if ( comments_open() || get_comments_number() ) :?>
+            <?php get_template_part(FOUR_CROWNS_THEME_PARTS . '/recommended'); ?>
+
+            <?php if ( comments_open() || get_comments_number() ) :?>
 
 			<!-- Comments Start -->
 

@@ -104,6 +104,7 @@ const swiper = new Swiper('.expert-slider', {
         },
         1024: {
             slidesPerView: 5,
+            centeredSlides: false,
         },
     },
     navigation: {

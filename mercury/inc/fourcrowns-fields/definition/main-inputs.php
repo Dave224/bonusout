@@ -3,6 +3,7 @@ const CUSTOM_SETTINGS = 'custom-settings';
 const CUSTOM_SETTINGS_BOTTOM_BAR = 'custom-settings-bottom-bar';
 const CUSTOM_SETTINGS_TOP_BRANDS = 'custom-settings-top-brands';
 const CUSTOM_SETTINGS_POST_DETAIL = 'custom-settings-post-detail';
+const CUSTOM_SETTINGS_RECOMMENDED = 'custom-settings-recommended';
 
 // REGISTRACE polí bez hooku (rovnou při načtení)
 Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS, [
@@ -87,6 +88,25 @@ Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_POST_DETAIL, [
     ],
 ]);
 
+Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_RECOMMENDED, [
+    'title' => 'Doporučená casina',
+    'context' => 'option',
+    'fields' => [
+        ['type' => 'select', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_background', 'label' => 'Pozadí sekce:', 'options' => BACKGROUND],
+        ['type' => 'text', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_section_title', 'label' => 'Titulek sekce:'],
+        ['type' => 'text', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_section_description', 'label' => 'Popisek sekce:'],
+        ['type' => 'repeater', 'name' => CUSTOM_SETTINGS_RECOMMENDED, 'label' => 'Položky', 'fields' => [
+            ['type' => 'text', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_title', 'label' => 'Titulek:'],
+            ['type' => 'image', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_image', 'label' => 'Obrázek:'],
+            ['type' => 'text', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_description', 'label' => 'Popisek pod tlačítkem:'],
+            ['type' => 'text', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_button_text', 'label' => 'Text tlačítka:'],
+            ['type' => 'text', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_button_url', 'label' => 'URL tlačítka:'],
+            ['type' => 'checkbox', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_button_url_open_new_tab', 'label' => 'Otevřít odkaz na nové kartě:'],
+        ]],
+        ['type' => 'checkbox', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_show', 'label' => 'Použít toto nastavení u všech příspěvku na webu'],
+    ],
+]);
+
 function custom_admin_menu() {
     // Hlavní stránka v sekci "Nastavení"
     add_menu_page(
@@ -135,6 +155,15 @@ function custom_admin_menu() {
         CUSTOM_SETTINGS_POST_DETAIL,         // Slug
         'post_detail_settings_menu_page'    // Callback funkce
     );
+
+    add_submenu_page(
+        CUSTOM_SETTINGS,     // Parent
+        'Doporučená casina',        // Název
+        'Doporučená casina',        // Název v menu
+        'manage_options',      // Potřebná oprávnění
+        CUSTOM_SETTINGS_RECOMMENDED,         // Slug
+        'custom_recommended_page'    // Callback funkce
+    );
 }
 add_action('admin_menu', 'custom_admin_menu');
 
@@ -152,4 +181,8 @@ function custom_brand_menu_page() {
 
 function post_detail_settings_menu_page() {
     Fourcrowns_AdminPages::render_option_page(CUSTOM_SETTINGS_POST_DETAIL, 'Nastavení detailu článku');
+}
+
+function custom_recommended_page() {
+    Fourcrowns_AdminPages::render_option_page(CUSTOM_SETTINGS_RECOMMENDED, 'Doporučená casina');
 }

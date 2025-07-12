@@ -1,6 +1,7 @@
 <?php
 const CATEGORY_TOP_BRANDS = 'category_top_brands';
 const CATEGORY_BOTTOM_BAR = 'category_bottom_bar';
+const CATEGORY_RECOMMENDED = 'category_recommended';
 
 Fourcrowns_Fields::add_metabox(CATEGORY_TOP_BRANDS . '_metabox', [
     'title' => 'Nastavení top brandů',
@@ -27,6 +28,26 @@ Fourcrowns_Fields::add_metabox(CATEGORY_BOTTOM_BAR . '_metabox', [
         ['type' => 'text', 'name' => CATEGORY_BOTTOM_BAR . '_button_text', 'label' => 'Text tlačítka:'],
         ['type' => 'text', 'name' => CATEGORY_BOTTOM_BAR . '_button_url', 'label' => 'URL tlačítka:'],
         ['type' => 'image', 'name' => CATEGORY_BOTTOM_BAR . '_image', 'label' => 'Obrázek:'],
+    ],
+]);
+
+Fourcrowns_Fields::add_metabox(CATEGORY_RECOMMENDED . '_metabox', [
+    'title' => 'Doporučená casina',
+    'context' => 'term',
+    'taxonomy' => ['category'],
+    'fields' => [
+        ['type' => 'select', 'name' => CATEGORY_RECOMMENDED . '_background', 'label' => 'Pozadí sekce:', 'options' => BACKGROUND],
+        ['type' => 'text', 'name' => CATEGORY_RECOMMENDED . '_section_title', 'label' => 'Titulek sekce:'],
+        ['type' => 'text', 'name' => CATEGORY_RECOMMENDED . '_section_description', 'label' => 'Popisek sekce:'],
+        ['type' => 'repeater', 'name' => CATEGORY_RECOMMENDED, 'label' => 'Položky', 'fields' => [
+            ['type' => 'text', 'name' => CATEGORY_RECOMMENDED . '_item_title', 'label' => 'Titulek:'],
+            ['type' => 'image', 'name' => CATEGORY_RECOMMENDED . '_item_image', 'label' => 'Obrázek:'],
+            ['type' => 'text', 'name' => CATEGORY_RECOMMENDED . '_item_description', 'label' => 'Popisek pod tlačítkem:'],
+            ['type' => 'text', 'name' => CATEGORY_RECOMMENDED . '_item_button_text', 'label' => 'Text tlačítka:'],
+            ['type' => 'text', 'name' => CATEGORY_RECOMMENDED . '_item_button_url', 'label' => 'URL tlačítka:'],
+            ['type' => 'checkbox', 'name' => CATEGORY_RECOMMENDED . '_item_button_url_open_new_tab', 'label' => 'Otevřít odkaz na nové kartě:'],
+        ]],
+        ['type' => 'checkbox', 'name' => CATEGORY_RECOMMENDED . '_show', 'label' => 'Použít toto nastavení u všech příspěvku v kategorii'],
     ],
 ]);
 

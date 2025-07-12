@@ -2,11 +2,41 @@
 use utils\Util;
 use utils\Image;
 
-$background = Fourcrowns_Storage::get('post', get_queried_object_id(), RECOMMENDED . '_background');
-$title = Fourcrowns_Storage::get('post', get_queried_object_id(), RECOMMENDED . '_section_title');
-$description = Fourcrowns_Storage::get('post', get_queried_object_id(), RECOMMENDED . '_section_description');
+$postTerms = wp_get_post_terms(get_the_ID(), 'category');
+$postId = get_the_ID();
 
-$recommendedItems = Fourcrowns_Storage::get('post', get_queried_object_id(), RECOMMENDED);
+$useCategorySettings = false;
+$categoryId = null;
+foreach($postTerms as $postTerm) {
+    $useSettings = get_term_meta($postTerm->term_id, CATEGORY_RECOMMENDED . '_show', true);
+    if (Util::issetAndNotEmpty($useSettings) && $useSettings !== 'disabled') {
+        $useCategorySettings = true;
+        $categoryId = $postTerm->term_id;
+        break;
+    }
+}
+
+$mainRecommended = get_option(CUSTOM_SETTINGS_RECOMMENDED . '_show');
+if (get_post_meta($postId, RECOMMENDED . '_section_title', true)) {
+    $background = Fourcrowns_Storage::get('post', get_queried_object_id(), RECOMMENDED . '_background');
+    $title = Fourcrowns_Storage::get('post', get_queried_object_id(), RECOMMENDED . '_section_title');
+    $description = Fourcrowns_Storage::get('post', get_queried_object_id(), RECOMMENDED . '_section_description');
+    $recommendedItems = Fourcrowns_Storage::get('post', get_queried_object_id(), RECOMMENDED);
+    $prefix = RECOMMENDED;
+} else if ($useCategorySettings) {
+    $background = get_term_meta($categoryId, CATEGORY_RECOMMENDED . '_background', true);
+    $title = get_term_meta($categoryId, CATEGORY_RECOMMENDED . '_section_title', true);
+    $description = get_term_meta($categoryId, CATEGORY_RECOMMENDED . '_section_description', true);
+    $recommendedItems = get_term_meta($categoryId, CATEGORY_RECOMMENDED, true);
+    $prefix = CATEGORY_RECOMMENDED;
+} else if ($mainRecommended && $mainRecommended != "disabled") {
+    $background = get_option(CUSTOM_SETTINGS_RECOMMENDED . '_background');
+    $title = get_option(CUSTOM_SETTINGS_RECOMMENDED . '_section_title');
+    $description = get_option(CUSTOM_SETTINGS_RECOMMENDED . '_section_description');
+    $recommendedItems = get_option(CUSTOM_SETTINGS_RECOMMENDED);
+    $prefix = CUSTOM_SETTINGS_RECOMMENDED;
+}
+
 ?>
 
 <?php if ($recommendedItems && Util::issetAndNotEmpty($title)) { ?>
@@ -27,8 +57,8 @@ $recommendedItems = Fourcrowns_Storage::get('post', get_queried_object_id(), REC
         <div class="swiper expert-slider">
             <div class="swiper-wrapper">
                 <?php foreach ($recommendedItems as $item) { ?>
-                    <?php if ($item[RECOMMENDED . '_item_title']) {
-                        $image = $item[RECOMMENDED . '_item_image'];
+                    <?php if ($item[$prefix . '_item_title']) {
+                        $image = $item[$prefix . '_item_image'];
                         if (is_string($image)) {
                             $decoded = json_decode($image, true);
                             if (json_last_error() === JSON_ERROR_NONE) {
@@ -42,13 +72,13 @@ $recommendedItems = Fourcrowns_Storage::get('post', get_queried_object_id(), REC
                         ?>
                         <div class="swiper-slide">
                             <div class="casino-card">
-                                <img src="<?= $imageUrl; ?>" alt="<?= $item[RECOMMENDED . '_item_title']; ?>">
-                                <h3><?= $item[RECOMMENDED . '_item_title']; ?></h3>
-                                <?php if ($item[RECOMMENDED . '_item_button_text'] && $item[RECOMMENDED . '_item_button_url']) { ?>
-                                    <a href="<?= $item[RECOMMENDED . '_item_button_url']; ?>" class="play-button btn"><?= $item[RECOMMENDED . '_item_button_text']; ?></a>
+                                <img src="<?= $imageUrl; ?>" alt="<?= $item[$prefix . '_item_title']; ?>">
+                                <h3><?= $item[$prefix . '_item_title']; ?></h3>
+                                <?php if ($item[$prefix . '_item_button_text'] && $item[$prefix . '_item_button_url']) { ?>
+                                    <a href="<?= $item[$prefix . '_item_button_url']; ?>" class="play-button btn"><?= $item[$prefix . '_item_button_text']; ?></a>
                                 <?php } ?>
-                                <?php if ($item[RECOMMENDED . '_item_description']) { ?>
-                                    <span class="tnc-text"><?= $item[RECOMMENDED . '_item_description']; ?></span>
+                                <?php if ($item[$prefix . '_item_description']) { ?>
+                                    <span class="tnc-text"><?= $item[$prefix . '_item_description']; ?></span>
                                 <?php } ?>
                             </div>
                         </div>

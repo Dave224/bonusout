@@ -6,7 +6,6 @@ $title = Fourcrowns_Storage::get('post', get_queried_object_id(), COUNTER . '_se
 $description = Fourcrowns_Storage::get('post', get_queried_object_id(), COUNTER . '_section_description');
 $under_description = Fourcrowns_Storage::get('post', get_queried_object_id(), COUNTER . '_under_section_description');
 $numbers = Fourcrowns_Storage::get('post', get_queried_object_id(), COUNTER);
-var_dump($numbers);
 ?>
 
 <div class="custom-wrapper relative <?= $background; ?>">
@@ -17,7 +16,7 @@ var_dump($numbers);
         </div>
     <?php } ?>
 
-     <?php if (Util::issetAndNotEmpty($numbers[0][COUNTER . '_number'])) { ?>
+     <?php if (is_array($numbers) && Util::issetAndNotEmpty($numbers[0][COUNTER . '_number'])) { ?>
          <div class="space-page-wrapper relative">
              <div class="counter-grid">
                  <?php foreach ( $numbers as $counter ) : ?>

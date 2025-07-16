@@ -4,7 +4,7 @@ Fourcrowns_Core::init();
 /*  Mercury - 3.9.10.1  */
 
 global $mercury_version;
-$mercury_version = '3.9.10.5';
+$mercury_version = '3.9.10.6';
 
 add_theme_support( 'title-tag' );
 add_theme_support( 'automatic-feed-links' );

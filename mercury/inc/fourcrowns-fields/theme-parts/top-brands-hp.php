@@ -2,13 +2,27 @@
 use utils\Image;
 use utils\Util;
 
+$mainTitle = Fourcrowns_Storage::get('post', get_queried_object_id(), MAIN_INFO . '_title');
+$mainDescription = Fourcrowns_Storage::get('post', get_queried_object_id(), MAIN_INFO . '_description');
+
 $topBrands = Fourcrowns_Storage::get('post', get_queried_object_id(), TOP_BRANDS);
 $background = Fourcrowns_Storage::get('post', get_queried_object_id(), TOP_BRANDS . '_background');
 $title = Fourcrowns_Storage::get('post', get_queried_object_id(), TOP_BRANDS . '_section_title');
 $description = Fourcrowns_Storage::get('post', get_queried_object_id(), TOP_BRANDS . '_section_description');
+$under_description = Fourcrowns_Storage::get('post', get_queried_object_id(), TOP_BRANDS . '_under_section_description');
 
 $key = 1;
 ?>
+
+<?php if ($mainTitle || $mainDescription) { ?>
+    <div class="custom-wrapper relative">
+        <div class="space-page-wrapper relative space-page-content box-100">
+            <h1><?= $mainTitle; ?></h1>
+            <?= $mainDescription; ?>
+        </div>
+    </div>
+<?php } ?>
+
 <?php if ($topBrands && $topBrands != []) { ?>
     <div class="custom-wrapper relative <?= $background; ?>">
         <?php if (Util::issetAndNotEmpty($title) || Util::issetAndNotEmpty($description)) { ?>
@@ -45,8 +59,16 @@ $key = 1;
                         <span class="hidden-text" style="display:none"><?= __('Navštívit', 'SLOTH'); ?></span>
                     </a>
                 <?php } ?>
-            <?php $key++;
+                <?php $key++;
             } ?>
+        </div>
+    </div>
+<?php } ?>
+
+<?php if ($under_description) { ?>
+    <div class="custom-wrapper relative">
+        <div class="space-page-wrapper relative space-page-content box-100">
+            <?= $under_description; ?>
         </div>
     </div>
 <?php } ?>

@@ -213,6 +213,10 @@ html {
     margin: 0 auto;
 }
 
+.space-page-content a:hover, .space-header-height .space-header-menu ul.main-menu li ul.sub-menu li a:hover {
+    color: var(--main-color)!important;
+}
+
 a.btn {
     display: inline-block;
     text-decoration: none !important;
@@ -574,26 +578,72 @@ a.btn:hover {
     color: #1d1d1b;
 }
 
+.listing-logo-wrap {
+    position: relative;
+    max-height: 60px;
+    display: inline-block;    /* udrží rozměr jen podle <img> */
+}
+
 /* Vnitřní grid (seznam karet ve sloupci) */
 .listing-grid {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s, transform 0.3s;
+    overflow: hidden;
+}
+
+.rank-over-img {
+    position: absolute;
+    top: -6px;                /* lehce „vyskočí“ nad obrázek */
+    left: -6px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    background: #151515;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 1px 1px 3px white;
+    z-index: 2;               /* jistota, že bude nad obrázkem */
+}
+
+.listing-logo-wrap:hover .rank-over-img {
+    transform: scale(0.9);    /* kopíruje efekt obrázku (volitelné) */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* 4) Mobil – menší kruh, ať nepřekrývá moc plochy */
+@media (max-width: 640px) {
+    .rank-over-img {
+        top: -4px;
+        left: -4px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 0.6rem;
+    }
+}
+
+.listing-btn-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;             /* na mobilu se zalomí */
+}
+
+.listing-btn-group .visit-btn {
+    flex: 1 1 auto;              /* povolí růst, ale nechá min-width */
+    padding: 5px!important;
 }
 
 /* Karta */
 .listing-card {
-    background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-    transition: box-shadow 0.3s, transform 0.3s;
     overflow: hidden;
-    cursor: pointer;
-}
-
-.listing-card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    transform: translateY(-3px);
 }
 
 /* Klikací oblast */
@@ -601,7 +651,7 @@ a.btn:hover {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1.25rem;
+    padding: 1rem;
     text-decoration: none;
     color: inherit;
 }
@@ -610,10 +660,24 @@ a.btn:hover {
 .listing-logo img {
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 5px;
     object-fit: cover;
     flex-shrink: 0;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.listing-logo-wrap:hover {
+    transform: scale(0.9);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 /* Textová část */
@@ -628,6 +692,20 @@ a.btn:hover {
     font-size: 1.05rem;
     margin: 0;
     color: #1d1d1b;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.listing-content h3:hover {
+    color: var(--main-color);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .listing-bonus,
@@ -640,7 +718,6 @@ a.btn:hover {
 a.visit-btn {
     display: inline-block;
     color: white;
-    padding: 0.4rem 1rem!important;
     border-radius: 0.5rem;
     font-weight: bold;
     font-size: 0.9rem!important;
@@ -653,14 +730,32 @@ a.visit-btn {
 }
 
 a.visit-btn:hover {
-    padding: 0.4rem 1rem!important;
-    font-size: 0.9rem!important;
+    border-radius: 0.5rem;
+}
+
+a.secondary-btn {
+    background-color: #c0c6d1!important;
+    color: #151515!important;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+a.secondary-btn:hover {
+    background-color: #57606f!important;
+    color: #ffffff!important;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 /* Responzivita */
 @media (max-width: 640px) {
     .listing-link {
-        flex-direction: column;
         align-items: center;
         text-align: center;
     }
@@ -670,11 +765,66 @@ a.visit-btn:hover {
     }
 
     .listing-content {
-        align-items: center;
+        align-items: start;
+        gap: 0.75rem;
     }
 
     .visit-btn {
         align-self: center;
+    }
+
+    .listing-rank {
+        margin-bottom: 0.6rem;   /* oddělí číslo od loga */
+    }
+
+    .listing-btn-group {
+        justify-content: center; /* na úzkém vycentruj tlačítka */
+        margin: 0;
+    }
+
+    a.visit-btn {
+        margin-top: 0!important;
+    }
+
+    .listing-btn-group .visit-btn {
+        padding: 5px 10px!important
+    }
+}
+
+a.btn-wide {
+    display: block;                /* aby zabralo 100 % šířky sloupce */
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.9rem 1.2rem;
+    text-align: center;
+    background: var(--main-color);
+    color: #151515;
+    background-color: #fff;
+    border: solid 2px var(--main-color);
+    font-weight: 700;
+    border-radius: 1rem;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+a.btn-wide:hover {
+    border: solid 2px #57606f;
+    color: var(--main-color);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Mobilní breakpoint – širší okraje pro “dýchnutí” */
+@media (max-width: 640px) {
+    a.btn-wide {
+        margin-inline: auto;       /* zarovná zleva/ zprava stejně */
     }
 }
 
@@ -691,8 +841,12 @@ a.visit-btn:hover {
 }
 
 @media (max-width: 1235px) {
-    .space-page-wrapper {
-        margin: 0 5px;
+    .custom-wrapper .space-page-wrapper {
+        margin: 0 15px;
+    }
+
+    .custom-wrapper .space-page-wrapper p {
+        margin-right: 20px;
     }
 }
 
@@ -788,7 +942,7 @@ a.visit-btn:hover {
     bottom: 90px;
     background: #1b1d21;
     padding: 5px;
-    border-radius: 100%;
+    border-radius: 50%;
     cursor: pointer;
     font-size: 20px;
     color: var(--main-color);
@@ -923,17 +1077,6 @@ a.visit-btn:hover {
     text-align: center;
 }
 
-.bottom-bar-link {
-    color: var(--main-color);
-    text-decoration: underline;
-    padding-left: 10px;
-}
-
-.bottom-bar-link:hover {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
 .small-bar-title {
     padding-top: 10px;
     text-align: center;
@@ -954,6 +1097,33 @@ a.visit-btn:hover {
     padding-top: 10px;
 }
 
+.space-organization-float-bar-title-wrap {
+    top: -12px;
+}
+
+.space-organization-float-bar-title-wrap a {
+    color: #ffffff;
+}
+
+.space-organization-float-bar-title-wrap a:hover {
+    opacity: 0.8;
+}
+
+.space-organization-float-bar-logo-img img:hover {
+    opacity: 0.8;
+}
+
+.bottom-bar-link {
+    color: var(--main-color)!important;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.bottom-bar-link:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
 .bottom-bar-btn {
     margin-top: 10px!important;
 }
@@ -968,12 +1138,36 @@ a.visit-btn:hover {
     }
 }
 
-.space-footer-copy {
-    background-color: #262161!important;
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 0;
 }
 
-.space-page-content a:hover, .space-header-height .space-header-menu ul.main-menu li ul.sub-menu li a:hover {
-    color: var(--main-color)!important;
+.counter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counter-number {
+    color: var(--main-color);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+}
+
+.counter-label {
+    margin-top: 1.5rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.space-footer-copy {
+    background-color: #262161!important;
 }
 
 .space-archive-loop-item-img-category a, .space-title-box-category a, .space-news-3-item-img-category a {
@@ -1293,4 +1487,50 @@ div#ez-toc-container {
 .fc-outline-headline {
     margin: 10px 0!important;
     font-size: 1.65em !important;
+}
+
+@media screen and (max-width: 479px) {
+    .space-archive-loop-item-img, .space-archive-loop-item-title-box {
+        float: left!important;
+    }
+
+    .space-archive-loop-item-img {
+        width: 33.33333333%!important;
+    }
+
+    .space-archive-loop-item-title-box {
+        width: 66.66666666%!important;
+    }
+
+    .space-archive-loop-item-meta, .space-archive-loop-item-img-category {
+        display: none!important;
+    }
+
+    .space-archive-loop-item-more {
+        display: block!important;
+    }
+
+    .space-archive-loop-item-title-box-ins {
+        margin-top: 0!important;
+    }
+
+    .space-archive-loop-item {
+        margin-bottom: 35px!important;
+    }
+
+    .space-archive-loop-item-title {
+        margin-top: 0!important;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+    .space-archive-loop-item-excerpt {
+        display: block!important;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .space-archive-loop-item-excerpt {
+        display: block!important;
+    }
 }

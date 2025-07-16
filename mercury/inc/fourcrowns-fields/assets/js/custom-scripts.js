@@ -90,6 +90,7 @@ const swiper = new Swiper('.expert-slider', {
     spaceBetween: 20,
     loop: true,
     centeredSlides: true,
+    watchOverflow: true,
     breakpoints: {
         374: {
             slidesPerView: 2, // malý telefon
@@ -119,12 +120,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeBtn = document.getElementById('float-bar-close');
     const expandBtn = document.getElementById('expand-bar');
 
+    // Najde iframe Tawk.to chatu
+    function moveTawkTo(bottomValue) {
+        const tawkIframe = document.querySelector("iframe[title='chat widget']");
+        if (tawkIframe) {
+            tawkIframe.style.bottom = bottomValue;
+        }
+    }
+
     closeBtn.addEventListener('click', function () {
         fullBar.style.maxHeight = '0';
         fullBar.style.opacity = '0';
         setTimeout(() => {
             fullBar.style.display = 'none';
             collapsedBar.style.display = 'block';
+            moveTawkTo('75px'); // Posun chatu dolů (např. o 20px odspodu)
         }, 500); // čas odpovídá CSS animaci
     });
 
@@ -134,6 +144,42 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             fullBar.style.maxHeight = '500px';
             fullBar.style.opacity = '1';
+            moveTawkTo('152px'); // Posun chatu výš, podle výšky lišty
         }, 10); // drobné zpoždění, aby animace proběhla
     });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter-number');
+    const options = { threshold: 0.5 };
+
+    const animateCounter = (el) => {
+        const target = parseInt(el.dataset.target, 10);
+        const duration = 1500;
+        const fps = 60;
+        const totalFrames = Math.round(duration / (1000 / fps));
+        let frame = 0;
+
+        const counter = setInterval(() => {
+            frame++;
+            const progress = frame / totalFrames;
+            const current = Math.round(target * easeOutQuad(progress));
+            el.textContent = current.toLocaleString('cs-CZ');
+
+            if (frame === totalFrames) clearInterval(counter);
+        }, 1000 / fps);
+    };
+
+    const easeOutQuad = (t) => t * (2 - t);
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.dataset.animated) {
+                animateCounter(entry.target);
+                entry.target.dataset.animated = 'true';
+            }
+        });
+    }, options);
+
+    counters.forEach(counter => observer.observe(counter));
 });

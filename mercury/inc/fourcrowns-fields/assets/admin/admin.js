@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         addBtn.addEventListener("click", function () {
             setTimeout(() => {
                 initFourcrownsGalleryButtons();
+                initTrumbowyg();
             }, 150);
         });
     });
@@ -147,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
         addBtn.addEventListener("click", function () {
             setTimeout(() => {
                 initFourcrownsImageButtons();
+                initTrumbowyg();
             }, 150);
         });
     });
@@ -196,6 +198,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 const msg = container.querySelector(".fourcrowns-repeater-limit-msg");
                 if (msg) msg.style.display = "none";
             }
+
+            // před klonováním vyčistit všechny trumbowyg editory v šabloně
+            template.querySelectorAll('.fourcrowns-trumbowyg').forEach(el => {
+                if (jQuery(el).hasClass('trumbowyg-initialized')) {
+                    jQuery(el).trumbowyg('destroy');
+                    jQuery(el).removeClass('trumbowyg-initialized');
+                }
+            });
 
             const clone = template.cloneNode(true);
             const newIndex = currentItems.length;

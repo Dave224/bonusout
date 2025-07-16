@@ -111,12 +111,12 @@ $tag = $tagExtra ?: '';
         visibility : {
             desktop : {
                 position : 'br',
-                xOffset : '10px',
+                xOffset : 0,
                 yOffset : '152px',
             },
             mobile : {
                 position : 'br',
-                xOffset : '60px',
+                xOffset : 0,
                 yOffset : '142px',
             },
             bubble : {
@@ -174,9 +174,6 @@ $tag = $tagExtra ?: '';
 <div class="float-bar-collapsed">
     <div class="collapsed-content">
         <div class="space-organization-float-bar-title-wrap small-bar-title">
-            <?php if ($tag) { ?>
-                <span class="tag-over-title"><?= $tag; ?></span><br />
-            <?php } ?>
             <?= $title; ?>
             <a href="<?= $button_url; ?>" class="bottom-bar-link" title="<?= $button_title; ?>" target="_blank" rel="noopener noreferrer">
                 <?= $button_title; ?>

@@ -3,7 +3,7 @@ class Fourcrowns_Field_Checkbox extends Fourcrowns_Field_Base {
     public function render() {
         $name = $this->field['name'];
         $label = $this->field['label'] ?? '';
-        $checked = $this->value !== 'disabled' ? 'checked' : '';
+        $checked = $this->value === '1' ? 'checked' : '';
 
         echo "<div class='fourcrowns-toggle-wrapper'>";
         if ($label) {

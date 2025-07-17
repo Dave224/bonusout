@@ -183,3 +183,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     counters.forEach(counter => observer.observe(counter));
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector(".fc-outline-toggle");
+    const content = document.querySelector(".fc-outline-content");
+
+    if (toggleButton && content) {
+        toggleButton.addEventListener("click", () => {
+            const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
+            toggleButton.setAttribute("aria-expanded", !isExpanded);
+            content.hidden = isExpanded;
+        });
+    }
+});

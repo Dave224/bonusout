@@ -90,7 +90,13 @@ function fc_insert_outline_before_first_div($content) {
     preg_match_all('/<(h[2-3])[^>]*id="([^"]+)"[^>]*>(.*?)<\/\1>/', $content, $matches, PREG_SET_ORDER);
 
     // Vytvoř osnovu
-    $outline = '<div class="fc-inline-outline">';
+
+    $outline = '<div class="fc-outline-container">';
+    $outline .= '<button class="fc-outline-toggle" aria-expanded="false">';
+    $outline .= '<strong>' . esc_html($contentTitle) . '</strong>';
+    $outline .= '<span class="fc-toggle-icon">▼</span>';
+    $outline .= '</button>';
+    $outline .= '<div class="fc-outline-content" hidden>';
     $outline .= '<ul class="fc-outline">';
     if (Util::issetAndNotEmpty($contentTitle)) {
         $outline .= '<h2 class="fc-outline-headline"> ' . $contentTitle . ' </h2>';
@@ -121,7 +127,7 @@ function fc_insert_outline_before_first_div($content) {
         $outline .= '</ul></li>';
     }
 
-    $outline .= '</ul></div>';
+    $outline .= '</ul></div></div>';
 
     // Najdi první <div> a vlož osnovu PŘED něj
     if (preg_match('/<div[^>]*>/', $content, $match, PREG_OFFSET_CAPTURE)) {

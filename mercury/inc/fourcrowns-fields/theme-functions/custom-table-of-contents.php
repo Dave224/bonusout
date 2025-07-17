@@ -93,14 +93,14 @@ function fc_insert_outline_before_first_div($content) {
 
     $outline = '<div class="fc-outline-container">';
     $outline .= '<button class="fc-outline-toggle" aria-expanded="false">';
-    $outline .= '<strong>' . esc_html($contentTitle) . '</strong>';
+    if (Util::issetAndNotEmpty($contentTitle)) {
+        $outline .= '<h2 class="fc-outline-headline"> ' . $contentTitle . ' </h2>';
+    }
     $outline .= '<span class="fc-toggle-icon">▼</span>';
     $outline .= '</button>';
     $outline .= '<div class="fc-outline-content">';
     $outline .= '<ul class="fc-outline">';
-    if (Util::issetAndNotEmpty($contentTitle)) {
-        $outline .= '<h2 class="fc-outline-headline"> ' . $contentTitle . ' </h2>';
-    }
+
     $open_sublist = false;
 
     foreach ($matches as $match) {

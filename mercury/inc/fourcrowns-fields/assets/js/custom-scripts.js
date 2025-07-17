@@ -190,12 +190,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (toggleButton && content) {
         toggleButton.addEventListener("click", () => {
-            const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
-            toggleButton.setAttribute("aria-expanded", !isExpanded);
+            const isExpanded = toggleButton.getAttribute("aria-expanded");
             if (!isExpanded) {
+                toggleButton.setAttribute("aria-expanded", true);
                 content.style.display = 'block';
             } else {
                 content.style.display = 'none';
+                toggleButton.setAttribute("aria-expanded", false);
             }
         });
     }

@@ -188,15 +188,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.querySelector(".fc-outline-toggle");
     const content = document.querySelector(".fc-outline-content");
 
-    if (toggleButton && content) {
+    if (content) {
         toggleButton.addEventListener("click", () => {
-            const isExpanded = toggleButton.getAttribute("aria-expanded");
+            let isExpanded = toggleButton.getAttribute("aria-expanded");
             if (!isExpanded) {
-                toggleButton.setAttribute("aria-expanded", true);
+                toggleButton.setAttribute("aria-expanded", 'true');
                 content.style.display = 'block';
             } else {
                 content.style.display = 'none';
-                toggleButton.setAttribute("aria-expanded", false);
+                toggleButton.setAttribute("aria-expanded", 'false');
             }
         });
     }

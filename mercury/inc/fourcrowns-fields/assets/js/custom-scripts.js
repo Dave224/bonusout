@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleButton.addEventListener("click", () => {
             const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
             toggleButton.setAttribute("aria-expanded", !isExpanded);
-            content.hidden = isExpanded;
+            content.style.display = 'block';
         });
     }
 });

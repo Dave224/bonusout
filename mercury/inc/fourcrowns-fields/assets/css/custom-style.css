@@ -634,6 +634,7 @@ a.btn:hover {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;             /* na mobilu se zalomí */
+    width: 100%;
 }
 
 .listing-btn-group .visit-btn {
@@ -725,7 +726,7 @@ a.visit-btn {
     margin-bottom: 0!important;
     transition: background-color 0.3s;
     text-decoration: none;
-    max-width: 90px!important;
+    max-width: 50%!important;
     text-align: center!important;
 }
 

@@ -1533,7 +1533,7 @@ div#ez-toc-container {
     color: #ffffff;
 }
 
-.fc-outline-toggle:hover > .open-content {
+.fc-outline-toggle:hover .open-content {
     background-color: var(--main-color);
 }
 

@@ -1490,13 +1490,6 @@ div#ez-toc-container {
     font-size: 1.65em !important;
 }
 
-.fc-outline-container {
-    background: #f5f5f5;
-    border-left: 4px solid var(--secondary-color);
-    padding-left: 0;
-    margin-bottom: 1rem;
-}
-
 .fc-outline-toggle {
     display: flex;
     justify-content: space-between;
@@ -1522,7 +1515,6 @@ div#ez-toc-container {
 
 .fc-outline-content {
     display:none;
-    padding: 0 1rem 1rem;
 }
 
 @media screen and (max-width: 479px) {

@@ -92,7 +92,7 @@ function fc_insert_outline_before_first_div($content) {
     // Vytvoř osnovu
 
     $outline = '<div class="fc-outline-container">';
-    $outline .= '<button class="fc-outline-toggle" aria-expanded="false">';
+    $outline .= '<button class="fc-outline-toggle collapsed" aria-expanded="false">';
     if (Util::issetAndNotEmpty($contentTitle)) {
         $outline .= '<h2 class="fc-outline-headline"> ' . $contentTitle . ' </h2>';
     }

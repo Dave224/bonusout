@@ -1505,6 +1505,10 @@ div#ez-toc-container {
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+.collapsed {
+    margin-bottom: 1.45em;
+}
+
 .fc-toggle-icon {
     transition: transform 0.2s ease-in-out;
 }

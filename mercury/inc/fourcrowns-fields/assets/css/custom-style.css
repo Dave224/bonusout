@@ -1521,6 +1521,7 @@ div#ez-toc-container {
 }
 
 .fc-outline-content {
+    display:none;
     padding: 0 1rem 1rem;
 }
 

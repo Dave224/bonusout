@@ -96,7 +96,7 @@ function fc_insert_outline_before_first_div($content) {
     $outline .= '<strong>' . esc_html($contentTitle) . '</strong>';
     $outline .= '<span class="fc-toggle-icon">▼</span>';
     $outline .= '</button>';
-    $outline .= '<div class="fc-outline-content" hidden>';
+    $outline .= '<div class="fc-outline-content">';
     $outline .= '<ul class="fc-outline">';
     if (Util::issetAndNotEmpty($contentTitle)) {
         $outline .= '<h2 class="fc-outline-headline"> ' . $contentTitle . ' </h2>';

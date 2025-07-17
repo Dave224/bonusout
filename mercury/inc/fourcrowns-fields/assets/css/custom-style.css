@@ -1526,6 +1526,17 @@ div#ez-toc-container {
     transition: all 0.5s ease-in-out;
 }
 
+.open-content {
+    padding: 5px;
+    background-color: #57606f;
+    border-radius: 50%;
+    color: #ffffff;
+}
+
+.fc-outline-toggle:hover > .open-content {
+    background-color: var(--main-color);
+}
+
 @media screen and (max-width: 479px) {
     .space-archive-loop-item-img, .space-archive-loop-item-title-box {
         float: left!important;

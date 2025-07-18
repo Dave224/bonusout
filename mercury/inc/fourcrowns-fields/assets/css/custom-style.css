@@ -754,75 +754,6 @@ a.btn:hover {
     }
 }
 
-a.btn-wide {
-    display: block;                /* aby zabralo 100 % šířky sloupce */
-    width: 100%;
-    margin-top: 1rem;
-    padding: 0.9rem 1.2rem;
-    text-align: center;
-    background: var(--main-color);
-    color: #151515;
-    background-color: #fff;
-    border: solid 2px var(--main-color);
-    font-weight: 700;
-    border-radius: 1rem;
-    text-decoration: none;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-}
-
-a.btn-wide:hover {
-    border: solid 2px #57606f;
-    color: var(--main-color);
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-}
-
-/* Tlačítko */
-a.visit-btn {
-    display: inline-block;
-    color: white;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    font-size: 0.9rem!important;
-    margin-top: 0.5rem!important;
-    margin-bottom: 0!important;
-    transition: background-color 0.3s;
-    text-decoration: none;
-    max-width: 50%!important;
-    text-align: center!important;
-}
-
-a.visit-btn:hover {
-    border-radius: 0.5rem;
-}
-
-a.secondary-btn {
-    background-color: #c0c6d1!important;
-    color: #151515!important;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-}
-
-a.secondary-btn:hover {
-    background-color: #57606f!important;
-    color: #ffffff!important;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-}
-
 /* Mobilní breakpoint – širší okraje pro “dýchnutí” */
 @media (max-width: 640px) {
     a.btn-wide {
@@ -1592,4 +1523,74 @@ div#ez-toc-container {
     .space-archive-loop-item-excerpt {
         display: block!important;
     }
+}
+
+
+a.btn-wide {
+    display: block;                /* aby zabralo 100 % šířky sloupce */
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.9rem 1.2rem;
+    text-align: center;
+    background: var(--main-color);
+    color: #151515;
+    background-color: #fff;
+    border: solid 2px var(--main-color);
+    font-weight: 700;
+    border-radius: 1rem;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+a.btn-wide:hover {
+    border: solid 2px #57606f;
+    color: var(--main-color);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Tlačítko */
+a.visit-btn {
+    display: inline-block;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 0.9rem!important;
+    margin-top: 0.5rem!important;
+    margin-bottom: 0!important;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    max-width: 50%!important;
+    text-align: center!important;
+}
+
+a.visit-btn:hover {
+    border-radius: 0.5rem;
+}
+
+a.secondary-btn {
+    background-color: #c0c6d1!important;
+    color: #151515!important;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+a.secondary-btn:hover {
+    background-color: #57606f!important;
+    color: #ffffff!important;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }

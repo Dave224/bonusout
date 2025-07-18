@@ -878,7 +878,7 @@ a.btn:hover {
     border-radius: 50%;
     cursor: pointer;
     font-size: 20px;
-    color: var(--main-color);
+    color: #ffffff;
 }
 
 #float-bar-show {

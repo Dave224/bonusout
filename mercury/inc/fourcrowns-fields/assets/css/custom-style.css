@@ -917,7 +917,8 @@ a.btn:hover {
 }
 
 .space-title-box-ins {
-    padding-bottom: 50px;
+    padding-bottom: 50px !important;
+    padding-top: 50px !important;
 }
 
 .space-organization-float-bar-bg .space-organization-float-bar-bg-ins {

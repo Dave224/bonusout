@@ -921,6 +921,7 @@ a.btn:hover {
 }
 
 .space-organization-float-bar-bg .space-organization-float-bar-bg-ins {
+    padding-top: 15px!important;
     padding-bottom: 0!important;
 }
 
@@ -1342,7 +1343,7 @@ input[type="submit"]:hover {
 }
 
 .tag-over-title {
-    color: #ccff00!important;
+    color: var(--main-color)!important;
 }
 
 /* Titulek pod obrázkem */

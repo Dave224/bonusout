@@ -136,20 +136,20 @@ $tag = $tagExtra ?: '';
             <div class="space-organization-float-bar-data box-75 relative">
                 <div class="space-organization-float-bar-data-ins relative">
                     <div class="space-organization-float-bar-logo relative">
-                        <div class="space-organization-float-bar-logo-img relative">
+                        <a class="space-organization-float-bar-logo-img relative" href="<?= $button_url; ?>" target="_blank" rel="noopener noreferrer">
                             <?php
                             $post_title_attr = the_title_attribute( 'echo=0' );
                             if ( wp_get_attachment_image($thumbnail_id) ) {
                                 echo wp_get_attachment_image( $thumbnail_id, 'mercury-100-100', "", array( "alt" => $post_title_attr ) );
                             } ?>
-                        </div>
+                        </a>
                     </div>
                     <div class="space-organization-float-bar-title box-50 relative">
                         <div class="space-organization-float-bar-title-wrap box-100 relative">
                             <?php if ($tag) { ?>
                                 <span class="tag-over-title"><?= $tag; ?></span><br />
                             <?php } ?>
-                            <?= $title; ?>
+                            <a href="<?= $button_url; ?>" target="_blank" rel="noopener noreferrer"><?= $title; ?></a>
                         </div>
                     </div>
                 </div>
@@ -174,7 +174,7 @@ $tag = $tagExtra ?: '';
 <div class="float-bar-collapsed">
     <div class="collapsed-content">
         <div class="space-organization-float-bar-title-wrap small-bar-title">
-            <?= $title; ?>
+            <a href="<?= $button_url; ?>" target="_blank" rel="noopener noreferrer"><?= $title; ?></a>
             <a href="<?= $button_url; ?>" class="bottom-bar-link" title="<?= $button_title; ?>" target="_blank" rel="noopener noreferrer">
                 <?= $button_title; ?>
             </a>

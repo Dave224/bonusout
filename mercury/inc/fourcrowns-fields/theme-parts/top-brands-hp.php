@@ -56,7 +56,6 @@ $key = 1;
                         <div class="star-rating"><i class="fas fa-star"></i><?= $key; ?></div>
                         <img src="<?= $imageUrl; ?>" alt="<?= $topBrand['top_brands_title']; ?>">
                         <h3><?= $topBrand['top_brands_title']; ?></h3>
-                        <span class="hidden-text" style="display:none"><?= __('Navštívit', 'SLOTH'); ?></span>
                     </a>
                 <?php } ?>
                 <?php $key++;

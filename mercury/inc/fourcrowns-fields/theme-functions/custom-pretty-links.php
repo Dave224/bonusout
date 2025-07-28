@@ -56,7 +56,8 @@ if (str_contains($current_url, '/go/')) {
         $data = json_decode($response, true);
         foreach ($data['docs'] as $brand) {
             foreach ($brand['deals'] as $deal) {
-                var_dump($deal);die;
+                var_dump('/go' . $url_array_for_match[1]);
+                var_dump($deal['pretty_link']);die;
                 if ($deal['pretty_link'] == '/go' . $url_array_for_match[1]) {
                    wp_redirect($deal['link']);
                    die;

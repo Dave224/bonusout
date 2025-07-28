@@ -8,7 +8,7 @@ $under_description = Fourcrowns_Storage::get('post', get_queried_object_id(), CO
 $numbers = Fourcrowns_Storage::get('post', get_queried_object_id(), COUNTER);
 ?>
 
-<?php if (is_array($numbers) || Util::issetAndNotEmpty($title) || Util::issetAndNotEmpty($description)) { ?>
+<?php if (Util::issetAndNotEmpty($title) || Util::issetAndNotEmpty($description)) { ?>
     <div class="custom-wrapper relative <?= $background; ?>">
         <?php if (Util::issetAndNotEmpty($title) || Util::issetAndNotEmpty($description)) { ?>
             <div class="space-page-wrapper relative space-page-content box-100">

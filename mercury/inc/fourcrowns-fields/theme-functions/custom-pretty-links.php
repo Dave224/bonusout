@@ -38,7 +38,7 @@ if (str_contains($current_url, '/go/')) {
             'where[affiliate_name][like]' => $url_array[1], // filtr podle názvu získaného z pretty linku
             'limit' => 50                 // limit počtu záznamů
         ];
-        var_dump($url_array);die;
+
         // Sestavení query stringu
         $queryString = http_build_query($params);
 
@@ -54,6 +54,7 @@ if (str_contains($current_url, '/go/')) {
         curl_close($ch);
         // Výpis nebo další zpracování dat
         $data = json_decode($response, true);
+        var_dump($data);die;
         foreach ($data['docs'] as $brand) {
             foreach ($brand['deals'] as $deal) {
                 if ($deal['pretty_link'] == '/go' . $url_array_for_match[1]) {

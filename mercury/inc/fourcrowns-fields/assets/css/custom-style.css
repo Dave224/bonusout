@@ -1601,3 +1601,7 @@ a.secondary-btn:hover {
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
+
+.hp-top-text {
+    padding: 0!important;
+}

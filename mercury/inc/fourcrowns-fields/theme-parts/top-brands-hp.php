@@ -16,7 +16,7 @@ $key = 1;
 
 <?php if ($mainTitle || $mainDescription) { ?>
     <div class="custom-wrapper relative">
-        <div class="space-page-wrapper relative space-page-content box-100">
+        <div class="space-page-wrapper relative space-page-content box-100 hp-top-text">
             <h1><?= $mainTitle; ?></h1>
             <?= $mainDescription; ?>
         </div>

@@ -38,6 +38,7 @@ if (str_contains($current_url, '/go/')) {
             'where[affiliate_name][like]' => $url_array[1], // filtr podle názvu získaného z pretty linku
             'limit' => 50                 // limit počtu záznamů
         ];
+        var_dump($url_array);die;
         // Sestavení query stringu
         $queryString = http_build_query($params);
 

@@ -41,7 +41,6 @@ $key = 1;
                             <img src="<?= $imageUrl; ?>" alt="<?= $topBrand[$titleKey]; ?>">
                         <?php } ?>
                         <h3><?= $topBrand[$titleKey]; ?></h3>
-                        <span class="hidden-text" style="display:none"><?= __('Navštívit', 'SLOTH'); ?></span>
                     </a>
                 <?php } ?>
             <?php $key++;

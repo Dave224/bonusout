@@ -217,6 +217,10 @@ html {
     color: var(--main-color)!important;
 }
 
+.home-bread {
+    display: none;
+}
+
 a.btn {
     display: inline-block;
     text-decoration: none !important;

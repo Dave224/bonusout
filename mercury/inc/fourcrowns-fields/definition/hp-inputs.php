@@ -142,7 +142,7 @@ if ($template == 'page-templates/page-hp.php') {
                 ['type' => 'text', 'name' => LISTING . '_item_title_third', 'label' => 'Titulek:'],
                 ['type' => 'image', 'name' => LISTING . '_item_image_third', 'label' => 'Logo:'],
                 ['type' => 'text', 'name' => LISTING . '_item_url_third', 'label' => 'URL externí:'],
-                ['type' => 'text', 'name' => LISTING . '_item_button_url_first', 'label' => 'URL interní:'],
+                ['type' => 'text', 'name' => LISTING . '_item_button_url_third', 'label' => 'URL interní:'],
                 ['type' => 'text', 'name' => LISTING . '_item_first_button_title_third', 'label' => 'Titulek tlačítka pro externí link:'],
                 ['type' => 'text', 'name' => LISTING . '_item_third_button_title_third', 'label' => 'Titulek tlačítka pro interní link:'],
             ]],

@@ -206,3 +206,23 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const mediaQuery = window.matchMedia("(max-width: 560px)");
+
+    function applyImageStyles() {
+        if (mediaQuery.matches) {
+            const container = document.querySelector(".space-page-content");
+            if (container) {
+                const firstImg = container.querySelector("img");
+                if (firstImg) {
+                    firstImg.style.maxWidth = "130px";
+                    firstImg.style.padding = "21px 10px 10px 0";
+                }
+            }
+        }
+    }
+
+    // Spusť hned
+    applyImageStyles();
+});

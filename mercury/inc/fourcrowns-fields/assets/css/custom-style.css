@@ -1348,13 +1348,6 @@ input[type="submit"]:hover {
     font-size: 1.65em!important;
 }
 
-@media screen and (max-width: 560px) {
-    .space-page-content img:nth-of-type(1) {
-        max-width: 130px;
-        padding: 21px 10px 10px 0 !important;
-    }
-}
-
 .tag-over-title {
     color: var(--main-color)!important;
 }

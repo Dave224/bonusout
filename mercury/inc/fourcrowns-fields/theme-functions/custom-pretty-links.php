@@ -54,9 +54,9 @@ if (str_contains($current_url, '/go/')) {
         curl_close($ch);
         // Výpis nebo další zpracování dat
         $data = json_decode($response, true);
-        var_dump($data);die;
         foreach ($data['docs'] as $brand) {
             foreach ($brand['deals'] as $deal) {
+                var_dump($deal);die;
                 if ($deal['pretty_link'] == '/go' . $url_array_for_match[1]) {
                    wp_redirect($deal['link']);
                    die;

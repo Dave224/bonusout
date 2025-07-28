@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             fullBar.style.display = 'none';
             collapsedBar.style.display = 'block';
-            footer.style.marginBttom = '50px';
+            footer.style.marginBottom = '50px';
             moveTawkTo('75px'); // Posun chatu dolů (např. o 20px odspodu)
         }, 500); // čas odpovídá CSS animaci
     });
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             fullBar.style.maxHeight = '500px';
             fullBar.style.opacity = '1';
-            footer.style.marginBttom = '100px';
+            footer.style.marginBottom = '100px';
             moveTawkTo('152px'); // Posun chatu výš, podle výšky lišty
         }, 10); // drobné zpoždění, aby animace proběhla
     });

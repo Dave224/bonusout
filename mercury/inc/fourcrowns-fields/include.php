@@ -9,7 +9,7 @@ function four_crowns_enqueue_styles()
 
     // Custom css + js
     wp_enqueue_style('custom_theme_css', get_theme_file_uri(FOUR_CROWNS_ASSETS . '/css/custom-style.css'), [], '2025-07-28-3');
-    wp_enqueue_script('custom_scripts_js', get_theme_file_uri(FOUR_CROWNS_ASSETS . '/js/custom-scripts.js'), [], '2025-07-28', true);
+    wp_enqueue_script('custom_scripts_js', get_theme_file_uri(FOUR_CROWNS_ASSETS . '/js/custom-scripts.js'), [], '2025-07-28-2', true);
 
     // Honeypot
     wp_enqueue_script('honeypot-js', get_theme_file_uri(FOUR_CROWNS_ASSETS . '/js/honey.js'), [], '2025-05-06', true);

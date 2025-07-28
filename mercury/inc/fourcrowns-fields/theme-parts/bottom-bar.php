@@ -95,8 +95,7 @@ $tag = $tagExtra ?: '';
         font-size: 15px;
         color: #b3732e;
     }
-    .wpml-ls-legacy-list-horizontal.wpml-ls-statics-footer {
-        padding-bottom: 50px;
+    .space-footer {
         margin-bottom: 100px;
     }
     .cky-revisit-bottom-right {

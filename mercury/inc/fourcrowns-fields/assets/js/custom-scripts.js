@@ -119,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const collapsedBar = document.querySelector('.float-bar-collapsed');
     const closeBtn = document.getElementById('float-bar-close');
     const expandBtn = document.getElementById('expand-bar');
+    const footer = document.querySelector(".space-footer");
 
     // Najde iframe Tawk.to chatu
     function moveTawkTo(bottomValue) {
@@ -134,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             fullBar.style.display = 'none';
             collapsedBar.style.display = 'block';
+            footer.style.marginBttom = '50px';
             moveTawkTo('75px'); // Posun chatu dolů (např. o 20px odspodu)
         }, 500); // čas odpovídá CSS animaci
     });
@@ -144,6 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             fullBar.style.maxHeight = '500px';
             fullBar.style.opacity = '1';
+            footer.style.marginBttom = '100px';
             moveTawkTo('152px'); // Posun chatu výš, podle výšky lišty
         }, 10); // drobné zpoždění, aby animace proběhla
     });

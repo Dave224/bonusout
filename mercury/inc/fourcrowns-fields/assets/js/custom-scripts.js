@@ -226,33 +226,3 @@ document.addEventListener("DOMContentLoaded", function () {
     // Spusť hned
     applyImageStyles();
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.fourcrowns-image-url-input').forEach(function(input) {
-        input.addEventListener('input', function () {
-            const wrapper = input.closest('.fourcrowns-image-wrapper');
-            const hiddenInput = wrapper.querySelector('.fourcrowns-image-field');
-            const img = wrapper.querySelector('.preview-img');
-            const url = input.value.trim();
-            const name = input.dataset.target;
-
-            // Update img
-            if (img) {
-                img.src = url;
-            } else {
-                const newImg = document.createElement('img');
-                newImg.classList.add('preview-img');
-                newImg.style.cssText = 'max-height: 60px; display:block; margin-top:5px;';
-                newImg.src = url;
-                wrapper.querySelector('.fourcrowns-image-preview').appendChild(newImg);
-            }
-
-            // Update hidden input (reset ID to 0)
-            const updated = {
-                id: 0,
-                url: url
-            };
-            hiddenInput.value = JSON.stringify(updated);
-        });
-    });
-});

@@ -1609,3 +1609,27 @@ a.secondary-btn:hover {
 .main-title {
     max-width: 90%;
 }
+
+@media screen and (max-width: 1199px) and (min-width: 1025px) {
+    .space-header-logo a {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .space-header-logo a {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+    .space-header-logo a {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .space-header-logo a {
+        padding-top: 10px;
+    }
+}

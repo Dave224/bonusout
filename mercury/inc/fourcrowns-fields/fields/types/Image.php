@@ -32,7 +32,7 @@ class Fourcrowns_Field_Image extends Fourcrowns_Field_Base {
         echo "</div>";
         echo "<button type='button' class='button fourcrowns-upload-button' data-target='{$name}'>Vybrat obrázek</button>";
         // Nový textový input pro URL
-        echo "<label>URL obrázku: </label><input type='text' class='fourcrowns-image-url-input' placeholder='Zadejte URL obrázku' value='" . esc_attr($url) . "' style='margin-top:10px; width: 100%;' data-target='{$name}'>";
+        echo "<input type='text' class='fourcrowns-image-url-input' placeholder='Zadejte URL obrázku' value='" . esc_attr($url) . "' style='margin-top:10px; width: 100%;' data-target='{$name}'>";
 
         echo "</div>";
     }

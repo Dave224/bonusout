@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const wrapper = button.closest(".fourcrowns-image-wrapper");
                 const input = wrapper.querySelector(".fourcrowns-image-field");
                 const preview = wrapper.querySelector(".fourcrowns-image-preview");
+                const urlInput = wrapper.querySelector(".fourcrowns-image-url-input");
 
                 const frame = wp.media({
                     title: "Vybrat obrázek",
@@ -131,6 +132,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     if (preview) {
                         preview.innerHTML = "<img src=\'" + attachment.url + "\' style=\'max-height: 60px; display:block; margin-top:5px;\' />";
+                    }
+
+                    // Update text URL input
+                    if (urlInput) {
+                        urlInput.value = attachment.url;
                     }
                 });
 

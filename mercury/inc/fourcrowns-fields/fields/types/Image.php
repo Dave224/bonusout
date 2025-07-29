@@ -24,13 +24,16 @@ class Fourcrowns_Field_Image extends Fourcrowns_Field_Base {
 
         echo "<label>{$label}</label>";
         echo "<div class='fourcrowns-image-wrapper'>";
-        echo "<input type='hidden' name='{$name}' value='" . esc_attr(json_encode(['id' => $id, 'url' => $url])) . "' class='fourcrowns-image-field'>";
+        echo "<input type='hidden' name='{$name}' value='" . esc_attr(json_encode(['id' => $id, 'url' => $url])) . "' class='fourcrowns-image-field' data-target='{$name}'>";
         echo "<div class='fourcrowns-image-preview'>";
         if ($url) {
-            echo "<img src='" . esc_attr($url) . "' style='max-height: 60px; display:block; margin-top:5px;' />";
+            echo "<img src='" . esc_attr($url) . "' style='max-height: 60px; display:block; margin-top:5px;' class='preview-img' />";
         }
         echo "</div>";
         echo "<button type='button' class='button fourcrowns-upload-button' data-target='{$name}'>Vybrat obrázek</button>";
+        // Nový textový input pro URL
+        echo "<input type='text' class='fourcrowns-image-url-input' placeholder='Zadejte URL obrázku' value='" . esc_attr($url) . "' style='margin-top:10px; width: 100%;' data-target='{$name}'>";
+
         echo "</div>";
     }
 

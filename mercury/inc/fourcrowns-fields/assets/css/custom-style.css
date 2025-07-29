@@ -1605,3 +1605,7 @@ a.secondary-btn:hover {
 .hp-top-text {
     padding: 0!important;
 }
+
+.main-title {
+    max-width: 90%;
+}

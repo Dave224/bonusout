@@ -99,6 +99,7 @@ Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_RECOMMENDED, [
             ['type' => 'text', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_title', 'label' => 'Titulek:'],
             ['type' => 'image', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_image', 'label' => 'Obrázek:'],
             ['type' => 'text', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_description', 'label' => 'Popisek pod tlačítkem:'],
+            ['type' => 'text', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_external_url', 'label' => 'Externí URL:'],
             ['type' => 'text', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_button_text', 'label' => 'Text tlačítka:'],
             ['type' => 'text', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_button_url', 'label' => 'URL tlačítka:'],
             ['type' => 'checkbox', 'name' => CUSTOM_SETTINGS_RECOMMENDED . '_item_button_url_open_new_tab', 'label' => 'Otevřít odkaz na nové kartě:'],

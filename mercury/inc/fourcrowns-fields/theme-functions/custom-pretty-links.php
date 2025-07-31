@@ -35,8 +35,8 @@ if (str_contains($current_url, '/go/')) {
 
         // Vytvoření parametrů pro Payload query
         $params = [
-            'where[affiliate_name][like]' => $url_array[1], // filtr podle názvu získaného z pretty linku
-            'limit' => 50                 // limit počtu záznamů
+           // 'where[affiliate_name][like]' => $url_array[1], // filtr podle názvu získaného z pretty linku
+            'limit' => 800                 // limit počtu záznamů
         ];
 
         // Sestavení query stringu

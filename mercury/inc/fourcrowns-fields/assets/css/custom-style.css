@@ -1610,7 +1610,7 @@ a.secondary-btn:hover {
     max-width: 90%;
 }
 
-.recommended-title-link:hover {
+.recommended-title-link:hover h3 {
     color: var(--secondary-color);
 }
 

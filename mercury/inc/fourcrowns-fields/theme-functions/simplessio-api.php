@@ -81,7 +81,7 @@ function createPostFromApp ($data)
         wp_update_post($my_post);
 
         if ($postMetaData['image']) {
-            $src = $data->get_params()['origin'] . '/' . $postMetaData['image']['url'];
+            $src = $postMetaData['image']['url'];
             prepareImageFroPost($src, $appPostId, $posts[0]->ID, $postMetaData['image']['alt']);
         }
 
@@ -97,7 +97,7 @@ function createPostFromApp ($data)
         add_post_meta($post_id, 'app_id', $appPostId);
 
         if ($postMetaData['image']) {
-            $src = $data->get_params()['origin'] . '/' . $postMetaData['image']['url'];
+            $src = $postMetaData['image']['url'];
             prepareImageFroPost($src, $appPostId, $post_id, $postMetaData['image']['alt']);
         }
 

@@ -75,7 +75,7 @@ if (get_post_meta($postId, RECOMMENDED . '_section_title', true)) {
                         <div class="swiper-slide">
                             <div class="casino-card">
                                 <a href="<?= $item[$prefix . '_item_button_url']; ?>" target="_blank" rel="noopener nofollow"><img src="<?= $imageUrl; ?>" alt="<?= $item[$prefix . '_item_title']; ?>"></a>
-                                <h3><a href="<?= $item[$prefix . '_item_external_url']; ?>"><?= $item[$prefix . '_item_title']; ?></a></h3>
+                                <a class="recommended-title-link" href="<?= $item[$prefix . '_item_external_url']; ?>"><h3><?= $item[$prefix . '_item_title']; ?></h3></a>
                                 <?php if ($item[$prefix . '_item_button_text'] && $item[$prefix . '_item_button_url']) { ?>
                                     <a href="<?= $item[$prefix . '_item_button_url']; ?>" class="play-button btn"><?= $item[$prefix . '_item_button_text']; ?></a>
                                 <?php } ?>

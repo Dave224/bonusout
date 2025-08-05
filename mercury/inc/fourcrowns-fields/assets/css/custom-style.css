@@ -1610,6 +1610,10 @@ a.secondary-btn:hover {
     max-width: 90%;
 }
 
+.recommended-title-link:hover {
+    color: var(--secondary-color);
+}
+
 @media screen and (max-width: 1199px) and (min-width: 1025px) {
     .space-header-logo a {
         padding-top: 10px;

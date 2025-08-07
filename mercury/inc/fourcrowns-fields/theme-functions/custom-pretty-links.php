@@ -35,6 +35,7 @@ if (str_contains($current_url, '/go/')) {
         // Vytvoření parametrů pro Payload query
         $params = [
             'where[pretty_link][=]' => '/go' . $url_array_for_match[1], // filtr podle pretty linku
+            'limit' => 1,
         ];
 
         // Sestavení query stringu
@@ -52,7 +53,7 @@ if (str_contains($current_url, '/go/')) {
         curl_close($ch);
         // Výpis nebo další zpracování dat
         $data = json_decode($response, true);
-        var_dump($data);die;
+        var_dump($data['docs']['pretty_link']);die;
         foreach ($data['docs'] as $brand) {
             foreach ($brand['deals'] as $deal) {
                 if ($deal['pretty_link'] == '/go' . $url_array_for_match[1]) {

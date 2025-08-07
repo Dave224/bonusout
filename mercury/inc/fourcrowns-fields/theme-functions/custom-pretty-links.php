@@ -27,16 +27,13 @@ if (str_contains($current_url, '/go/')) {
     $responseData = json_decode($response, true);
 
     if (isset($responseData['token'])) {
-        $url_array = explode('-', $current_url);
         $url_array_for_match = explode('/go', $current_url);
-
         $token = $responseData['token'];
-        $collectionUrl = 'https://app.simplesio.com/api/affiliate-brands';
+        $collectionUrl = 'https://app.simplesio.com/api/brand-deals';
 
         // Vytvoření parametrů pro Payload query
         $params = [
-           // 'where[affiliate_name][like]' => $url_array[1], // filtr podle názvu získaného z pretty linku
-            'limit' => 800                 // limit počtu záznamů
+            'where[pretty_link][equals]' => '/go' . $url_array_for_match[1],
         ];
 
         // Sestavení query stringu
@@ -54,13 +51,11 @@ if (str_contains($current_url, '/go/')) {
         curl_close($ch);
         // Výpis nebo další zpracování dat
         $data = json_decode($response, true);
-        foreach ($data['docs'] as $brand) {
-            foreach ($brand['deals'] as $deal) {
-                if ($deal['pretty_link'] == '/go' . $url_array_for_match[1]) {
-                   wp_redirect($deal['link']);
-                   die;
-                }
-            }
+        $link = $data['docs'][0]["link"];
+
+        if ($data && $link) {
+            wp_redirect($link);
+            die;
         }
 
         wp_die("Affiliate brand nebyl nalazen!");

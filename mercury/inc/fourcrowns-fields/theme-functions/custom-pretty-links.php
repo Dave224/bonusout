@@ -35,7 +35,6 @@ if (str_contains($current_url, '/go/')) {
         // Vytvoření parametrů pro Payload query
         $params = [
             'where[pretty_link][=]' => '/go' . $url_array_for_match[1], // filtr podle pretty linku
-            'limit' => 1,
         ];
 
         // Sestavení query stringu

@@ -1658,6 +1658,12 @@ a.secondary-btn:hover {
     text-decoration: none;
 }
 
+.btn-tag ul li {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
 .btn-tag ul li a:hover {
     background: #57606f;
     color: white;

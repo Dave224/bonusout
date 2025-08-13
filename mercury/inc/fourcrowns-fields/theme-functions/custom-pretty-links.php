@@ -58,9 +58,9 @@ if (str_contains($current_url, '/go/')) {
             die;
         } else {
             $url_array = explode('-', $url_array_for_match[1]);
-            $url_array = array_shift($url_array);
+            array_shift($url_array);
             $params = [
-                'where[pretty_link][like]' => $url_array_for_match[1],
+                'where[pretty_link][like]' => $url_array,
                 'limit' => 1,
             ];
 

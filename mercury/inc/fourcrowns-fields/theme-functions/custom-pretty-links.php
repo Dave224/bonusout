@@ -52,11 +52,35 @@ if (str_contains($current_url, '/go/')) {
         // Výpis nebo další zpracování dat
         $data = json_decode($response, true);
         $link = $data['docs'][0]["link"];
-        var_dump($link);
 
         if ($data && $link) {
             wp_redirect($link);
             die;
+        } else {
+            $params = [
+                'where[pretty_link][like]' => $url_array_for_match[1],
+                'limit' => 1,
+            ];
+
+            // Sestavení query stringu
+            $queryString = http_build_query($params);
+
+            $requestUrl = $collectionUrl . '?' . $queryString;
+            $ch = curl_init($requestUrl);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                'Authorization: Bearer ' . $token,
+                'Content-Type: application/json'
+            ]);
+            $response = curl_exec($ch);
+            curl_close($ch);
+            $data = json_decode($response, true);
+            $link = $data['docs'][0]["link"];
+
+            if ($data && $link) {
+                wp_redirect($link);
+                die;
+            }
         }
 
         wp_die("Affiliate brand nebyl nalazen!");

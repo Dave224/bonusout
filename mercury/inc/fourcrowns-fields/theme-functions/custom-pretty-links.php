@@ -52,6 +52,7 @@ if (str_contains($current_url, '/go/')) {
         // Výpis nebo další zpracování dat
         $data = json_decode($response, true);
         $link = $data['docs'][0]["link"];
+        var_dump($link);
 
         if ($data && $link) {
             wp_redirect($link);

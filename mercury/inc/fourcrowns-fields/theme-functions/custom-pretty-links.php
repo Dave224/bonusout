@@ -57,6 +57,8 @@ if (str_contains($current_url, '/go/')) {
             wp_redirect($link);
             die;
         } else {
+            $url_array = explode('-', $url_array_for_match[1]);
+            $url_array = array_shift($url_array);
             $params = [
                 'where[pretty_link][like]' => $url_array_for_match[1],
                 'limit' => 1,
@@ -76,7 +78,7 @@ if (str_contains($current_url, '/go/')) {
             curl_close($ch);
             $data = json_decode($response, true);
             $link = $data['docs'][0]["link"];
-            var_dump($url_array_for_match[1]);
+            var_dump($url_array);
             if ($data && $link) {
                 wp_redirect($link);
                 die;

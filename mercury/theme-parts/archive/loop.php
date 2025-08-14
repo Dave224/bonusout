@@ -43,7 +43,7 @@
 
 							</div>
 							<div class="space-archive-loop-item-title relative">
-								<?php if ( wp_get_attachment_image(get_post_thumbnail_id()) ) {} else { ?><div class="space-archive-loop-item-img-category relative"><?php the_category(' '); ?></div><?php } ?><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php if ( is_sticky() ) { ?><i class="fas fa-paperclip"></i> <?php } ?><?php the_title(); ?></a>
+								<?php if ( wp_get_attachment_image(get_post_thumbnail_id()) ) {} else { ?><div class="space-archive-loop-item-img-category relative"><?php the_category(' '); ?></div><?php } ?><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 							</div>
 							<div class="space-archive-loop-item-excerpt relative">
 								<?php echo esc_html(wp_trim_words( get_the_excerpt(), 18, ' ...' )); ?>

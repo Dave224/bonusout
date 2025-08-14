@@ -28,6 +28,31 @@
 
 			<div class="space-archive-loop box-100 relative">
 
+                <?php
+                // zobrazíme sticky nahoře jen na 1. stránce kategorie
+                if (!is_paged()) {
+                    $sticky = get_option('sticky_posts');
+                    if (!empty($sticky)) {
+                        $cat = get_queried_object();
+                        $sticky_q = new WP_Query([
+                            'post__in'            => $sticky,
+                            'ignore_sticky_posts' => 1,
+                            'posts_per_page'      => -1,
+                            'orderby'             => 'post__in',
+                            'cat'                 => $cat->term_id,
+                        ]);
+
+                        if ($sticky_q->have_posts()) {
+                            while ($sticky_q->have_posts()) {
+                                $sticky_q->the_post();
+                                get_template_part( '/theme-parts/archive/loop' );
+                            }
+                            wp_reset_postdata();
+                        }
+                    }
+                }
+                ?>
+
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( '/theme-parts/archive/loop' ); ?>

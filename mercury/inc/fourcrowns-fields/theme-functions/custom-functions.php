@@ -190,3 +190,15 @@ function turn_off_plugin_table_of_content() {
 
 // Registrace shortcodu
 add_shortcode('ez-toc', 'turn_off_plugin_table_of_content');
+
+// V kategoriích vynech sticky z hlavního loopu (ukážeme je zvlášť nahoře)
+add_action('pre_get_posts', function ($query) {
+    if (!is_admin() && $query->is_main_query() && $query->is_category()) {
+        $sticky = get_option('sticky_posts');
+        if (!empty($sticky)) {
+            $query->set('ignore_sticky_posts', 1);
+            // nezobrazovat sticky znovu v hlavním výpisu
+            $query->set('post__not_in', $sticky);
+        }
+    }
+});

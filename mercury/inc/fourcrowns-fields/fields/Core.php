@@ -7,7 +7,7 @@ class Fourcrowns_Core {
 
     public static function load_assets() {
         wp_enqueue_style('fourcrowns-fields', get_template_directory_uri() . '/inc/fourcrowns-fields/assets/admin/admin.css', []);
-        wp_enqueue_script('fourcrowns-admin-js', get_template_directory_uri() . '/inc/fourcrowns-fields/assets/admin/admin.js', ['jquery'], '4', true);
+        wp_enqueue_script('fourcrowns-admin-js', get_template_directory_uri() . '/inc/fourcrowns-fields/assets/admin/admin.js', ['jquery'], '5', true);
 
         wp_enqueue_script('fourcrowns-sortable', 'https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js', [], null, true);
 

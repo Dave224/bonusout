@@ -95,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 initFourcrownsGalleryButtons();
                 initTrumbowyg();
-                initImageUrlInput();
             }, 150);
         });
     });
@@ -156,7 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 initFourcrownsImageButtons();
                 initTrumbowyg();
-                initImageUrlInput();
             }, 150);
         });
     });

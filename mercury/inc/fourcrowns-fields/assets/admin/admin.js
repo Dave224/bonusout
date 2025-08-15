@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 initFourcrownsGalleryButtons();
                 initTrumbowyg();
+                initImageUrlInput();
             }, 150);
         });
     });
@@ -155,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 initFourcrownsImageButtons();
                 initTrumbowyg();
+                initImageUrlInput();
             }, 150);
         });
     });
@@ -230,6 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             container.insertBefore(clone, addButton);
             initTrumbowyg(clone);
+            initImageUrlInput(clone);
             initFourcrownsFlatpickr(clone);
         });
 
@@ -278,6 +281,13 @@ function initTrumbowyg(context = document) {
             });
             $this.addClass('trumbowyg-initialized');
         }
+    });
+}
+
+function initImageUrlInput(context = document) {
+    jQuery(context).find('.fourcrowns-image-url-input').each(function () {
+        const $this = jQuery(this);
+        $this.val('');
     });
 }
 

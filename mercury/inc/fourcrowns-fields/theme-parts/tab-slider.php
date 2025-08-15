@@ -17,7 +17,7 @@ $query = new WP_Query([
                     <a href="<?php the_permalink(); ?>" class="article-card">
                         <?php if (get_post_thumbnail_id(get_the_ID())) { ?>
                             <div class="article-thumb">
-                                <img src="<?= Image::getCloudImage(get_post_thumbnail_id(get_the_ID()), 272, 181); ?>" alt="<?php the_title(); ?>">
+                                <img src="<?= Image::getCloudImage(get_post_thumbnail_id(get_the_ID()), 245, 163); ?>" alt="<?php the_title(); ?>">
                             </div>
                         <?php } ?>
                         <div class="article-content tab-article-content">

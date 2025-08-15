@@ -18,6 +18,6 @@ class Fourcrowns_Field_Checkbox extends Fourcrowns_Field_Base {
     }
 
     public function sanitize($value) {
-        return $value === '1' ? 1 : 'disabled';
+        return $value === '1' ? '1' : 'disabled';
     }
 }

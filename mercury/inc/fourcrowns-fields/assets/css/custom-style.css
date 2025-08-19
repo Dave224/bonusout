@@ -261,7 +261,7 @@ a.btn:hover {
     background: #fff;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(229, 147, 61, 0.2); /* ✨ stín */
+    box-shadow: 0 2px 10px rgba(255, 0, 153, 0.2); /* ✨ stín */
     transition: box-shadow 0.3s,transform 0.3s;
     min-width: 245px;
     max-width: 300px;

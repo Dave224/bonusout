@@ -51,6 +51,7 @@ if (str_contains($current_url, '/go/')) {
         curl_close($ch);
         // Výpis nebo další zpracování dat
         $data = json_decode($response, true);
+        var_dump($data);
         $link = $data['docs'][0]["link"];
 
         if ($data && $link) {

@@ -2,24 +2,30 @@
 use utils\Util;
 use utils\Image;
 
-$background = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_background');
-$title = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_section_title');
-$description = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_section_description');
+$id = get_queried_object_id();
 
-$firstTitle = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_title_first');
-$firstItems = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_first');
-$firstButtonUrl = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_button_url_first');
-$firstButtonTitle = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_button_title_first');
+if (!is_front_page()) {
+    $id = get_option('page_on_front');
+}
 
-$secondTitle = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_title_second');
-$secondItems = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_second');
-$secondButtonUrl = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_button_url_second');
-$secondButtonTitle = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_button_title_second');
+$background = Fourcrowns_Storage::get('post', $id, LISTING . '_background');
+$title = Fourcrowns_Storage::get('post', $id, LISTING . '_section_title');
+$description = Fourcrowns_Storage::get('post', $id, LISTING . '_section_description');
 
-$thirdTitle = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_title_third');
-$thirdItems = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_third');
-$thirdButtonUrl = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_button_url_third');
-$thirdButtonTitle = Fourcrowns_Storage::get('post', get_queried_object_id(), LISTING . '_button_title_third');
+$firstTitle = Fourcrowns_Storage::get('post', $id, LISTING . '_title_first');
+$firstItems = Fourcrowns_Storage::get('post', $id, LISTING . '_first');
+$firstButtonUrl = Fourcrowns_Storage::get('post', $id, LISTING . '_button_url_first');
+$firstButtonTitle = Fourcrowns_Storage::get('post', $id, LISTING . '_button_title_first');
+
+$secondTitle = Fourcrowns_Storage::get('post', $id, LISTING . '_title_second');
+$secondItems = Fourcrowns_Storage::get('post', $id, LISTING . '_second');
+$secondButtonUrl = Fourcrowns_Storage::get('post', $id, LISTING . '_button_url_second');
+$secondButtonTitle = Fourcrowns_Storage::get('post', $id, LISTING . '_button_title_second');
+
+$thirdTitle = Fourcrowns_Storage::get('post', $id, LISTING . '_title_third');
+$thirdItems = Fourcrowns_Storage::get('post', $id, LISTING . '_third');
+$thirdButtonUrl = Fourcrowns_Storage::get('post', $id, LISTING . '_button_url_third');
+$thirdButtonTitle = Fourcrowns_Storage::get('post', $id, LISTING . '_button_title_third');
 
 $firstRank = 1;
 $secondRank = 1;

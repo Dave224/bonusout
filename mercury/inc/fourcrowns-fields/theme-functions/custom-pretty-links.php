@@ -128,10 +128,12 @@ if (str_contains($current_url, '/go/')) {
             'hierarchical'   => 0,
         ]);
 
+
+
         if (!empty($pages)) {
             $page_id = $pages[0]->ID;
             $url = get_permalink($page_id);
-            wp_redirect($url);
+            wp_redirect($url);die;
         }
 
         wp_die("Affiliate brand nebyl nalezen!");

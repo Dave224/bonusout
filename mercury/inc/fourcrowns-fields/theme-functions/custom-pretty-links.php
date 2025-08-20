@@ -118,7 +118,23 @@ if (str_contains($current_url, '/go/')) {
             }
         }
 
-        wp_die("Affiliate brand nebyl nalazen!");
+        $template = 'page-templates/page-ooops.php'; // relativně k rootu šablony
+        $pages = get_pages([
+            'post_type'      => 'page',
+            'post_status'    => 'publish',
+            'meta_key'       => '_wp_page_template',
+            'meta_value'     => $template,
+            'number'         => 1,  // vezmeme jen první
+            'hierarchical'   => 0,
+        ]);
+
+        if (!empty($pages)) {
+            $page_id = $pages[0]->ID;
+            $url = get_permalink($page_id);
+            wp_redirect($url);
+        }
+
+        wp_die("Affiliate brand nebyl nalezen!");
     } else {
         wp_die("Chyba při přihlášení: " . $response);
     }

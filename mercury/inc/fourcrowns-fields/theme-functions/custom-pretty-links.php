@@ -1,5 +1,13 @@
 <?php
 $current_url = home_url($_SERVER['REQUEST_URI']);
+// Získání URL webu
+$url = get_site_url();
+// Převedení na objekt URL
+$parsed = parse_url($url);
+// Doména (host část)
+$host = $parsed['host'];
+// Odstranění "www."
+$currentDomain = preg_replace('/^www\./', '', $host);
 
 if (str_contains($current_url, '/go/')) {
     // URL k API
@@ -51,8 +59,19 @@ if (str_contains($current_url, '/go/')) {
         curl_close($ch);
         // Výpis nebo další zpracování dat
         $data = json_decode($response, true);
-        var_dump($data);
-        $link = $data['docs'][0]["link"];
+        if (count($data['docs']) == 1) {
+            $link = $data['docs'][0]["link"];
+        } else {
+            foreach ($data['docs'] as $item) {
+                $domain = $item["affiliate_partner_domain"][0]['domain'];
+                if ($domain == $currentDomain) {
+                    $link = $item["link"];
+                    break;
+                } else {
+                    $link = $data['docs'][0]["link"];
+                }
+            }
+        }
 
         if ($data && $link) {
             wp_redirect($link);
@@ -63,7 +82,6 @@ if (str_contains($current_url, '/go/')) {
             $urlToMatch = implode('-', $url_array);
             $params = [
                 'where[pretty_link][like]' => $urlToMatch,
-                'limit' => 1,
             ];
 
             // Sestavení query stringu
@@ -79,7 +97,20 @@ if (str_contains($current_url, '/go/')) {
             $response = curl_exec($ch);
             curl_close($ch);
             $data = json_decode($response, true);
-            $link = $data['docs'][0]["link"];
+
+            if (count($data['docs']) == 1) {
+                $link = $data['docs'][0]["link"];
+            } else {
+                foreach ($data['docs'] as $item) {
+                    $domain = $item["affiliate_partner_domain"][0]['domain'];
+                    if ($domain == $currentDomain) {
+                        $link = $item["link"];
+                        break;
+                    } else {
+                        $link = $data['docs'][0]["link"];
+                    }
+                }
+            }
 
             if ($data && $link) {
                 wp_redirect($link);

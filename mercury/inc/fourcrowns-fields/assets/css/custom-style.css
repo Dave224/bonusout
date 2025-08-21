@@ -211,7 +211,6 @@ html {
 .space-page-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 0 25px!important;
 }
 
 .space-page-content a:hover, .space-header-height .space-header-menu ul.main-menu li ul.sub-menu li a:hover {

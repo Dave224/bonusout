@@ -45,7 +45,7 @@ $thirdRank = 1;
         </div>
     <?php } ?>
 
-    <div class="space-page-wrapper">
+    <div class="space-page-wrapper listing-custom-wrapper">
         <div class="listing-columns-wrapper">
             <div class="listing-column">
                 <?php if (Util::issetAndNotEmpty($firstTitle)) { ?>

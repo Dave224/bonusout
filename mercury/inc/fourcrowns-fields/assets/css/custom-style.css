@@ -213,6 +213,10 @@ html {
     margin: 0 auto;
 }
 
+.listing-custom-wrapper {
+    padding: 0 0 25px!important;
+}
+
 .space-page-content a:hover, .space-header-height .space-header-menu ul.main-menu li ul.sub-menu li a:hover {
     color: var(--main-color)!important;
 }

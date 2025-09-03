@@ -275,7 +275,9 @@ function initTrumbowyg(context = document) {
         const $this = jQuery(this);
         if (!$this.hasClass('trumbowyg-initialized')) {
             $this.trumbowyg({
-                autogrow: true
+                autogrow: true,
+                tagsToKeep: ['div'],
+                semantic: false,
             });
             $this.addClass('trumbowyg-initialized');
         }

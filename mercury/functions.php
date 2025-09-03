@@ -1,5 +1,5 @@
 <?php
-require_once get_template_directory() . '/inc/fourcrowns-fields/autoload.php';
+require_once get_template_directory() . '/inc/custom-fields/autoload.php';
 Fourcrowns_Core::init();
 /*  Mercury - 3.9.10.1  */
 

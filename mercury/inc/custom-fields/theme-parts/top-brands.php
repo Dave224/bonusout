@@ -33,7 +33,7 @@ $key = 1;
                             $image = ['url' => $image];
                         }
                     }
-                    $imageUrl = Image::getCloudImage($image['id'], 270, 270);
+                    $imageUrl = $image['url'];
                     ?>
                     <a class="custom-column dynamic-typewriter" target="_blank" href="<?= $topBrand[$urlKey]; ?>" rel="noopener">
                         <div class="star-rating"><i class="fas fa-star"></i><?= $key; ?></div>

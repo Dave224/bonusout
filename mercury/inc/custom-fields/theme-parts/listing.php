@@ -68,7 +68,7 @@ $thirdRank = 1;
                                                     $image = ['url' => $image];
                                                 }
                                             }
-                                            $imageUrl = Image::getCloudImage($image['id'], 60, 60);
+                                            $imageUrl = $image['url'];
                                             ?>
                                             <a class="listing-logo" href="<?= $firstItem[LISTING . '_item_url_first']; ?>" target="_blank">
                                                 <img src="<?= $imageUrl; ?>" alt="<?= $firstItem[LISTING . '_item_title_first']; ?>">
@@ -125,7 +125,7 @@ $thirdRank = 1;
                                                         $image = ['url' => $image];
                                                     }
                                                 }
-                                                $imageUrl = Image::getCloudImage($image['id'], 60, 60);
+                                                $imageUrl = $image['url'];
                                                 ?>
                                                 <a class="listing-logo" href="<?= $secondItem[LISTING . '_item_url_second']; ?>" target="_blank">
                                                     <img src="<?= $imageUrl; ?>" alt="<?= $secondItem[LISTING . '_item_title_second']; ?>">
@@ -183,7 +183,7 @@ $thirdRank = 1;
                                                         $image = ['url' => $image];
                                                     }
                                                 }
-                                                $imageUrl = Image::getCloudImage($image['id'], 60, 60);
+                                                $imageUrl = $image['url'];
                                                 ?>
                                                 <a class="listing-logo" href="<?= $thirdItem[LISTING . '_item_url_third']; ?>" target="_blank">
                                                     <img src="<?= $imageUrl; ?>" alt="<?= $thirdItem[LISTING . '_item_title_third']; ?>">

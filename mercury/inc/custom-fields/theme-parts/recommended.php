@@ -70,7 +70,7 @@ if (get_post_meta($postId, RECOMMENDED . '_section_title', true)) {
                                 $image = ['url' => $image];
                             }
                         }
-                        $imageUrl = Image::getCloudImage($image['id'], 80, 80);
+                        $imageUrl = $image['url'];
                         ?>
                         <div class="swiper-slide">
                             <div class="casino-card">

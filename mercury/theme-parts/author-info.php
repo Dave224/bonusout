@@ -1,3 +1,12 @@
+<?php
+$firstLinkTitle = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_trustworthy_title');
+$firstLinkPage = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_trustworthy_page');
+$secondLinkTitle = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_rating_title');
+$secondLinkPage = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_rating_page');
+$firstLinkPageUrl = get_permalink($firstLinkPage);
+$secondLinkPageUrl = get_permalink($secondLinkPage);
+?>
+
 <div class="space-page-content-meta box-100 relative">
 	<div class="space-page-content-meta-avatar absolute">
 		<?php echo get_avatar( get_the_author_meta('user_email'), 50 ); ?>
@@ -29,8 +38,8 @@
 		</div>
 		<div class="space-page-content-meta-data relative" style="margin-top: 10px;">
             <div class="space-page-content-meta-data-ins relative">
-                <span><i class="far fa-check-circle"></i><a class="author-info-link" href="<?= __("https://www.bonusout.com/duveryhodne-zdroje/", "BO"); ?>"><?= __('Důvěryhodné', 'SLOTH'); ?></a></span>
-                <span><i class="fas fa-search"></i><a class="author-info-link" href="<?= __("https://www.bonusout.com/jak-hodnotime/", "BO"); ?>"><?= __('Jak hodnotíme?', 'SLOTH'); ?></a></span>
+                <span><i class="far fa-check-circle"></i><a class="author-info-link" href="<?= $firstLinkPageUrl; ?>"><?= $firstLinkTitle; ?></a></span>
+                <span><i class="fas fa-search"></i><a class="author-info-link" href="<?= $secondLinkPageUrl; ?>"><?= $secondLinkTitle; ?></a></span>
             </div>
         </div>
 	</div>

@@ -31,6 +31,23 @@ class Util
         return $options;
     }
 
+    public static function getPageForOptions() {
+        $posts = get_posts([
+            'post_type' => 'page',
+            'post_status' => 'publish',
+            'numberposts' => 100,
+            'orderby' => 'title',
+            'order' => 'ASC',
+        ]);
+
+        $options = [];
+        foreach ($posts as $post) {
+            $options[$post->ID] = get_the_title($post->ID);
+        }
+
+        return $options;
+    }
+
     public static function getPostTermsForOptions() {
         $categories = get_categories([
             'hide_empty' => false,

@@ -1,4 +1,6 @@
 <?php
+use utils\Util;
+
 const CUSTOM_SETTINGS = 'custom-settings';
 const CUSTOM_SETTINGS_BOTTOM_BAR = 'custom-settings-bottom-bar';
 const CUSTOM_SETTINGS_TOP_BRANDS = 'custom-settings-top-brands';
@@ -84,7 +86,10 @@ Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_POST_DETAIL, [
     'context' => 'option',
     'fields' => [
         ['type' => 'text', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_contents_title', 'label' => 'Nadpis pro osnovu článku:'],
-
+        ['type' => 'text', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_trustworthy_title', 'label' => 'Titulek pro 1. link u autora (Důvěryhodné):'],
+        ['type' => 'select', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_trustworthy_page', 'label' => 'Stránka pro 1. link u autora (Důvěryhodné):', 'options' => Util::getPageForOptions()],
+        ['type' => 'text', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_rating_title', 'label' => 'Titulek pro 2. link u autora (Jak hodnotíme?):'],
+        ['type' => 'select', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_rating_page', 'label' => 'Stránka pro 2. link u autora (Jak hodnotíme?):', 'options' => Util::getPageForOptions()],
     ],
 ]);
 

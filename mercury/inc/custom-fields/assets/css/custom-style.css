@@ -1707,3 +1707,21 @@ p.logged-in-as a {
     text-decoration: underline;
     font-size:13px;
 }
+
+/* FAQ boxíky pod článkem */
+
+.su-spoiler-title {
+    background: #f1f3f4 !important;
+}
+
+.su-spoiler {
+    margin-bottom: 0.5em!important;
+}
+
+.su-spoiler-style-fancy {
+    border: 1px solid #f1f3f4!important;
+}
+
+.su-spoiler-style-fancy>.su-spoiler-title {
+    border-bottom: 1px solid #f1f3f4!important;
+}

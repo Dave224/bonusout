@@ -246,6 +246,8 @@ a.btn {
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 a.btn:hover {

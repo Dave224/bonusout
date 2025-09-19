@@ -1669,3 +1669,34 @@ a.secondary-btn:hover {
     color: white;
     text-decoration: none;
 }
+
+/* author box pod článkem */
+
+.dcms_author-info {
+    background-color: #f1f3f4;
+    padding: 30px;
+    margin: 10px auto 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.dcms_author-heading {
+    margin-bottom: 6px;
+    font-size: 1.777em;
+}
+
+.dcms_author-description {
+    color: #5D5D5D !important;
+    font-size: 14px;
+}
+
+p.logged-in-as {
+    color: #5D5D5D !important;
+    font-size:13px;
+}
+
+p.logged-in-as a {
+    color: #5D5D5D !important;
+    text-decoration: underline;
+    font-size:13px;
+}

@@ -202,3 +202,9 @@ add_action('pre_get_posts', function ($query) {
         }
     }
 });
+
+function my_custom_locales( $locales ) {
+    $locales['ga'] = 'Gaeilge';
+    return $locales;
+}
+add_filter( 'locale_names', 'my_custom_locales' );

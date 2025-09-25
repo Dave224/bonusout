@@ -3,6 +3,7 @@ $firstLinkTitle = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_D
 $firstLinkPage = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_trustworthy_page');
 $secondLinkTitle = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_rating_title');
 $secondLinkPage = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_rating_page');
+$updated = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_update');
 $firstLinkPageUrl = get_permalink($firstLinkPage);
 $secondLinkPageUrl = get_permalink($secondLinkPage);
 ?>
@@ -22,7 +23,7 @@ $secondLinkPageUrl = get_permalink($secondLinkPage);
 										<span class="date"><i class="far fa-clock"></i> <?= get_the_date("d. m. Y"); ?></span>
 
 					 <?php if (get_the_date() != get_the_modified_date()) { ?>
-                        <span class="date"><i class="fa fa-refresh"></i> <?= __("Aktualizováno:", "BO"); ?> <?= get_the_modified_date("d. m. Y"); ?></span>
+                        <span class="date"><i class="fa fa-refresh"></i> <?= $updated; ?> <?= get_the_modified_date("d. m. Y"); ?></span>
                     <?php } ?>
 				<?php } ?>
 

@@ -1,17 +1,25 @@
 <?php
+use utils\Util;
 	if ( post_password_required() ) {
 		return;
 	}
+
+$commentsTitle = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_comments_title');
+$commentsDescription = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_comments_description');
 ?>
 				<div id="comments" class="space-comments box-100 relative">
 					<div class="space-comments-ins case-15 white relative">
 						<div class="space-comments-wrap space-page-content relative">
-                             <h3 class="comment-first-title">
-                                <?php _e("Diskuze, komentáře a vaše zkušenosti", "BO"); ?>
-                            </h3>
-                            <p><?php _e("Sdílejte svůj názor, položte otázku nebo nabídněte radu ostatním v moderované diskuzi. Redaktoři se do ní také zapojují, ale reagují podle své momentální vytíženosti. Pokud očekáváte přímou odpověď, doporučujeme spíše využít e-mailovou komunikaci.", "BO"); ?>
-                            </p>
-
+                            <?php if (Util::issetAndNotEmpty($commentsTitle)) { ?>
+                                 <h3 class="comment-first-title">
+                                    <?= $commentsTitle; ?>
+                                </h3>
+                            <?php } ?>
+                            <?php if (Util::issetAndNotEmpty($commentsDescription)) { ?>
+                                <p>
+                                    <?= $commentsDescription; ?>
+                                </p>
+                            <?php } ?>
 							<?php
 							if ( have_comments() ) : ?>
 

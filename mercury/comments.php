@@ -43,7 +43,7 @@
 											'style'       => 'ul',
 											'short_ping'  => true,
 											'callback'    => 'mercury_comment',
-											'reply_text'  => esc_html__( 'Odpovědět', 'mercury' ),
+											'reply_text'  => esc_html__( 'Reply', 'mercury' ),
 										) );
 									?>
 								</ul>
@@ -61,15 +61,15 @@
 							$consent  = empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"';
 							$comments_args = array(
 								'fields' => array(
-									'author' => '<p class="comment-form-author"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" placeholder="'. esc_attr__( 'Jméno*', 'mercury' ) .'" /></p>',
+									'author' => '<p class="comment-form-author"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" placeholder="'. esc_attr__( 'Name*', 'mercury' ) .'" /></p>',
 									'email'  => '<p class="comment-form-email"><input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes" placeholder="'. esc_attr__( 'Email*', 'mercury' ) .'" /></p>',
-									'url'    => '<p class="comment-form-url"><input id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" placeholder="'. esc_attr__( 'Webová stránka', 'mercury' ) .'" /></p>',
+									'url'    => '<p class="comment-form-url"><input id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" placeholder="'. esc_attr__( 'Website', 'mercury' ) .'" /></p>',
                                     'honey'     => '<p class="d-none" style="display:none;">'.
                                         '<input type="text" name="kt-honey-comment" id="kt-honey" class="js-honey hidden kt-field " value=""></p>',
                                     'cookies' => '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' .
-					 				'<label for="wp-comment-cookies-consent">' . esc_html__( 'Uložit moje údaje do prohlížeče pro další komentáře.', 'mercury' ) . '</label></p>',
+					 				'<label for="wp-comment-cookies-consent">' . esc_html__( 'Save my name, email, and website in this browser for the next time I ', 'mercury' ) . '</label></p>',
 								),
-								'comment_field'        => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8"  aria-required="true" required="required" placeholder="'. esc_attr__( 'Komentář*', 'mercury' ) .'"></textarea></p>',
+								'comment_field'        => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8"  aria-required="true" required="required" placeholder="'. esc_attr__( 'Comment*', 'mercury' ) .'"></textarea></p>',
 								);
 							comment_form( $comments_args ); ?>
 						</div>

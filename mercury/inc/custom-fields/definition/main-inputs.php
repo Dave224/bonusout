@@ -90,6 +90,10 @@ Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_POST_DETAIL, [
         ['type' => 'select', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_trustworthy_page', 'label' => 'Stránka pro 1. link u autora (Důvěryhodné):', 'options' => Util::getPageForOptions()],
         ['type' => 'text', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_rating_title', 'label' => 'Titulek pro 2. link u autora (Jak hodnotíme?):'],
         ['type' => 'select', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_rating_page', 'label' => 'Stránka pro 2. link u autora (Jak hodnotíme?):', 'options' => Util::getPageForOptions()],
+        ['type' => 'text', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_update', 'label' => 'Aktualizováno:'],
+        ['type' => 'text', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_comments_title', 'label' => 'Titulek nad diskuzí:'],
+        ['type' => 'textarea', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_comments_description', 'label' => 'Popisek nad diskuzí:'],
+
     ],
 ]);
 

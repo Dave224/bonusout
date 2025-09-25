@@ -93,7 +93,7 @@ Fourcrowns_Fields::add_metabox(CUSTOM_SETTINGS_POST_DETAIL, [
         ['type' => 'text', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_update', 'label' => 'Aktualizováno:'],
         ['type' => 'text', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_comments_title', 'label' => 'Titulek nad diskuzí:'],
         ['type' => 'textarea', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_comments_description', 'label' => 'Popisek nad diskuzí:'],
-
+        ['type' => 'text', 'name' => CUSTOM_SETTINGS_POST_DETAIL . '_button_authors_posts_title', 'label' => 'Titulek pro tlačítko "všechny články autora":'],
     ],
 ]);
 

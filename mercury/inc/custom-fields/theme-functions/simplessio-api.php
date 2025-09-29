@@ -21,7 +21,6 @@ function createPostFromApp ($data)
     }
 
     $appPostId = $postAdminData['wordpressId'];
-    my_debug_log("Start " . $appPostId);
 
     $author_id = 1;
     $user = null;
@@ -38,7 +37,7 @@ function createPostFromApp ($data)
     }
 
     $new_html = replace_images_with_sideloaded_versions($postContentData['contentHTML'], $appPostId);
-    my_debug_log("HTML: " . $new_html);
+
     $my_post = [
         'post_title'    => $postContentData['title'],
         'post_content'  => $new_html,

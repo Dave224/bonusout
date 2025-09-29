@@ -123,7 +123,7 @@ function replace_images_with_sideloaded_versions($html, $app_post_id, $post_id =
         $media_url = wp_get_attachment_url($attachment_id);
 
         if (is_wp_error($media_url)) {
-            error_log("❌ Nepodařilo se nahrát obrázek $src – " . $media_url->get_error_message());
+            my_debug_log("❌ Nepodařilo se nahrát obrázek $src – " . $media_url->get_error_message());
             continue;
         }
 
@@ -202,3 +202,29 @@ add_action('pre_get_posts', function ($query) {
         }
     }
 });
+
+if ( ! function_exists( 'my_debug_log' ) ) {
+    function my_debug_log( $message, $file = 'my_debug.log' ) {
+        // Cesta do wp-content
+        $upload_dir = wp_upload_dir();
+        $log_dir    = trailingslashit( $upload_dir['basedir'] ) . 'logs';
+
+        // Pokud složka neexistuje, vytvoříme ji
+        if ( ! file_exists( $log_dir ) ) {
+            wp_mkdir_p( $log_dir );
+        }
+
+        $log_file = trailingslashit( $log_dir ) . $file;
+
+        // Připravíme zprávu
+        if ( is_array( $message ) || is_object( $message ) ) {
+            $message = print_r( $message, true );
+        }
+
+        $timestamp = date( 'Y-m-d H:i:s' );
+        $line      = "[{$timestamp}] " . $message . PHP_EOL;
+
+        // Zápis do souboru
+        file_put_contents( $log_file, $line, FILE_APPEND | LOCK_EX );
+    }
+}

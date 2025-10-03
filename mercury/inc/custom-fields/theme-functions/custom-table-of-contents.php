@@ -84,13 +84,16 @@ function fc_insert_outline_before_first_div($content) {
         return $content;
     }
 
+    if (str_contains($content, "ez-toc")) {
+        return $content;
+    }
+
     $contentTitle = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_contents_title');
 
     // Najdi <h2> a <h3> s ID
     preg_match_all('/<(h[2-3])[^>]*id="([^"]+)"[^>]*>(.*?)<\/\1>/', $content, $matches, PREG_SET_ORDER);
 
     // Vytvoř osnovu
-
     $outline = '<div class="fc-outline-container">';
     $outline .= '<button class="fc-outline-toggle collapsed" aria-expanded="false">';
     if (Util::issetAndNotEmpty($contentTitle)) {
@@ -138,3 +141,58 @@ function fc_insert_outline_before_first_div($content) {
     return $content;
 }
 add_filter('the_content', 'fc_insert_outline_before_first_div', 20);
+
+// Funkce, která vrací výstup shortcodu
+function custom_table_for_content_shortcode() {
+    createTableOfContents();
+}
+
+// Registrace shortcodu pro osnovu
+add_shortcode('ez-toc', 'custom_table_for_content_shortcode');
+
+function createTableOfContents() {
+    $contentTitle = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_contents_title');
+
+    // Najdi <h2> a <h3> s ID
+    preg_match_all('/<(h[2-3])[^>]*id="([^"]+)"[^>]*>(.*?)<\/\1>/', get_the_content(), $matches, PREG_SET_ORDER);
+    // Vytvoř osnovu
+    $outline = '<div class="fc-outline-container">';
+    $outline .= '<button class="fc-outline-toggle collapsed" aria-expanded="false">';
+    if (Util::issetAndNotEmpty($contentTitle)) {
+        $outline .= '<h2 class="fc-outline-headline"> ' . $contentTitle . ' </h2>';
+    }
+    $outline .= '<span class="fc-toggle-icon"><i class="fa fa-chevron-down open-content"></i></span>';
+    $outline .= '</button>';
+    $outline .= '<div class="fc-outline-content">';
+    $outline .= '<ul class="fc-outline">';
+
+    $open_sublist = false;
+
+    foreach ($matches as $match) {
+        $tag = $match[1];
+        $id = $match[2];
+        $title = $match[3];
+
+        if ($tag === 'h2') {
+            if ($open_sublist) {
+                $outline .= '</ul></li>';
+                $open_sublist = false;
+            }
+            $outline .= '<li><a href="#' . esc_attr($id) . '">' . esc_html($title) . '</a>';
+        } elseif ($tag === 'h3') {
+            if (!$open_sublist) {
+                $outline .= '<ul class="fc-outline-sub">';
+                $open_sublist = true;
+            }
+            $outline .= '<li><a href="#' . esc_attr($id) . '">' . esc_html($title) . '</a></li>';
+        }
+    }
+
+    if ($open_sublist) {
+        $outline .= '</ul></li>';
+    }
+
+    $outline .= '</ul></div></div>';
+
+    return $outline;
+}

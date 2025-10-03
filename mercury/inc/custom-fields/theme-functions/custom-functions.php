@@ -183,14 +183,6 @@ function prepareImageFroPost ($src, $appPostId, $post_id, $image_alt) {
     }
 }
 
-// Funkce, která vrací výstup shortcodu
-function turn_off_plugin_table_of_content() {
-    return '';
-}
-
-// Registrace shortcodu
-add_shortcode('ez-toc', 'turn_off_plugin_table_of_content');
-
 // V kategoriích vynech sticky z hlavního loopu (ukážeme je zvlášť nahoře)
 add_action('pre_get_posts', function ($query) {
     if (!is_admin() && $query->is_main_query() && $query->is_category()) {

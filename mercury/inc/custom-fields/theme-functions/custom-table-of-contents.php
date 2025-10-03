@@ -84,10 +84,6 @@ function fc_insert_outline_before_first_div($content) {
         return $content;
     }
 
-    if (has_shortcode(get_the_content(), "ez-toc")) {
-        return $content;
-    }
-
     // Vytvoř osnovu
     $outline = createTableOfContents($content);
 

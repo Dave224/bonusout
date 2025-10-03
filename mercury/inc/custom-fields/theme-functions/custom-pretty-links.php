@@ -1,4 +1,6 @@
 <?php
+use utils\Util;
+
 $current_url = home_url($_SERVER['REQUEST_URI']);
 // Získání URL webu
 $url = get_site_url();
@@ -59,6 +61,40 @@ if (str_contains($current_url, '/go/')) {
         curl_close($ch);
         // Výpis nebo další zpracování dat
         $data = json_decode($response, true);
+
+        // Zvýšení statistiky kliknutí na odkaz pokud se nejedná o robota
+        if (!Util::isBot($_SERVER['HTTP_USER_AGENT'])) {
+            $id = $data['docs'][0]['id'];
+            if (isset($data['docs'][0]['pretty_link_clicks'])) {
+                $clicks = $data['docs'][0]['pretty_link_clicks'];
+                $clicks++;
+            } else {
+                $clicks = 1;
+            }
+
+            $updateUrl = $collectionUrl . '/' . $id;
+
+            $updateData = [
+                'pretty_link_clicks' => $clicks,
+            ];
+
+            $jsonData = json_encode($updateData);
+
+            $ch = curl_init($updateUrl);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                'Authorization: Bearer ' . $token,
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($jsonData)
+            ]);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
+
+            $updateResponse = curl_exec($ch);
+            curl_close($ch);
+        }
+
+        // Přesměrování na affili link
         if (count($data['docs']) == 1) {
             $link = $data['docs'][0]["link"];
         } else {

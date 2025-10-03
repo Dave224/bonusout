@@ -62,4 +62,26 @@ class Util
 
         return $options;
     }
+
+    public static function isBot($userAgent) {
+        $bots = [
+            // vyhledávače
+            'googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider',
+            'yandexbot', 'sogou', 'exabot', 'seznam',
+            // sociální sítě
+            'facebot', 'facebookexternalhit', 'twitterbot', 'linkedinbot',
+            'whatsapp', 'discordbot', 'skypeuripreview',
+            // SEO a analyzátory
+            'ahrefs', 'semrush', 'majestic', 'mj12bot', 'moz', 'rogerbot',
+            // monitoring
+            'uptimebot', 'pingdom', 'gtmetrix'
+        ];
+        $userAgent = strtolower($userAgent);
+        foreach ($bots as $bot) {
+            if (strpos($userAgent, $bot) !== false) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

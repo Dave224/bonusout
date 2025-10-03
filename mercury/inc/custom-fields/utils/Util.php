@@ -67,14 +67,7 @@ class Util
         $bots = [
             // vyhledávače
             'googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider',
-            'yandexbot', 'sogou', 'exabot', 'seznam',
-            // sociální sítě
-            'facebot', 'facebookexternalhit', 'twitterbot', 'linkedinbot',
-            'whatsapp', 'discordbot', 'skypeuripreview',
-            // SEO a analyzátory
-            'ahrefs', 'semrush', 'majestic', 'mj12bot', 'moz', 'rogerbot',
-            // monitoring
-            'uptimebot', 'pingdom', 'gtmetrix'
+            'yandexbot', 'sogou', 'exabot', 'seznam'
         ];
         $userAgent = strtolower($userAgent);
         foreach ($bots as $bot) {

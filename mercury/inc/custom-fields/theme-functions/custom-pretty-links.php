@@ -92,8 +92,6 @@ if (str_contains($current_url, '/go/')) {
 
             $updateResponse = curl_exec($ch);
             curl_close($ch);
-
-            var_dump($updateResponse);
         }
 
         // Přesměrování na affili link

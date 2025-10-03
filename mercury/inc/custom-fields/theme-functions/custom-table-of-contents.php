@@ -84,10 +84,10 @@ function fc_insert_outline_before_first_div($content) {
         return $content;
     }
 
-    if (str_contains($content, "ez-toc")) {
+    if (has_shortcode(get_the_content(), "ez-toc")) {
         return $content;
     }
-    
+
     // Vytvoř osnovu
     $outline = createTableOfContents($content);
 
@@ -103,7 +103,7 @@ add_filter('the_content', 'fc_insert_outline_before_first_div', 20);
 
 // Funkce, která vrací výstup shortcodu
 function custom_table_for_content_shortcode() {
-    createTableOfContents(get_the_content());
+    return '';
 }
 
 // Registrace shortcodu pro osnovu

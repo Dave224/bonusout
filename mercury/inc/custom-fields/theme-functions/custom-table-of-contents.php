@@ -87,12 +87,7 @@ function fc_insert_outline_before_first_div($content) {
     if (str_contains($content, "ez-toc")) {
         return $content;
     }
-
-    $contentTitle = Fourcrowns_Storage::get('option', null, CUSTOM_SETTINGS_POST_DETAIL . '_contents_title');
-
-    // Najdi <h2> a <h3> s ID
-    preg_match_all('/<(h[2-3])[^>]*id="([^"]+)"[^>]*>(.*?)<\/\1>/', $content, $matches, PREG_SET_ORDER);
-
+    
     // Vytvoř osnovu
     $outline = createTableOfContents($content);
 

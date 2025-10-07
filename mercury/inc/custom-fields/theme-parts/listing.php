@@ -86,7 +86,7 @@ $thirdRank = 1;
                                                 <a href="<?= $firstItem[LISTING . '_item_button_url_first']; ?>" class="visit-btn secondary-btn btn"><?= $firstItem[LISTING . '_item_third_button_title_first']; ?></a>
                                             <?php } ?>
                                             <?php if (Util::issetAndNotEmpty($firstItem[LISTING . '_item_url_first']) && Util::issetAndNotEmpty($firstItem[LISTING . '_item_first_button_title_first'])) { ?>
-                                                <a href="<?= $firstItem[LISTING . '_item_url_first']; ?>" class="visit-btn btn"><?= $firstItem[LISTING . '_item_first_button_title_first']; ?></a>
+                                                <a href="<?= $firstItem[LISTING . '_item_url_first']; ?>" class="visit-btn btn" target="_blank"><?= $firstItem[LISTING . '_item_first_button_title_first']; ?></a>
                                             <?php } ?>
                                         </div>
                                     </div>
@@ -143,7 +143,7 @@ $thirdRank = 1;
                                                     <a href="<?= $secondItem[LISTING . '_item_button_url_second']; ?>" class="visit-btn secondary-btn btn"><?= $secondItem[LISTING . '_item_third_button_title_second']; ?></a>
                                                 <?php } ?>
                                                 <?php if (Util::issetAndNotEmpty($secondItem[LISTING . '_item_url_second']) && Util::issetAndNotEmpty($secondItem[LISTING . '_item_first_button_title_second'])) { ?>
-                                                    <a href="<?= $secondItem[LISTING . '_item_url_second']; ?>" class="visit-btn btn"><?= $secondItem[LISTING . '_item_first_button_title_second']; ?></a>
+                                                    <a href="<?= $secondItem[LISTING . '_item_url_second']; ?>" class="visit-btn btn" target="_blank"><?= $secondItem[LISTING . '_item_first_button_title_second']; ?></a>
                                                 <?php } ?>
                                             </div>
                                         </div>
@@ -201,7 +201,7 @@ $thirdRank = 1;
                                                     <a href="<?= $thirdItem[LISTING . '_item_button_url_third']; ?>" class="visit-btn secondary-btn btn"><?= $thirdItem[LISTING . '_item_third_button_title_third']; ?></a>
                                                 <?php } ?>
                                                 <?php if (Util::issetAndNotEmpty($thirdItem[LISTING . '_item_url_third']) && Util::issetAndNotEmpty($thirdItem[LISTING . '_item_first_button_title_third'])) { ?>
-                                                    <a href="<?= $thirdItem[LISTING . '_item_url_third']; ?>" class="visit-btn btn"><?= $thirdItem[LISTING . '_item_first_button_title_third']; ?></a>
+                                                    <a href="<?= $thirdItem[LISTING . '_item_url_third']; ?>" class="visit-btn btn" target="_blank"><?= $thirdItem[LISTING . '_item_first_button_title_third']; ?></a>
                                                 <?php } ?>
                                             </div>
                                         </div>

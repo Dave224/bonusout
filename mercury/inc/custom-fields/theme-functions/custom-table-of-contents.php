@@ -47,19 +47,20 @@ class FC_Outline_Widget extends WP_Widget {
                     $tag = $match[1];      // h2 nebo h3
                     $id = $match[2];
                     $title = $match[3];
+                    $clean_title = wp_strip_all_tags($title);
 
                     if ($tag === 'h2') {
                         if ($open_sublist) {
                             echo '</ul></li>'; // Uzavřít otevřený <ul> z předchozí h3
                             $open_sublist = false;
                         }
-                        echo '<li><a href="#' . esc_attr($id) . '">' . $title . '</a>';
+                        echo '<li><a href="#' . esc_attr($id) . '">' . $clean_title . '</a>';
                     } elseif ($tag === 'h3') {
                         if (!$open_sublist) {
                             echo '<ul class="fc-outline-sub">';
                             $open_sublist = true;
                         }
-                        echo '<li><a href="#' . esc_attr($id) . '">' . $title . '</a></li>';
+                        echo '<li><a href="#' . esc_attr($id) . '">' . $clean_title . '</a></li>';
                     }
                 }
 
@@ -84,6 +85,10 @@ function fc_insert_outline_before_first_div($content) {
         return $content;
     }
 
+    if (has_shortcode(get_the_content(), "ez-toc")) {
+        return $content;
+    }
+
     // Vytvoř osnovu
     $outline = createTableOfContents($content);
 
@@ -99,7 +104,16 @@ add_filter('the_content', 'fc_insert_outline_before_first_div', 20);
 
 // Funkce, která vrací výstup shortcodu
 function custom_table_for_content_shortcode() {
-    return '';
+    global $post;
+    // dočasně odebrat vlastní shortcode, aby se nespustil uvnitř apply_filters a nevznikla nekonečná smyčkaa
+    remove_shortcode('ez-toc');
+
+    $content = apply_filters( 'the_content', $post->post_content );
+
+    // znovu zaregistrovat shortcode
+    add_shortcode('ez-toc', 'custom_table_for_content_shortcode');
+
+    return createTableOfContents($content);
 }
 
 // Registrace shortcodu pro osnovu
@@ -127,19 +141,20 @@ function createTableOfContents($content) {
         $tag = $match[1];
         $id = $match[2];
         $title = $match[3];
+        $clean_title = wp_strip_all_tags($title);
 
         if ($tag === 'h2') {
             if ($open_sublist) {
                 $outline .= '</ul></li>';
                 $open_sublist = false;
             }
-            $outline .= '<li><a href="#' . esc_attr($id) . '">' . esc_html($title) . '</a>';
+            $outline .= '<li><a href="#' . esc_attr($id) . '">' . esc_html($clean_title) . '</a>';
         } elseif ($tag === 'h3') {
             if (!$open_sublist) {
                 $outline .= '<ul class="fc-outline-sub">';
                 $open_sublist = true;
             }
-            $outline .= '<li><a href="#' . esc_attr($id) . '">' . esc_html($title) . '</a></li>';
+            $outline .= '<li><a href="#' . esc_attr($id) . '">' . esc_html($clean_title) . '</a></li>';
         }
     }
 

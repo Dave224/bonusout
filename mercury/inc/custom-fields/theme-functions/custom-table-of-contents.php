@@ -92,9 +92,31 @@ function fc_insert_outline_before_first_div($content) {
     // Vytvoř osnovu
     $outline = createTableOfContents($content);
 
-    // Najdi první <div> a vlož osnovu PŘED něj
-    if (preg_match('/<div[^>]*>/', $content, $match, PREG_OFFSET_CAPTURE)) {
-        $pos = $match[0][1]; // pozice ZAČÁTKU prvního <div>
+    // Najdi první <h2>
+    $posH2 = false;
+    if (preg_match('/<h2[^>]*>/i', $content, $match, PREG_OFFSET_CAPTURE)) {
+        $posH2 = $match[0][1]; // pozice ZAČÁTKU prvního <h2>
+    }
+
+    // Najdi první <div>
+    $posDiv = false;
+    if (preg_match('/<div[^>]*>/i', $content, $match, PREG_OFFSET_CAPTURE)) {
+        $posDiv = $match[0][1]; // pozice ZAČÁTKU prvního <div>
+    }
+
+    // Urči, co je první
+    if ($posDiv !== false && $posH2 !== false) {
+        $pos = min($posDiv, $posH2);
+    } elseif ($posDiv !== false) {
+        $pos = $posDiv;
+    } elseif ($posH2 !== false) {
+        $pos = $posH2;
+    } else {
+        $pos = false;
+    }
+
+    // Vlož osnovu
+    if ($pos !== false) {
         $content = substr_replace($content, $outline, $pos, 0);
     }
 

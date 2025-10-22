@@ -220,3 +220,8 @@ if ( ! function_exists( 'my_debug_log' ) ) {
         file_put_contents( $log_file, $line, FILE_APPEND | LOCK_EX );
     }
 }
+
+add_action('after_setup_theme', function() {
+    unload_textdomain('mercury');
+    load_textdomain('mercury', get_template_directory() . '/languages/' . get_locale() . '.mo');
+});

@@ -98,10 +98,11 @@ function fc_insert_outline_before_first_div($content) {
         $posH2 = $match[0][1]; // pozice ZAČÁTKU prvního <h2>
     }
 
-    // Najdi první <div>
+    // Najdi první <table> a spočítej pozici ZA uzavíracím </table>
     $posDiv = false;
-    if (preg_match('/<table[^>]*>/i', $content, $match, PREG_OFFSET_CAPTURE)) {
-        $posDiv = $match[0][1]; // pozice ZAČÁTKU prvního <div>
+    if (preg_match('/<table[^>]*>.*?<\/table>/is', $content, $match, PREG_OFFSET_CAPTURE)) {
+        $tableHtml = $match[0][0];
+        $posDiv = $match[0][1] + strlen($tableHtml); // pozice ZA tabulkou
     }
 
     // Urči, co je první

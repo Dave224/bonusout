@@ -100,7 +100,7 @@ function fc_insert_outline_before_first_div($content) {
 
     // Najdi první <div>
     $posDiv = false;
-    if (preg_match('/</table[^>]*>/i', $content, $match, PREG_OFFSET_CAPTURE)) {
+    if (preg_match('/<table[^>]*>/i', $content, $match, PREG_OFFSET_CAPTURE)) {
         $posDiv = $match[0][1]; // pozice ZAČÁTKU prvního <div>
     }
 

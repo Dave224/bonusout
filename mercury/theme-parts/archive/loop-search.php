@@ -36,6 +36,8 @@
 									<span><i class="far fa-comment"></i> <?php comments_number( '0', '1', '%' ); ?></span>
 								<?php } ?>
 
+                                <span class="space-archive-loop-item-img-category"><?php the_category(' '); ?></span>
+
 							</div>
 							<div class="space-archive-loop-item-title relative">
 								<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>

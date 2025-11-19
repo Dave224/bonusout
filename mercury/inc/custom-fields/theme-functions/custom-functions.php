@@ -233,5 +233,20 @@ add_action('init', function () {
         unregister_post_type('casino');
         unregister_post_type('bonus');
         unregister_post_type('game');
+    } else {
+        // Odeber starý CPT (zaregistrovaný šablonou)
+        unregister_post_type('casino');
+
+        // Zaregistruj znovu s jiným slugu
+        register_post_type('casino', array(
+            'labels' => array(
+                'name' => __('Casinos', 'mercury'),
+                'singular_name' => __('Casino', 'mercury'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'casino-item'), // nový slug
+            'supports' => array('title', 'editor', 'thumbnail'),
+        ));
     }
 }, 20);

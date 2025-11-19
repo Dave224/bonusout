@@ -226,13 +226,12 @@ add_action('after_setup_theme', function() {
     load_textdomain('mercury', get_template_directory() . '/languages/' . get_locale() . '.mo');
 });
 
-// Přepíše slug post type 'casino' po registraci
 add_action('init', function () {
-    $domain = $_SERVER['HTTP_HOST'];
+    $domain = preg_replace('/^www\./', '', strtolower($_SERVER['HTTP_HOST']));
+
     if ($domain === 'bonusout-hr.com') {
-        // Odeber starý CPT (zaregistrovaný šablonou)
         unregister_post_type('casino');
         unregister_post_type('bonus');
         unregister_post_type('game');
     }
-}, 20); // důležité: větší priorita, aby se to provedlo PO registraci v šabloně
+}, 20);

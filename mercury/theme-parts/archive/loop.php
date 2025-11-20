@@ -19,7 +19,6 @@
 									<?php } ?>
 								</div>
 							</a>
-							<div class="space-archive-loop-item-img-category absolute"><?php the_category(' '); ?></div>
 						</div>
 					</div>
 					<div class="space-archive-loop-item-title-box box-66 left relative">
@@ -41,7 +40,9 @@
 									<span><i class="fas fa-eye"></i> <?php echo esc_html(spacethemes_get_post_views(get_the_ID())); ?></span>
 								<?php } ?>
 
-							</div>
+                                <span class="space-archive-loop-item-img-category"><?php the_category(' '); ?></span>
+
+                            </div>
 							<div class="space-archive-loop-item-title relative">
 								<?php if ( wp_get_attachment_image(get_post_thumbnail_id()) ) {} else { ?><div class="space-archive-loop-item-img-category relative"><?php the_category(' '); ?></div><?php } ?><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 							</div>

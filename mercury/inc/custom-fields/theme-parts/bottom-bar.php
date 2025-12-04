@@ -38,7 +38,6 @@ $content = get_the_content();
 $link = '';
 if (preg_match('/<a[^>]*class=["\'][^"\']*btn[^"\']*["\'][^>]*href=["\']([^"\']+)["\']/i', $content, $matches)) {
     $link = $matches[1];
-    $link = str_replace('/go/', '/visit/', $link);
     // Získání ID z odkazu jako /?p=2345
     if (preg_match('/[?&]p=(\d+)/', $link, $id_match)) {
         $post_id = intval($id_match[1]);
